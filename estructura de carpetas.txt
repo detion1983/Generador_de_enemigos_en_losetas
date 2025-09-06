@@ -1,0 +1,22 @@
+proyecto-arena/
+├── index.html
+├── assets/
+│   ├── data/
+│   │   ├── enemigos.json
+│   │   ├── losetas.json
+│   │   ├── encuentros.json
+│   │   ├── monstruos-exp.json
+│   │   ├── ui_config.json
+│   │   ├── estados.json
+│   │   ├── descansos.json
+│   │   ├── recompensas.json
+│   │   └── comportamiento.json
+│   ├── imagenes/
+│   │   ├── losetas/
+│   │   │   ├── cueva_oscura.jpg
+│   │   │   ├── bosque_encantado.jpg
+│   │   │   └── ...
+│   │   └── ...
+│   └── audio/
+│       └── ...
+└── README.md
