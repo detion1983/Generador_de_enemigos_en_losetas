@@ -69,7 +69,7 @@
 
         .select-group {
             flex: 1;
-            min-width: 250px;
+            min-width: 200px;
         }
 
         label {
@@ -132,6 +132,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .loseta-title {
@@ -146,12 +147,13 @@
             grid-template-columns: repeat(8, 1fr);
             grid-template-rows: repeat(6, 1fr);
             gap: 2px;
-            background:transparent;
+            background: transparent;
             padding: 8px;
             border-radius: 8px;
             min-height: 350px;
             background-size: cover;
             background-position: center;
+            position: relative;
         }
 
         .casilla {
@@ -169,28 +171,51 @@
         .casilla:hover {
             transform: scale(1.02);
             z-index: 1;
-            background: rgba(255, 255, 255, 0.2); /* Ligero cambio al hover */
+            background: rgba(255, 255, 255, 0.2);
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
         }
 
         .casilla.invalida {
-            background: rgba(0, 0, 0, 0.05); /* Muy transparente para casillas inválidas */
-            border: 1px dashed rgba(0, 0, 0, 0.1); /* Borde más tenue */
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px dashed rgba(0, 0, 0, 0.1);
         }
+
+        .casilla.ocupada {
+            background: rgba(231, 76, 60, 0.2);
+        }
+
         .enemigo {
-            width: 85%;
-            height: 85%;
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            border-radius: 50%;
+            position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             font-weight: bold;
-            font-size: 14px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             animation: aparecer 0.5s ease-out;
+            z-index: 2;
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .enemigo.normal {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .enemigo.enorme {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .enemigo.extraenorme {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            border-radius: 12px;
+            font-size: 18px;
         }
 
         @keyframes aparecer {
@@ -239,6 +264,14 @@
             color: #2c3e50;
             display: block;
             margin-bottom: 5px;
+        }
+
+        .tirada-info {
+            background: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
         }
 
         .stats {
@@ -293,10 +326,27 @@
     <div class="container">
         <header>
             <h1>Generador de Enemigos en Losetas</h1>
-            <p class="subtitle">Selecciona el tipo de enemigos y una loseta para generar tu escenario</p>
+            <p class="subtitle">Selecciona el nivel de héroes, tipo de enemigos y una loseta</p>
         </header>
         
         <div class="controls">
+            <div class="select-group">
+                <label for="nivel-heroes">Nivel de Héroes:</label>
+                <select id="nivel-heroes">
+                    <option value="">Selecciona nivel</option>
+                    <option value="1">Nivel 1</option>
+                    <option value="2">Nivel 2</option>
+                    <option value="3">Nivel 3</option>
+                    <option value="4">Nivel 4</option>
+                    <option value="5">Nivel 5</option>
+                    <option value="6">Nivel 6</option>
+                    <option value="7">Nivel 7</option>
+                    <option value="8">Nivel 8</option>
+                    <option value="9">Nivel 9</option>
+                    <option value="10">Nivel 10</option>
+                </select>
+            </div>
+            
             <div class="select-group">
                 <label for="tipo-enemigo">Tipo de Enemigos:</label>
                 <select id="tipo-enemigo">
@@ -322,6 +372,10 @@
             
             <div class="info-panel">
                 <h3>Enemigos Generados</h3>
+                <div id="tirada-info" class="tirada-info" style="display: none;">
+                    <strong>Información de la tirada:</strong><br>
+                    <span id="tirada-detalle"></span>
+                </div>
                 <div id="enemigos-lista"></div>
             </div>
         </div>
@@ -352,11 +406,18 @@
         let losetasData = {};
         let enemigosCargados = [];
         let losetaSeleccionada = null;
+        let nivelHeroes = 0;
+        const isGitHubPages = window.location.hostname.includes('github.io');
+
 
         // Cargar datos iniciales
         document.addEventListener('DOMContentLoaded', () => {
             cargarTiposEnemigos();
             cargarLosetas();
+            
+            document.getElementById('nivel-heroes').addEventListener('change', (e) => {
+                nivelHeroes = parseInt(e.target.value) || 0;
+            });
             
             document.getElementById('generar-btn').addEventListener('click', generarEnemigos);
         });
@@ -394,7 +455,10 @@
         // Cargar enemigos desde JSON
         async function cargarEnemigos(tipo) {
             try {
-                const response = await fetch(`data/${tipo}.json`);
+                // Cambia esta línea:
+                const ruta = isGitHubPages ? `data/${tipo}.json` : `data\\${tipo}.json`;
+                const response = await fetch(ruta);
+                
                 if (!response.ok) {
                     throw new Error(`Error al cargar ${tipo}.json: ${response.status}`);
                 }
@@ -409,10 +473,14 @@
         // Cargar losetas disponibles
         async function cargarLosetas() {
             try {
-                const response = await fetch('data/losetas.json');
+                // Cambia esta línea:
+                const ruta = isGitHubPages ? 'data/losetas.json' : 'data\\losetas.json';
+                const response = await fetch(ruta);
+                
                 if (!response.ok) {
                     throw new Error(`Error al cargar losetas.json: ${response.status}`);
                 }
+        
                 const data = await response.json();
                 losetasData = data.losetas;
                 
@@ -469,9 +537,9 @@
             const matrizContainer = document.getElementById('matriz-loseta');
             matrizContainer.innerHTML = '';
             
-            // Establecer la imagen de fondo
-            matrizContainer.style.backgroundImage = `url(data/${loseta.imagen})`;
-            matrizContainer.style.backgroundSize = 'cover';
+            // LÍNEA CORREGIDA - usa siempre barras normales
+            const rutaImagen = `data/${loseta.imagen}`;
+            matrizContainer.style.backgroundImage = `url(${rutaImagen})`;
             
             // Determinar dimensiones de la matriz
             const filas = loseta.matriz.length;
@@ -496,39 +564,184 @@
                     matrizContainer.appendChild(casilla);
                 }
             }
+        } 
+
+        // Realizar tirada de dado de 20 caras
+        function tirarD20() {
+            return Math.floor(Math.random() * 20) + 1;
+        }
+
+        // Calcular tirada según nivel de héroes
+        function calcularTirada() {
+            if (nivelHeroes < 1) return 0;
+            
+            const tiradaDado = tirarD20();
+            const modificador = (nivelHeroes - 1) * 10;
+            const tiradaFinal = tiradaDado + modificador;
+            
+            return {
+                dado: tiradaDado,
+                modificador: modificador,
+                total: tiradaFinal
+            };
+        }
+
+        // Encontrar encuentro según tirada
+        function encontrarEncuentroPorTirada(tirada) {
+            if (!enemigosData.encuentros) return null;
+            
+            for (const encuentro of enemigosData.encuentros) {
+                const [min, max] = encuentro.tirada.split('-').map(Number);
+                if (tirada >= min && tirada <= max) {
+                    return encuentro;
+                }
+            }
+            
+            // Si no encuentra ningún encuentro, devolver el último
+            return enemigosData.encuentros[enemigosData.encuentros.length - 1];
+        }
+
+        // Obtener dimensiones según el tipo de enemigo
+        function obtenerDimensionesEnemigo(tamano) {
+            switch (tamano) {
+                case 'ENORME': 
+                    return { ancho: 2, alto: 2, casillas: 4 };
+                case 'EXTRAENORME': 
+                    return { ancho: 3, alto: 2, casillas: 6 };
+                default: 
+                    return { ancho: 1, alto: 1, casillas: 1 };
+            }
+        }
+
+        // Verificar si un área está disponible para colocar un enemigo
+        function areaDisponible(filaInicio, columnaInicio, tamano) {
+            const dimensiones = obtenerDimensionesEnemigo(tamano);
+            const ancho = dimensiones.ancho;
+            const alto = dimensiones.alto;
+            
+            for (let i = 0; i < alto; i++) {
+                for (let j = 0; j < ancho; j++) {
+                    const fila = filaInicio + i;
+                    const columna = columnaInicio + j;
+                    
+                    // Verificar si está dentro de los límites
+                    if (fila >= losetaSeleccionada.matriz.length || columna >= losetaSeleccionada.matriz[0].length) {
+                        return false;
+                    }
+                    
+                    const casilla = document.querySelector(`.casilla[data-fila="${fila}"][data-columna="${columna}"]`);
+                    
+                    if (!casilla || 
+                        casilla.classList.contains('invalida') || 
+                        casilla.classList.contains('ocupada')) {
+                        return false;
+                    }
+                }
+            }
+            
+            return true;
+        }
+
+        // Marcar área como ocupada
+        function marcarAreaOcupada(filaInicio, columnaInicio, tamano) {
+            const dimensiones = obtenerDimensionesEnemigo(tamano);
+            const ancho = dimensiones.ancho;
+            const alto = dimensiones.alto;
+            
+            for (let i = 0; i < alto; i++) {
+                for (let j = 0; j < ancho; j++) {
+                    const fila = filaInicio + i;
+                    const columna = columnaInicio + j;
+                    
+                    const casilla = document.querySelector(`.casilla[data-fila="${fila}"][data-columna="${columna}"]`);
+                    if (casilla) {
+                        casilla.classList.add('ocupada');
+                    }
+                }
+            }
         }
 
         // Generar enemigos basados en las probabilidades
         function generarEnemigos() {
-            if (!enemigosData.encuentros || !losetaSeleccionada) {
-                alert('Por favor, selecciona ambos: tipo de enemigos y loseta.');
+            if (!enemigosData.encuentros || !losetaSeleccionada || nivelHeroes < 1) {
+                alert('Por favor, selecciona nivel de héroes, tipo de enemigos y loseta.');
                 return;
             }
             
             // Limpiar enemigos anteriores
             document.querySelectorAll('.enemigo').forEach(el => el.remove());
+            document.querySelectorAll('.casilla.ocupada').forEach(el => el.classList.remove('ocupada'));
             document.getElementById('enemigos-lista').innerHTML = '';
             enemigosCargados = [];
             
-            // Contar casillas válidas
-            let casillasValidas = 0;
-            for (let i = 0; i < losetaSeleccionada.matriz.length; i++) {
-                for (let j = 0; j < losetaSeleccionada.matriz[i].length; j++) {
-                    if (losetaSeleccionada.matriz[i][j] === 1) {
-                        casillasValidas++;
-                    }
+            // Realizar tirada según nivel de héroes
+            const tirada = calcularTirada();
+            const encuentro = encontrarEncuentroPorTirada(tirada.total);
+            
+            if (!encuentro) {
+                alert('No se pudo encontrar un encuentro para la tirada realizada.');
+                return;
+            }
+            
+            // Mostrar información de la tirada
+            document.getElementById('tirada-info').style.display = 'block';
+            document.getElementById('tirada-detalle').innerHTML = `
+                Nivel héroes: ${nivelHeroes}<br>
+                Tirada D20: ${tirada.dado}<br>
+                Modificador: +${tirada.modificador}<br>
+                <strong>Total: ${tirada.total}</strong><br>
+                Encuentro: ${encuentro.descripcion}
+            `;
+            
+            // Procesar la descripción del encuentro para obtener número de enemigos
+            const descripcion = encuentro.descripcion;
+            let cantidadEnemigos = 1;
+            
+            // Buscar patrones como "1d3", "2d4", etc.
+            const diceMatch = descripcion.match(/(\d+)d(\d+)/);
+            if (diceMatch) {
+                const numDados = parseInt(diceMatch[1]);
+                const carasDado = parseInt(diceMatch[2]);
+                cantidadEnemigos = 0;
+                for (let i = 0; i < numDados; i++) {
+                    cantidadEnemigos += Math.floor(Math.random() * carasDado) + 1;
+                }
+            } 
+            // Buscar patrones como "1d4+1"
+            const dicePlusMatch = descripcion.match(/(\d+)d(\d+)\+(\d+)/);
+            if (dicePlusMatch) {
+                const numDados = parseInt(dicePlusMatch[1]);
+                const carasDado = parseInt(dicePlusMatch[2]);
+                const plus = parseInt(dicePlusMatch[3]);
+                cantidadEnemigos = plus;
+                for (let i = 0; i < numDados; i++) {
+                    cantidadEnemigos += Math.floor(Math.random() * carasDado) + 1;
                 }
             }
             
-            // Determinar número de enemigos (entre 1/3 y 1/2 de las casillas válidas)
-            const maxEnemigos = Math.floor(casillasValidas / 2);
-            const minEnemigos = Math.floor(casillasValidas / 3);
-            const numEnemigos = Math.floor(Math.random() * (maxEnemigos - minEnemigos + 1)) + minEnemigos;
+            // Crear array de enemigos a colocar
+            const enemigos = [];
+            for (let i = 0; i < cantidadEnemigos; i++) {
+                enemigos.push({
+                    nombre: encuentro.descripcion,
+                    nivel: nivelHeroes,
+                    tamano: encuentro.tamano || 'NORMAL'
+                });
+            }
             
-            // Generar enemigos
-            for (let i = 0; i < numEnemigos; i++) {
-                const enemigo = seleccionarEnemigo();
-                colocarEnemigo(enemigo);
+            // Ordenar enemigos por tamaño (los más grandes primero)
+            enemigos.sort((a, b) => {
+                const sizeOrder = { 'NORMAL': 1, 'ENORME': 2, 'EXTRAENORME': 3 };
+                return sizeOrder[b.tamano] - sizeOrder[a.tamano];
+            });
+            
+            // Colocar enemigos
+            for (const enemigo of enemigos) {
+                const colocado = colocarEnemigo(enemigo);
+                if (!colocado) {
+                    console.warn('No se pudo colocar el enemigo:', enemigo.nombre);
+                    break; // Si no se puede colocar un enemigo, dejar de intentar
+                }
             }
             
             // Mostrar lista de enemigos
@@ -536,64 +749,77 @@
             actualizarEstadisticas();
         }
 
-        // Seleccionar enemigo aleatorio de la lista
-        function seleccionarEnemigo() {
-            const indiceAleatorio = Math.floor(Math.random() * enemigosData.encuentros.length);
-            const encuentro = enemigosData.encuentros[indiceAleatorio];
-            
-            // Extraer nivel del enemigo de la descripción (si es posible)
-            let nivel = 1;
-            const nivelMatch = encuentro.descripcion.match(/Nivel (\d+)/i);
-            if (nivelMatch) {
-                nivel = parseInt(nivelMatch[1]);
-            }
-            
-            return {
-                nombre: encuentro.descripcion,
-                nivel: nivel,
-                tamano: encuentro.tamano
-            };
-        }
-
         // Colocar enemigo en una casilla válida aleatoria
         function colocarEnemigo(enemigo) {
             // Encontrar todas las casillas válidas y disponibles
             const casillasValidas = [];
-            const casillas = document.querySelectorAll('.casilla:not(.invalida)');
+            const casillas = document.querySelectorAll('.casilla:not(.invalida):not(.ocupada)');
             
             casillas.forEach(casilla => {
-                if (!casilla.querySelector('.enemigo')) {
-                    casillasValidas.push(casilla);
-                }
+                casillasValidas.push(casilla);
             });
             
             if (casillasValidas.length === 0) {
                 console.warn('No hay casillas disponibles para colocar enemigos');
-                return;
+                return false;
             }
             
-            // Seleccionar casilla aleatoria
-            const casillaAleatoria = casillasValidas[Math.floor(Math.random() * casillasValidas.length)];
+            // Mezclar casillas para obtener una posición aleatoria
+            for (let i = casillasValidas.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [casillasValidas[i], casillasValidas[j]] = [casillasValidas[j], casillasValidas[i]];
+            }
             
-            // Crear elemento visual para el enemigo
-            const enemigoElement = document.createElement('div');
-            enemigoElement.className = 'enemigo';
-            enemigoElement.title = `${enemigo.nombre} (${enemigo.tamano})`;
+            // Intentar colocar el enemigo
+            for (const casilla of casillasValidas) {
+                const fila = parseInt(casilla.dataset.fila);
+                const columna = parseInt(casilla.dataset.columna);
+                
+                if (areaDisponible(fila, columna, enemigo.tamano)) {
+                    // Marcar área como ocupada
+                    marcarAreaOcupada(fila, columna, enemigo.tamano);
+                    
+                    // Obtener dimensiones
+                    const dimensiones = obtenerDimensionesEnemigo(enemigo.tamano);
+                    
+                    // Crear elemento visual para el enemigo
+                    const enemigoElement = document.createElement('div');
+                    enemigoElement.className = `enemigo ${enemigo.tamano.toLowerCase()}`;
+                    enemigoElement.title = `${enemigo.nombre} (${enemigo.tamano})`;
+                    
+                    // Calcular posición y tamaño
+                    const matrizContainer = document.getElementById('matriz-loseta');
+                    const cellWidth = matrizContainer.offsetWidth / losetaSeleccionada.matriz[0].length;
+                    const cellHeight = matrizContainer.offsetHeight / losetaSeleccionada.matriz.length;
+                    
+                    enemigoElement.style.width = `${dimensiones.ancho * cellWidth - 4}px`;
+                    enemigoElement.style.height = `${dimensiones.alto * cellHeight - 4}px`;
+                    enemigoElement.style.left = `${columna * cellWidth + 2}px`;
+                    enemigoElement.style.top = `${fila * cellHeight + 2}px`;
+                    
+                    // Usar iniciales para mostrar en el rectángulo
+                    const iniciales = enemigo.nombre.split(' ').map(p => p[0]).join('').toUpperCase().substring(0, 3);
+                    enemigoElement.textContent = iniciales;
+                    
+                    matrizContainer.appendChild(enemigoElement);
+                    
+                    // Guardar información del enemigo
+                    enemigosCargados.push({
+                        nombre: enemigo.nombre,
+                        nivel: enemigo.nivel,
+                        tamano: enemigo.tamano,
+                        fila: fila,
+                        columna: columna,
+                        casillasOcupadas: dimensiones.casillas,
+                        ancho: dimensiones.ancho,
+                        alto: dimensiones.alto
+                    });
+                    
+                    return true;
+                }
+            }
             
-            // Usar iniciales para mostrar en el círculo
-            const iniciales = enemigo.nombre.split(' ').map(p => p[0]).join('').toUpperCase().substring(0, 3);
-            enemigoElement.textContent = iniciales;
-            
-            casillaAleatoria.appendChild(enemigoElement);
-            
-            // Guardar información del enemigo
-            enemigosCargados.push({
-                nombre: enemigo.nombre,
-                nivel: enemigo.nivel,
-                tamano: enemigo.tamano,
-                fila: parseInt(casillaAleatoria.dataset.fila),
-                columna: parseInt(casillaAleatoria.dataset.columna)
-            });
+            return false;
         }
 
         // Mostrar lista de enemigos generados
@@ -610,7 +836,9 @@
                 item.className = 'enemigo-item';
                 item.innerHTML = `
                     <strong>${enemigo.nombre}</strong> (Nivel ${enemigo.nivel}, ${enemigo.tamano})<br>
-                    Posición: Fila ${enemigo.fila + 1}, Columna ${enemigo.columna + 1}
+                    Posición: Fila ${enemigo.fila + 1}, Columna ${enemigo.columna + 1}<br>
+                    Dimensiones: ${enemigo.ancho}x${enemigo.alto} casillas<br>
+                    Casillas ocupadas: ${enemigo.casillasOcupadas}
                 `;
                 listaContainer.appendChild(item);
             });
@@ -632,6 +860,8 @@
             
             // Porcentaje de casillas ocupadas
             let casillasValidas = 0;
+            let casillasOcupadas = 0;
+            
             for (let i = 0; i < losetaSeleccionada.matriz.length; i++) {
                 for (let j = 0; j < losetaSeleccionada.matriz[i].length; j++) {
                     if (losetaSeleccionada.matriz[i][j] === 1) {
@@ -640,7 +870,11 @@
                 }
             }
             
-            const porcentaje = Math.round((enemigosCargados.length / casillasValidas) * 100);
+            enemigosCargados.forEach(enemigo => {
+                casillasOcupadas += enemigo.casillasOcupadas;
+            });
+            
+            const porcentaje = Math.round((casillasOcupadas / casillasValidas) * 100);
             document.getElementById('casillas-ocupadas').textContent = `${porcentaje}%`;
         }
     </script>
