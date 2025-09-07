@@ -29,7 +29,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1600px;
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.95);
             padding: 25px;
@@ -127,7 +127,7 @@
 
         .loseta-container {
             flex: 2;
-            min-width: 350px;
+            min-width: 300px;
             background: #f9f9f9;
             padding: 20px;
             border-radius: 10px;
@@ -144,16 +144,16 @@
 
         .matriz {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(6, 1fr);
             gap: 2px;
             background: transparent;
             padding: 8px;
             border-radius: 8px;
             min-height: 350px;
-            background-size: cover;
+            background-size: 100% 100%;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
+            width: 100%;
         }
 
         .casilla {
@@ -166,6 +166,7 @@
             position: relative;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .casilla:hover {
@@ -225,7 +226,7 @@
 
         .info-panel {
             flex: 1;
-            min-width: 280px;
+            min-width: 300px;
             background: #f9f9f9;
             padding: 20px;
             border-radius: 10px;
@@ -300,7 +301,7 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .visualization {
                 flex-direction: column;
             }
@@ -404,13 +405,15 @@
         // Variables globales
         let enemigosData = {};
         let losetasData = {};
+        let tamanosMonstruos = {};
         let enemigosCargados = [];
         let losetaSeleccionada = null;
         let nivelHeroes = 0;
         const isGitHubPages = window.location.hostname.includes('github.io');
 
         // Cargar datos iniciales
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            await cargarTamanosMonstruos();
             cargarTiposEnemigos();
             cargarLosetas();
             
@@ -420,6 +423,43 @@
             
             document.getElementById('generar-btn').addEventListener('click', generarEnemigos);
         });
+
+        // Cargar tamaños de monstruos
+        async function cargarTamanosMonstruos() {
+            try {
+                const ruta = isGitHubPages ? 'data/tamanos_monstruos.json' : 'data\\tamanos_monstruos.json';
+                const response = await fetch(ruta);
+                
+                if (!response.ok) {
+                    throw new Error(`Error al cargar tamanos_monstruos.json: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                tamanosMonstruos = data.tamaños;
+                console.log('Tamaños de monstruos cargados:', tamanosMonstruos);
+            } catch (error) {
+                console.error('Error cargando tamaños de monstruos:', error);
+                alert('Error al cargar los tamaños de monstruos.');
+            }
+        }
+
+        // Obtener el tamaño de un monstruo por su nombre
+        function obtenerTamanoMonstruo(nombre) {
+            // Buscar coincidencia exacta
+            if (tamanosMonstruos[nombre]) {
+                return tamanosMonstruos[nombre];
+            }
+            
+            // Buscar coincidencias parciales
+            for (const key in tamanosMonstruos) {
+                if (nombre.includes(key) || key.includes(nombre)) {
+                    return tamanosMonstruos[key];
+                }
+            }
+            
+            // Si no se encuentra, devolver NORMAL por defecto
+            return "NORMAL";
+        }
 
         // Cargar tipos de enemigos disponibles
         async function cargarTiposEnemigos() {
@@ -534,7 +574,6 @@
             const matrizContainer = document.getElementById('matriz-loseta');
             matrizContainer.innerHTML = '';
             
-            // MODIFICACIÓN: Cambiar la ruta para que apunte a data/images/losetas/
             const rutaImagen = isGitHubPages ? 
                 `data/images/losetas/${loseta.imagen}.png` : 
                 `data/images/losetas/${loseta.imagen}.png`;
@@ -543,6 +582,7 @@
             const img = new Image();
             img.onload = function() {
                 matrizContainer.style.backgroundImage = `url(${rutaImagen})`;
+                matrizContainer.style.backgroundSize = '100% 100%';
             };
             img.onerror = function() {
                 console.warn(`No se pudo cargar la imagen: ${rutaImagen}`);
@@ -680,7 +720,7 @@
                 /(\d+)d(\d+)\+(\d+)/,
                 // Patrón para "1d4" o "2d6"  
                 /(\d+)d(\d+)/,
-                // Patrón para números simples "3" o "12"
+                // Patrón para números simples "3" or "12"
                 /(\d+)/
             ];
             
@@ -716,7 +756,7 @@
             return cantidad;
         }
 
-        // Función mejorada para procesar descripción de encuentro (mantiene equipo pero no lo trata como enemigos)
+        // Función mejorada para procesar descripción de encuentro
         function procesarDescripcionEncuentro(descripcion) {
             const enemigos = [];
             
@@ -737,14 +777,15 @@
                     
                     if (nombreEnemigo && nombreEnemigo.length > 1) {
                         const cantidad = procesarExpresionDados(expresion);
+                        const tamano = obtenerTamanoMonstruo(nombreEnemigo);
                         
-                        // Añadir cada enemigo individualmente con la descripción COMPLETA
+                        // Añadir cada enemigo individualmente con el tamaño correcto
                         for (let i = 0; i < cantidad; i++) {
                             enemigos.push({
-                                nombre: nombreEnemigo, // Este es el nombre base sin equipo
-                                descripcionCompleta: partePrincipal.trim(), // Mantenemos la descripción completa con equipo
+                                nombre: nombreEnemigo,
+                                descripcionCompleta: partePrincipal.trim(),
                                 nivel: nivelHeroes,
-                                tamano: 'NORMAL'
+                                tamano: tamano
                             });
                         }
                     }
@@ -757,22 +798,24 @@
                     if (matchNumeroSimple) {
                         const cantidad = parseInt(matchNumeroSimple[1]);
                         const nombreEnemigo = matchNumeroSimple[2].trim();
+                        const tamano = obtenerTamanoMonstruo(nombreEnemigo);
                         
                         for (let i = 0; i < cantidad; i++) {
                             enemigos.push({
                                 nombre: nombreEnemigo,
                                 descripcionCompleta: partePrincipal.trim(),
                                 nivel: nivelHeroes,
-                                tamano: 'NORMAL'
+                                tamano: tamano
                             });
                         }
                     } else {
                         // Si no hay número, asumir 1 enemigo
+                        const tamano = obtenerTamanoMonstruo(partePrincipal.trim());
                         enemigos.push({
                             nombre: partePrincipal.trim(),
                             descripcionCompleta: partePrincipal.trim(),
                             nivel: nivelHeroes,
-                            tamano: 'NORMAL'
+                            tamano: tamano
                         });
                     }
                 }
@@ -904,7 +947,8 @@
                         columna: columna,
                         casillasOcupadas: dimensiones.casillas,
                         ancho: dimensiones.ancho,
-                        alto: dimensiones.alto
+                        alto: dimensiones.alto,
+                        descripcionCompleta: enemigo.descripcionCompleta
                     });
                     
                     return true;
@@ -923,35 +967,44 @@
                 return;
             }
             
+            // Agrupar enemigos por tipo
+            const enemigosPorTipo = {};
             enemigosCargados.forEach(enemigo => {
-                const item = document.createElement('div');
-                item.className = 'enemigo-item';
-                item.innerHTML = `
-                    <strong>${enemigo.descripcionCompleta || enemigo.nombre}</strong> (Nivel ${enemigo.nivel}, ${enemigo.tamano})<br>
-                    Posición: Fila ${enemigo.fila + 1}, Columna ${enemigo.columna + 1}<br>
-                    Dimensiones: ${enemigo.ancho}x${enemigo.alto} casillas<br>
-                    Casillas ocupadas: ${enemigo.casillasOcupadas}
-                `;
-                listaContainer.appendChild(item);
+                if (!enemigosPorTipo[enemigo.nombre]) {
+                    enemigosPorTipo[enemigo.nombre] = [];
+                }
+                enemigosPorTipo[enemigo.nombre].push(enemigo);
             });
+            
+            // Crear HTML para cada tipo de enemigo
+            let html = '';
+            for (const tipo in enemigosPorTipo) {
+                const cantidad = enemigosPorTipo[tipo].length;
+                const primerEnemigo = enemigosPorTipo[tipo][0];
+                
+                html += `
+                    <div class="enemigo-item">
+                        <strong>${tipo}</strong>
+                        <div>Cantidad: ${cantidad}</div>
+                        <div>Nivel: ${primerEnemigo.nivel}</div>
+                        <div>Tamaño: ${primerEnemigo.tamano}</div>
+                    </div>
+                `;
+            }
+            
+            listaContainer.innerHTML = html;
         }
 
         // Actualizar estadísticas
         function actualizarEstadisticas() {
             const totalEnemigos = enemigosCargados.length;
-            const nivelPromedio = totalEnemigos > 0 ? 
-                Math.round(enemigosCargados.reduce((sum, e) => sum + e.nivel, 0) / totalEnemigos) : 0;
-            
-            // Calcular casillas ocupadas
-            const totalCasillas = losetaSeleccionada.matriz.length * losetaSeleccionada.matriz[0].length;
-            const casillasInvalidas = losetaSeleccionada.matriz.flat().filter(c => c === 0).length;
-            const casillasValidas = totalCasillas - casillasInvalidas;
-            const casillasOcupadas = enemigosCargados.reduce((sum, e) => sum + e.casillasOcupadas, 0);
-            const porcentajeOcupadas = Math.round((casillasOcupadas / casillasValidas) * 100);
+            const totalCasillas = document.querySelectorAll('.casilla:not(.invalida)').length;
+            const casillasOcupadas = document.querySelectorAll('.casilla.ocupada').length;
+            const porcentajeOcupacion = Math.round((casillasOcupadas / totalCasillas) * 100);
             
             document.getElementById('total-enemigos').textContent = totalEnemigos;
-            document.getElementById('nivel-promedio').textContent = nivelPromedio;
-            document.getElementById('casillas-ocupadas').textContent = `${porcentajeOcupadas}%`;
+            document.getElementById('nivel-promedio').textContent = nivelHeroes;
+            document.getElementById('casillas-ocupadas').textContent = `${porcentajeOcupacion}%`;
         }
     </script>
 </body>
