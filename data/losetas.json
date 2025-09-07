@@ -2,7 +2,7 @@
   "losetas": [
     {
       "nombre": "R17",
-      "imagen": "R17.png",
+      "imagen": "R17",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -14,7 +14,7 @@
     },
     {
       "nombre": "R11",
-      "imagen": "R11.png",
+      "imagen": "R11",
       "matriz": [
         [0, 0, 1, 1, 1, 1],
         [0, 0, 1, 1, 1, 1],
@@ -26,7 +26,7 @@
     },
     {
       "nombre": "R10",
-      "imagen": "R10.png",
+      "imagen": "R10",
       "matriz": [
         [0, 0, 1, 1, 1, 1],
         [0, 0, 1, 1, 1, 0],
@@ -38,7 +38,7 @@
     },
     {
       "nombre": "R9",
-      "imagen": "R9.png",
+      "imagen": "R9",
       "matriz": [
         [0, 0, 1, 1, 1, 1],
         [0, 0, 1, 1, 1, 1],
@@ -49,7 +49,7 @@
       ]
     },{
       "nombre": "R7B",
-      "imagen": "R7B.png",
+      "imagen": "R7B",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -61,7 +61,7 @@
     },
     {
       "nombre": "R7",
-      "imagen": "R7.png",
+      "imagen": "R7",
       "matriz": [
         [1, 1, 1, 1, 0, 0],
         [1, 1, 1, 1, 1, 0],
@@ -73,7 +73,7 @@
     },
     {
       "nombre": "R6B",
-      "imagen": "R6B.png",
+      "imagen": "R6B",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -85,7 +85,7 @@
     },
     {
       "nombre": "R6",
-      "imagen": "R6.png",
+      "imagen": "R6",
       "matriz": [
         [1, 0, 0, 0, 0, 1],
         [1, 1, 1, 1, 1, 1],
@@ -97,7 +97,7 @@
     },
     {
       "nombre": "R4B",
-      "imagen": "R4B.png",
+      "imagen": "R4B",
       "matriz": [
         [1, 1, 0, 0, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -109,7 +109,7 @@
     },
     {
       "nombre": "R4",
-      "imagen": "R4.png",
+      "imagen": "R4",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -121,7 +121,7 @@
     },
     {
       "nombre": "R3B",
-      "imagen": "R3B.png",
+      "imagen": "R3B",
       "matriz": [
         [1, 1, 1, 0, 0, 1],
         [1, 1, 1, 1, 1, 1],
@@ -133,7 +133,7 @@
     },
     {
       "nombre": "R3",
-      "imagen": "R3.png",
+      "imagen": "R3",
       "matriz": [
         [1, 0, 1, 1, 1, 0],
         [1, 1, 1, 1, 1, 1],
@@ -145,7 +145,7 @@
     },
     {
       "nombre": "R2B",
-      "imagen": "R2B.png",
+      "imagen": "R2B",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -157,7 +157,7 @@
     },
     {
       "nombre": "R2",
-      "imagen": "R2.png",
+      "imagen": "R2",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -169,7 +169,7 @@
     },
     {
       "nombre": "R1B",
-      "imagen": "R1B.png",
+      "imagen": "R1B",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -181,7 +181,7 @@
     },
     {
       "nombre": "R1",
-      "imagen": "R1.png",
+      "imagen": "R1",
       "matriz": [
         [0, 0, 1, 1, 0, 0],
         [0, 0, 1, 1, 0, 0],
@@ -193,7 +193,7 @@
     },
     {
       "nombre": "C10",
-      "imagen": "C10.png",
+      "imagen": "C10",
       "matriz": [
         [0, 0, 1, 1, 0, 0],
         [0, 0, 1, 1, 0, 0],
@@ -205,7 +205,7 @@
     },
     {
       "nombre": "SALA_DEL_TRONO",
-      "imagen": "SALA_DEL_TRONO.png",
+      "imagen": "SALA_DEL_TRONO",
       "matriz": [
         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
         [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
@@ -217,7 +217,7 @@
     },
     {
       "nombre": "SACRIFICIOS",
-      "imagen": "SACRIFICIOS.png",
+      "imagen": "SACRIFICIOS",
       "matriz": [
         [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1],
         [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -229,7 +229,7 @@
     },
     {
       "nombre": "RIO_DE_LAVA",
-      "imagen": "RIO_DE_LAVA.png",
+      "imagen": "RIO_DE_LAVA",
       "matriz": [
         [0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1],
@@ -241,7 +241,7 @@
     },
     {
       "nombre": "R18",
-      "imagen": "R18.png",
+      "imagen": "R18",
       "matriz": [
         [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -253,7 +253,7 @@
     },
     {
       "nombre": "R5B",
-      "imagen": "R5B.png",
+      "imagen": "R5B",
       "matriz": [
         [1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -265,7 +265,7 @@
     },
     {
       "nombre": "R5",
-      "imagen": "R5.png",
+      "imagen": "R5",
       "matriz": [
         [1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1],
         [1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1],
@@ -277,7 +277,7 @@
     },
     {
       "nombre": "LA_GRAN_CRIPTA",
-      "imagen": "LA_GRAN_CRIPTA.png",
+      "imagen": "LA_GRAN_CRIPTA",
       "matriz": [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -289,7 +289,7 @@
     },
     {
       "nombre": "R15",
-      "imagen": "R15.png",
+      "imagen": "R15",
       "matriz": [
         [1, 0, 1, 0],
         [1, 1, 1, 0],
@@ -299,7 +299,7 @@
     },
     {
       "nombre": "R14",
-      "imagen": "R14.png",
+      "imagen": "R14",
       "matriz": [
         [1, 1, 1, 1],
         [1, 0, 0, 1],
@@ -309,7 +309,7 @@
     },
     {
       "nombre": "R13",
-      "imagen": "R13.png",
+      "imagen": "R13",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1],
@@ -319,7 +319,7 @@
     },
     {
       "nombre": "R12",
-      "imagen": "R12.png",
+      "imagen": "R12",
       "matriz": [
         [1, 0, 0, 1],
         [1, 1, 1, 1],
@@ -329,7 +329,7 @@
     },
     {
       "nombre": "R8B",
-      "imagen": "R8B.png",
+      "imagen": "R8B",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1],
@@ -339,7 +339,7 @@
     },
     {
       "nombre": "R8",
-      "imagen": "R8.png",
+      "imagen": "R8",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1],
@@ -349,7 +349,7 @@
     },
     {
       "nombre": "C14",
-      "imagen": "C14.png",
+      "imagen": "C14",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1],
@@ -359,7 +359,7 @@
     },
     {
       "nombre": "C13",
-      "imagen": "C13.png",
+      "imagen": "C13",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1],
@@ -369,7 +369,7 @@
     },
     {
       "nombre": "C12",
-      "imagen": "C12.png",
+      "imagen": "C12",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1],
@@ -379,7 +379,7 @@
     },
     {
       "nombre": "R16",
-      "imagen": "R16.png",
+      "imagen": "R16",
       "matriz": [
         [1, 1, 0, 0],
         [1, 1, 1, 0],
@@ -391,7 +391,7 @@
     },
     {
       "nombre": "C11",
-      "imagen": "C11.png",
+      "imagen": "C11",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1],
@@ -401,7 +401,7 @@
     },
     {
       "nombre": "C18",
-      "imagen": "C18.png",
+      "imagen": "C18",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -409,7 +409,7 @@
     },
     {
       "nombre": "C17",
-      "imagen": "C17.png",
+      "imagen": "C17",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -417,7 +417,7 @@
     },
     {
       "nombre": "C9",
-      "imagen": "C9.png",
+      "imagen": "C9",
       "matriz": [
         [1, 1, 0, 0, 1, 1],
         [1, 1, 0, 0, 1, 1]
@@ -425,7 +425,7 @@
     },
     {
       "nombre": "C8",
-      "imagen": "C8.png",
+      "imagen": "C8",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -433,7 +433,7 @@
     },
     {
       "nombre": "C7",
-      "imagen": "C7.png",
+      "imagen": "C7",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -441,7 +441,7 @@
     },
     {
       "nombre": "C6",
-      "imagen": "C6.png",
+      "imagen": "C6",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -449,7 +449,7 @@
     },
     {
       "nombre": "C5",
-      "imagen": "2x6.png",
+      "imagen": "2x6",
       "matriz": [
         [1, 1, 0, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -457,7 +457,7 @@
     },
     {
       "nombre": "C4",
-      "imagen": "C4.png",
+      "imagen": "C4",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -465,7 +465,7 @@
     },
     {
       "nombre": "C3",
-      "imagen": "C3.png",
+      "imagen": "C3",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -473,7 +473,7 @@
     },
     {
       "nombre": "C2",
-      "imagen": "C2.png",
+      "imagen": "C2",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -481,7 +481,7 @@
     },
     {
       "nombre": "C1",
-      "imagen": "C1.png",
+      "imagen": "C1",
       "matriz": [
         [1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1]
@@ -489,7 +489,7 @@
     },
     {
       "nombre": "ENTRADA",
-      "imagen": "ENTRADA.png",
+      "imagen": "ENTRADA",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1]
@@ -497,7 +497,7 @@
     },
     {
       "nombre": "C16",
-      "imagen": "C16.png",
+      "imagen": "C16",
       "matriz": [
         [1, 1, 1, 1],
         [1, 1, 1, 1]
@@ -505,7 +505,7 @@
     },
     {
       "nombre": "C15",
-      "imagen": "C15.png",
+      "imagen": "C15",
       "matriz": [
         [0, 0, 1, 1],
         [0, 0, 1, 1]
@@ -513,7 +513,7 @@
     },
     {
       "nombre": "GUARIDA_DE_LADRONES",
-      "imagen": "GUARIDA_DE_LADRONES.png",
+      "imagen": "GUARIDA_DE_LADRONES",
       "matriz": [
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0],
