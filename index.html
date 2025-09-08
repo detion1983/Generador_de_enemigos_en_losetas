@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Enemigos en Losetas</title>
+    <title>Dungeon Tile Generator</title>
     <style>
         * {
             box-sizing: border-box;
@@ -14,46 +14,55 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            background: url('images/interface/fondo_losetas.jpg') no-repeat center center fixed;
+            background-size: cover;
             padding: 20px;
             min-height: 100vh;
+            position: relative;
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
         }
 
         .container {
             max-width: 1600px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(35, 35, 35, 0.9);
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid #8B4513;
         }
 
         header {
             text-align: center;
             margin-bottom: 30px;
             padding-bottom: 15px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #8B4513;
         }
 
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        .titulo-container {
+            width: 80%;
+            max-width: 800px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: url('images/interface/titulo_losetas.png') no-repeat center center;
+            background-size: contain;
         }
 
         .subtitle {
-            color: #7f8c8d;
+            color: #d4af37;
             font-size: 1.2rem;
+            text-shadow: 1px 1px 2px #000;
         }
 
         .controls {
@@ -62,9 +71,10 @@
             gap: 20px;
             margin-bottom: 40px;
             padding: 25px;
-            background: #f9f9f9;
+            background: rgba(60, 60, 60, 0.8);
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #5D4037;
         }
 
         .select-group {
@@ -76,45 +86,52 @@
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
-            color: #2c3e50;
+            color: #d4af37;
+            text-shadow: 1px 1px 1px #000;
         }
 
         select {
             width: 100%;
             padding: 12px;
-            border: 2px solid #ddd;
+            border: 2px solid #5D4037;
             border-radius: 6px;
             font-size: 16px;
             transition: border-color 0.3s;
-            background: white;
+            background: rgba(40, 40, 40, 0.9);
+            color: #fff;
+            background-image: url('images/interface/select_arrow.png');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+            padding-right: 35px;
         }
 
         select:focus {
-            border-color: #3498db;
+            border-color: #d4af37;
             outline: none;
         }
 
-        button {
-            padding: 14px 28px;
-            background: #3498db;
-            color: white;
+        .btn-container {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .btn {
+            width: 180px;
+            height: 60px;
+            background: url('images/interface/btn_generar.png') no-repeat center center;
+            background-size: contain;
             border: none;
-            border-radius: 6px;
             cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            align-self: flex-end;
             transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        button:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        .btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            filter: brightness(1.2);
         }
 
-        button:active {
+        .btn:active {
             transform: translateY(0);
         }
 
@@ -128,18 +145,20 @@
         .loseta-container {
             flex: 2;
             min-width: 300px;
-            background: #f9f9f9;
+            background: rgba(60, 60, 60, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             position: relative;
+            border: 1px solid #5D4037;
         }
 
         .loseta-title {
             text-align: center;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #d4af37;
             font-size: 1.4rem;
+            text-shadow: 1px 1px 2px #000;
         }
 
         .matriz {
@@ -166,23 +185,23 @@
             position: relative;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .casilla:hover {
             transform: scale(1.02);
             z-index: 1;
             background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
         }
 
         .casilla.invalida {
-            background: rgba(0, 0, 0, 0.05);
-            border: 1px dashed rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
         }
 
         .casilla.ocupada {
-            background: rgba(231, 76, 60, 0.2);
+            background: rgba(231, 76, 60, 0.3);
         }
 
         .enemigo {
@@ -193,10 +212,10 @@
             color: white;
             font-weight: bold;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             animation: aparecer 0.5s ease-out;
             z-index: 2;
-            border: 2px solid rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 0, 0, 0.5);
             padding: 5px;
             box-sizing: border-box;
         }
@@ -227,18 +246,20 @@
         .info-panel {
             flex: 1;
             min-width: 300px;
-            background: #f9f9f9;
+            background: rgba(60, 60, 60, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #5D4037;
         }
 
         .info-panel h3 {
-            color: #2c3e50;
+            color: #d4af37;
             margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #8B4513;
             text-align: center;
+            text-shadow: 1px 1px 2px #000;
         }
 
         #enemigos-lista {
@@ -250,11 +271,12 @@
         .enemigo-item {
             padding: 12px;
             margin-bottom: 12px;
-            background: white;
+            background: rgba(40, 40, 40, 0.8);
             border-left: 5px solid #e74c3c;
             border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s;
+            color: #fff;
         }
 
         .enemigo-item:hover {
@@ -262,28 +284,30 @@
         }
 
         .enemigo-item strong {
-            color: #2c3e50;
+            color: #d4af37;
             display: block;
             margin-bottom: 5px;
         }
 
         .tirada-info {
-            background: #e8f4fc;
+            background: rgba(52, 152, 219, 0.2);
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
             border-left: 4px solid #3498db;
+            color: #fff;
         }
 
         .stats {
             display: flex;
             justify-content: space-around;
-            background: #34495e;
+            background: rgba(52, 73, 94, 0.8);
             color: white;
             padding: 15px;
             border-radius: 8px;
             margin-top: 20px;
             text-align: center;
+            border: 1px solid #5D4037;
         }
 
         .stat-item {
@@ -294,6 +318,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             display: block;
+            color: #d4af37;
         }
 
         .stat-label {
@@ -310,8 +335,12 @@
                 flex-direction: column;
             }
             
-            button {
+            .btn-container {
                 align-self: stretch;
+            }
+            
+            .btn {
+                width: 100%;
             }
         }
 
@@ -326,7 +355,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Generador de Enemigos en Losetas</h1>
+            <div class="titulo-container"></div>
             <p class="subtitle">Selecciona el nivel de héroes, tipo de enemigos y una loseta</p>
         </header>
         
@@ -362,7 +391,9 @@
                 </select>
             </div>
             
-            <button id="generar-btn">Generar Enemigos</button>
+            <div class="btn-container">
+                <button id="generar-btn" class="btn"></button>
+            </div>
         </div>
         
         <div class="visualization">
@@ -927,28 +958,29 @@
                     const cellWidth = matrizContainer.offsetWidth / losetaSeleccionada.matriz[0].length;
                     const cellHeight = matrizContainer.offsetHeight / losetaSeleccionada.matriz.length;
                     
-                    enemigoElement.style.width = `${dimensiones.ancho * cellWidth - 4}px`;
-                    enemigoElement.style.height = `${dimensiones.alto * cellHeight - 4}px`;
-                    enemigoElement.style.left = `${columna * cellWidth + 2}px`;
-                    enemigoElement.style.top = `${fila * cellHeight + 2}px`;
+                    enemigoElement.style.width = `${cellWidth * dimensiones.ancho - 10}px`;
+                    enemigoElement.style.height = `${cellHeight * dimensiones.alto - 10}px`;
+                    enemigoElement.style.left = `${columna * cellWidth + 5}px`;
+                    enemigoElement.style.top = `${fila * cellHeight + 5}px`;
                     
-                    // Usar iniciales para mostrar en el rectángulo
-                    const iniciales = enemigo.nombre.split(' ').map(p => p[0]).join('').toUpperCase().substring(0, 3);
-                    enemigoElement.textContent = iniciales;
+                    // Añadir nombre abreviado si es necesario
+                    let nombreMostrar = enemigo.nombre;
+                    if (nombreMostrar.length > 12) {
+                        nombreMostrar = nombreMostrar.substring(0, 10) + '...';
+                    }
+                    enemigoElement.textContent = nombreMostrar;
                     
+                    // Añadir a la matriz
                     matrizContainer.appendChild(enemigoElement);
                     
-                    // Guardar información del enemigo
+                    // Guardar enemigo para la lista
                     enemigosCargados.push({
+                        element: enemigoElement,
                         nombre: enemigo.nombre,
-                        nivel: enemigo.nivel,
                         tamano: enemigo.tamano,
+                        nivel: enemigo.nivel,
                         fila: fila,
-                        columna: columna,
-                        casillasOcupadas: dimensiones.casillas,
-                        ancho: dimensiones.ancho,
-                        alto: dimensiones.alto,
-                        descripcionCompleta: enemigo.descripcionCompleta
+                        columna: columna
                     });
                     
                     return true;
@@ -960,51 +992,68 @@
 
         // Mostrar lista de enemigos generados
         function mostrarListaEnemigos() {
-            const listaContainer = document.getElementById('enemigos-lista');
+            const lista = document.getElementById('enemigos-lista');
+            lista.innerHTML = '';
             
-            if (enemigosCargados.length === 0) {
-                listaContainer.innerHTML = '<p>No se generaron enemigos.</p>';
-                return;
-            }
-            
-            // Agrupar enemigos por tipo
-            const enemigosPorTipo = {};
+            // Agrupar enemigos por nombre
+            const enemigosAgrupados = {};
             enemigosCargados.forEach(enemigo => {
-                if (!enemigosPorTipo[enemigo.nombre]) {
-                    enemigosPorTipo[enemigo.nombre] = [];
+                if (!enemigosAgrupados[enemigo.nombre]) {
+                    enemigosAgrupados[enemigo.nombre] = {
+                        count: 0,
+                        tamano: enemigo.tamano,
+                        nivel: enemigo.nivel
+                    };
                 }
-                enemigosPorTipo[enemigo.nombre].push(enemigo);
+                enemigosAgrupados[enemigo.nombre].count++;
             });
             
-            // Crear HTML para cada tipo de enemigo
-            let html = '';
-            for (const tipo in enemigosPorTipo) {
-                const cantidad = enemigosPorTipo[tipo].length;
-                const primerEnemigo = enemigosPorTipo[tipo][0];
+            // Crear elementos para la lista
+            for (const nombre in enemigosAgrupados) {
+                const item = document.createElement('div');
+                item.className = 'enemigo-item';
                 
-                html += `
-                    <div class="enemigo-item">
-                        <strong>${tipo}</strong>
-                        <div>Cantidad: ${cantidad}</div>
-                        <div>Nivel: ${primerEnemigo.nivel}</div>
-                        <div>Tamaño: ${primerEnemigo.tamano}</div>
-                    </div>
+                const info = enemigosAgrupados[nombre];
+                item.innerHTML = `
+                    <strong>${nombre}</strong>
+                    <div>Cantidad: ${info.count}</div>
+                    <div>Tamaño: ${info.tamano}</div>
+                    <div>Nivel: ${info.nivel}</div>
                 `;
+                
+                lista.appendChild(item);
             }
-            
-            listaContainer.innerHTML = html;
         }
 
         // Actualizar estadísticas
         function actualizarEstadisticas() {
             const totalEnemigos = enemigosCargados.length;
-            const totalCasillas = document.querySelectorAll('.casilla:not(.invalida)').length;
-            const casillasOcupadas = document.querySelectorAll('.casilla.ocupada').length;
-            const porcentajeOcupacion = Math.round((casillasOcupadas / totalCasillas) * 100);
+            const nivelPromedio = nivelHeroes;
             
+            // Calcular porcentaje de casillas ocupadas
+            const totalCasillas = losetaSeleccionada.matriz.length * losetaSeleccionada.matriz[0].length;
+            let casillasValidas = 0;
+            let casillasOcupadas = 0;
+            
+            for (let i = 0; i < losetaSeleccionada.matriz.length; i++) {
+                for (let j = 0; j < losetaSeleccionada.matriz[0].length; j++) {
+                    if (losetaSeleccionada.matriz[i][j] === 1) {
+                        casillasValidas++;
+                    }
+                }
+            }
+            
+            // Contar casillas ocupadas
+            document.querySelectorAll('.casilla.ocupada').forEach(() => {
+                casillasOcupadas++;
+            });
+            
+            const porcentajeOcupadas = casillasValidas > 0 ? Math.round((casillasOcupadas / casillasValidas) * 100) : 0;
+            
+            // Actualizar UI
             document.getElementById('total-enemigos').textContent = totalEnemigos;
-            document.getElementById('nivel-promedio').textContent = nivelHeroes;
-            document.getElementById('casillas-ocupadas').textContent = `${porcentajeOcupacion}%`;
+            document.getElementById('nivel-promedio').textContent = nivelPromedio;
+            document.getElementById('casillas-ocupadas').textContent = `${porcentajeOcupadas}%`;
         }
     </script>
 </body>
