@@ -298,9 +298,10 @@
             color: #fff;
         }
 
-        .stats {
+        /* ESTILOS PARA EL CONTADOR DE VISITAS */
+        .visitas-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             background: rgba(52, 73, 94, 0.8);
             color: white;
             padding: 15px;
@@ -310,18 +311,20 @@
             border: 1px solid #5D4037;
         }
 
-        .stat-item {
-            flex: 1;
+        .visitas-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .stat-value {
+        .visitas-value {
             font-size: 1.8rem;
             font-weight: bold;
             display: block;
             color: #d4af37;
         }
 
-        .stat-label {
+        .visitas-label {
             font-size: 0.9rem;
             opacity: 0.8;
         }
@@ -412,18 +415,11 @@
             </div>
         </div>
         
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-value" id="total-enemigos">0</span>
-                <span class="stat-label">Total Enemigos</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value" id="nivel-promedio">0</span>
-                <span class="stat-label">Nivel Promedio</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value" id="casillas-ocupadas">0%</span>
-                <span class="stat-label">Casillas Ocupadas</span>
+        <!-- CONTADOR DE VISITAS (reemplaza la sección de estadísticas) -->
+        <div class="visitas-container">
+            <div class="visitas-item">
+                <span class="visitas-value" id="contador-visitas">0</span>
+                <span class="visitas-label">Visitas a esta página</span>
             </div>
         </div>
         
@@ -448,12 +444,29 @@
             cargarTiposEnemigos();
             cargarLosetas();
             
+            // Inicializar contador de visitas
+            actualizarContadorVisitas();
+            
             document.getElementById('nivel-heroes').addEventListener('change', (e) => {
                 nivelHeroes = parseInt(e.target.value) || 0;
             });
             
             document.getElementById('generar-btn').addEventListener('click', generarEnemigos);
         });
+
+        // Función para actualizar el contador de visitas
+        function actualizarContadorVisitas() {
+            let visitas = localStorage.getItem('visitasPagina');
+            
+            if (visitas) {
+                visitas = parseInt(visitas) + 1;
+            } else {
+                visitas = 1;
+            }
+            
+            localStorage.setItem('visitasPagina', visitas);
+            document.getElementById('contador-visitas').textContent = visitas;
+        }
 
         // Cargar tamaños de monstruos
         async function cargarTamanosMonstruos() {
@@ -920,7 +933,6 @@
             
             // Mostrar lista de enemigos
             mostrarListaEnemigos();
-            actualizarEstadisticas();
         }
 
         // Colocar enemigo en una casilla válida aleatoria
@@ -1031,37 +1043,6 @@
                 
                 lista.appendChild(item);
             }
-        }
-
-        // Actualizar estadísticas
-        function actualizarEstadisticas() {
-            const totalEnemigos = enemigosCargados.length;
-            const nivelPromedio = nivelHeroes;
-            
-            // Calcular porcentaje de casillas ocupadas
-            const totalCasillas = losetaSeleccionada.matriz.length * losetaSeleccionada.matriz[0].length;
-            let casillasValidas = 0;
-            let casillasOcupadas = 0;
-            
-            for (let i = 0; i < losetaSeleccionada.matriz.length; i++) {
-                for (let j = 0; j < losetaSeleccionada.matriz[0].length; j++) {
-                    if (losetaSeleccionada.matriz[i][j] === 1) {
-                        casillasValidas++;
-                    }
-                }
-            }
-            
-            // Contar casillas ocupadas
-            document.querySelectorAll('.casilla.ocupada').forEach(() => {
-                casillasOcupadas++;
-            });
-            
-            const porcentajeOcupadas = casillasValidas > 0 ? Math.round((casillasOcupadas / casillasValidas) * 100) : 0;
-            
-            // Actualizar UI
-            document.getElementById('total-enemigos').textContent = totalEnemigos;
-            document.getElementById('nivel-promedio').textContent = nivelPromedio;
-            document.getElementById('casillas-ocupadas').textContent = `${porcentajeOcupadas}%`;
         }
     </script>
 </body>
