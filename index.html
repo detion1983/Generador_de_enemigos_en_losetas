@@ -476,18 +476,26 @@
 
         // Obtener el tamaño de un monstruo por su nombre
         function obtenerTamanoMonstruo(nombre) {
-            // Buscar coincidencia exacta
-            if (tamanosMonstruos[nombre]) {
-                return tamanosMonstruos[nombre];
+            // Normalizar nombre: convertir a singular (eliminar 's' final si existe)
+            let nombreNormalizado = nombre.trim();
+                
+            // Si termina con 's' y tiene más de 5 caracteres, quitarla para buscar en singular
+            if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
+                    nombreNormalizado = nombreNormalizado.slice(0, -1);
             }
-            
+                
+            // Buscar coincidencia exacta con nombre normalizado
+            if (tamanosMonstruos[nombreNormalizado]) {
+                    return tamanosMonstruos[nombreNormalizado];
+             }
+                
             // Buscar coincidencias parciales
             for (const key in tamanosMonstruos) {
-                if (nombre.includes(key) || key.includes(nombre)) {
+                if (nombre.includes(key) || key.includes(nombreNormalizado)) {
                     return tamanosMonstruos[key];
                 }
             }
-            
+                
             // Si no se encuentra, devolver NORMAL por defecto
             return "NORMAL";
         }
