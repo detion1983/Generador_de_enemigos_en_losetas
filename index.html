@@ -218,22 +218,22 @@
             border: 2px solid rgba(0, 0, 0, 0.5);
             padding: 5px;
             box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .enemigo.normal {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
             border-radius: 8px;
             font-size: 14px;
         }
 
         .enemigo.enorme {
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
             border-radius: 10px;
             font-size: 16px;
         }
 
         .enemigo.extraenorme {
-            background: linear-gradient(135deg, #34495e, #2c3e50);
             border-radius: 12px;
             font-size: 18px;
         }
@@ -433,6 +433,7 @@
         let enemigosData = {};
         let losetasData = {};
         let tamanosMonstruos = {};
+        let monstruosImagenes = {}; // Nueva variable para almacenar las imágenes
         let enemigosCargados = [];
         let losetaSeleccionada = null;
         let nivelHeroes = 0;
@@ -441,6 +442,7 @@
         // Cargar datos iniciales
         document.addEventListener('DOMContentLoaded', async () => {
             await cargarTamanosMonstruos();
+            await cargarMonstruosImagenes(); // Nueva función para cargar imágenes
             cargarTiposEnemigos();
             cargarLosetas();
             
@@ -466,6 +468,73 @@
             
             localStorage.setItem('visitasPagina', visitas);
             document.getElementById('contador-visitas').textContent = visitas;
+        }
+
+        // Función para cargar las imágenes de monstruos
+        async function cargarMonstruosImagenes() {
+            try {
+                const ruta = isGitHubPages ? 'data/monstruos-imagenes.json' : 'data\\monstruos-imagenes.json';
+                const response = await fetch(ruta);
+                
+                if (!response.ok) {
+                    throw new Error(`Error al cargar monstruos-imagenes.json: ${response.status}`);
+                }
+                
+                monstruosImagenes = await response.json();
+                console.log('Imágenes de monstruos cargadas:', monstruosImagenes);
+            } catch (error) {
+                console.error('Error cargando imágenes de monstruos:', error);
+                // Inicializar objeto vacío si hay error
+                monstruosImagenes = { mapeo_imagenes: {}, plurales: {} };
+            }
+        }
+
+        // Función para obtener la imagen de un token según el nombre del monstruo
+        function obtenerImagenToken(nombre) {
+            if (!monstruosImagenes.mapeo_imagenes) {
+                return 'images/tokens/default.png'; // Imagen por defecto
+            }
+                
+            // Primero, convertir a minúsculas, limpiar el nombre y normalizar tildes
+            let nombreLimpio = nombre.toLowerCase().trim()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Eliminar tildes
+                
+            // Si el nombre contiene un número al inicio, eliminarlo (ej: "2 lobos temibles" -> "lobos temibles")
+            nombreLimpio = nombreLimpio.replace(/^\d+\s+/, '');
+                
+            // Buscar si el nombre está en el diccionario de plurales
+            if (monstruosImagenes.plurales) {
+                for (const [plural, singular] of Object.entries(monstruosImagenes.plurales)) {
+                    const pluralLimpio = plural.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                    if (nombreLimpio === pluralLimpio) {
+                        nombreLimpio = singular.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        break;
+                    }
+                }
+            }
+                
+            // Si no se encontró en el diccionario, aplicar reglas generales
+            if (nombreLimpio.endsWith('es')) {
+                nombreLimpio = nombreLimpio.slice(0, -2);
+            } else if (nombreLimpio.endsWith('s')) {
+                nombreLimpio = nombreLimpio.slice(0, -1);
+            }
+                
+            // Obtener todas las claves y ordenarlas de más largas a más cortas
+            // Esto asegura que "goblin chamán" se busque antes que "goblin"
+            const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
+                .sort((a, b) => b.length - a.length);
+                
+            // Buscar coincidencia en el mapeo (empezando por las claves más largas)
+            for (const clave of clavesOrdenadas) {
+                const claveLimpia = clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                if (nombreLimpio.includes(claveLimpia)) {
+                    return `images/tokens/${monstruosImagenes.mapeo_imagenes[clave]}`;
+                }
+            }
+                
+            // Imagen por defecto si no se encuentra coincidencia
+            return 'images/tokens/default.png';
         }
 
         // Cargar tamaños de monstruos
@@ -494,13 +563,13 @@
                 
             // Si termina con 's' y tiene más de 5 caracteres, quitarla para buscar en singular
             if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
-                    nombreNormalizado = nombreNormalizado.slice(0, -1);
+                nombreNormalizado = nombreNormalizado.slice(0, -1);
             }
                 
             // Buscar coincidencia exacta con nombre normalizado
             if (tamanosMonstruos[nombreNormalizado]) {
-                    return tamanosMonstruos[nombreNormalizado];
-             }
+                return tamanosMonstruos[nombreNormalizado];
+            }
                 
             // Buscar coincidencias parciales
             for (const key in tamanosMonstruos) {
@@ -876,173 +945,203 @@
             return enemigos;
         }
 
-        // Generar enemigos basados en las probabilidades
+        // Función principal para generar enemigos
         function generarEnemigos() {
-            if (!enemigosData.encuentros || !losetaSeleccionada || nivelHeroes < 1) {
-                alert('Por favor, selecciona nivel de héroes, tipo de enemigos y loseta.');
+            // Validaciones
+            if (nivelHeroes < 1) {
+                alert('Por favor, selecciona un nivel de héroes.');
+                return;
+            }
+            
+            if (!enemigosData.encuentros) {
+                alert('Por favor, selecciona un tipo de enemigos.');
+                return;
+            }
+            
+            if (!losetaSeleccionada) {
+                alert('Por favor, selecciona una loseta.');
                 return;
             }
             
             // Limpiar enemigos anteriores
-            document.querySelectorAll('.enemigo').forEach(el => el.remove());
-            document.querySelectorAll('.casilla.ocupada').forEach(el => el.classList.remove('ocupada'));
-            document.getElementById('enemigos-lista').innerHTML = '';
-            enemigosCargados = [];
+            limpiarEnemigosAnteriores();
             
-            // Realizar tirada según nivel de héroes
+            // Calcular tirada
             const tirada = calcularTirada();
+            
+            // Encontrar encuentro
             const encuentro = encontrarEncuentroPorTirada(tirada.total);
             
             if (!encuentro) {
-                alert('No se pudo encontrar un encuentro para la tirada realizada.');
+                alert('No se encontró un encuentro para la tirada ' + tirada.total);
                 return;
             }
             
             // Mostrar información de la tirada
             document.getElementById('tirada-info').style.display = 'block';
-            document.getElementById('tirada-detalle').innerHTML = `
-                Nivel héroes: ${nivelHeroes}<br>
-                Tirada D20: ${tirada.dado}<br>
-                Modificador: +${tirada.modificador}<br>
-                <strong>Total: ${tirada.total}</strong><br>
-                Encuentro: ${encuentro.descripcion}
-            `;
+            document.getElementById('tirada-detalle').textContent = 
+                `Dado: ${tirada.dado} + Modificador (Nivel ${nivelHeroes}): ${tirada.modificador} = Total: ${tirada.total}`;
             
-            // Procesar la descripción del encuentro para obtener enemigos
-            const enemigos = procesarDescripcionEncuentro(encuentro.descripcion);
+            // Procesar descripción del encuentro
+            enemigosCargados = procesarDescripcionEncuentro(encuentro.descripcion);
             
-            if (enemigos.length === 0) {
-                alert('No se pudieron procesar los enemigos de este encuentro.');
-                return;
-            }
+            // Mostrar enemigos en la lista
+            mostrarEnemigosLista(enemigosCargados);
             
-            // Ordenar enemigos por tamaño (los más grandes primero)
-            enemigos.sort((a, b) => {
-                const sizeOrder = { 'NORMAL': 1, 'ENORME': 2, 'EXTRAENORME': 3 };
-                return sizeOrder[b.tamano] - sizeOrder[a.tamano];
-            });
-            
-            // Colocar enemigos
-            for (const enemigo of enemigos) {
-                const colocado = colocarEnemigo(enemigo);
-                if (!colocado) {
-                    console.warn('No se pudo colocar el enemigo:', enemigo.nombre);
-                    // Continuar intentando con los demás enemigos
-                }
-            }
-            
-            // Mostrar lista de enemigos
-            mostrarListaEnemigos();
+            // Colocar enemigos en la loseta
+            colocarEnemigosEnLoseta(enemigosCargados);
         }
 
-        // Colocar enemigo en una casilla válida aleatoria
-        function colocarEnemigo(enemigo) {
+        // Limpiar enemigos anteriores
+        function limpiarEnemigosAnteriores() {
+            // Remover elementos enemigo del DOM
+            document.querySelectorAll('.enemigo').forEach(el => el.remove());
+            
+            // Limpiar clases ocupadas
+            document.querySelectorAll('.casilla.ocupada').forEach(el => {
+                el.classList.remove('ocupada');
+            });
+            
+            // Limpiar lista de enemigos
+            document.getElementById('enemigos-lista').innerHTML = '';
+            enemigosCargados = [];
+        }
+
+        // Mostrar enemigos en la lista
+        function mostrarEnemigosLista(enemigos) {
+            const lista = document.getElementById('enemigos-lista');
+            lista.innerHTML = '';
+            
+            // Agrupar enemigos por tipo para mostrar más limpio
+            const enemigosAgrupados = {};
+            
+            enemigos.forEach(enemigo => {
+                if (!enemigosAgrupados[enemigo.nombre]) {
+                    enemigosAgrupados[enemigo.nombre] = {
+                        cantidad: 0,
+                        tamano: enemigo.tamano,
+                        descripcion: enemigo.descripcionCompleta
+                    };
+                }
+                enemigosAgrupados[enemigo.nombre].cantidad++;
+            });
+            
+            // Crear elementos para cada tipo de enemigo
+            for (const [nombre, info] of Object.entries(enemigosAgrupados)) {
+                const item = document.createElement('div');
+                item.className = 'enemigo-item';
+                
+                item.innerHTML = `
+                    <strong>${info.cantidad}x ${nombre}</strong>
+                    <div>Tamaño: ${info.tamano}</div>
+                    <div>Nivel: ${nivelHeroes}</div>
+                `;
+                
+                lista.appendChild(item);
+            }
+        }
+
+        // Colocar enemigos en la loseta
+        function colocarEnemigosEnLoseta(enemigos) {
+            // Primero, ordenar enemigos por tamaño (más grandes primero)
+            enemigos.sort((a, b) => {
+                const tamanoA = obtenerDimensionesEnemigo(a.tamano).casillas;
+                const tamanoB = obtenerDimensionesEnemigo(b.tamano).casillas;
+                return tamanoB - tamanoA;
+            });
+            
             // Encontrar todas las casillas válidas y disponibles
             const casillasValidas = [];
             const casillas = document.querySelectorAll('.casilla:not(.invalida):not(.ocupada)');
             
             casillas.forEach(casilla => {
-                casillasValidas.push(casilla);
+                casillasValidas.push({
+                    elemento: casilla,
+                    fila: parseInt(casilla.dataset.fila),
+                    columna: parseInt(casilla.dataset.columna)
+                });
             });
             
-            if (casillasValidas.length === 0) {
-                console.warn('No hay casillas disponibles para colocar enemigos');
-                return false;
-            }
-            
-            // Mezclar casillas para obtener una posición aleatoria
+            // Mezclar casillas válidas para colocación aleatoria
             for (let i = casillasValidas.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [casillasValidas[i], casillasValidas[j]] = [casillasValidas[j], casillasValidas[i]];
             }
             
-            // Intentar colocar el enemigo
-            for (const casilla of casillasValidas) {
-                const fila = parseInt(casilla.dataset.fila);
-                const columna = parseInt(casilla.dataset.columna);
+            // Intentar colocar cada enemigo
+            const enemigosNoColocados = [];
+            
+            for (const enemigo of enemigos) {
+                let colocado = false;
                 
-                if (areaDisponible(fila, columna, enemigo.tamano)) {
-                    // Marcar área como ocupada
-                    marcarAreaOcupada(fila, columna, enemigo.tamano);
-                    
-                    // Obtener dimensiones
-                    const dimensiones = obtenerDimensionesEnemigo(enemigo.tamano);
-                    
-                    // Crear elemento visual para el enemigo
-                    const enemigoElement = document.createElement('div');
-                    enemigoElement.className = `enemigo ${enemigo.tamano.toLowerCase()}`;
-                    enemigoElement.title = `${enemigo.nombre} (${enemigo.tamano})`;
-                    
-                    // Calcular posición y tamaño
-                    const matrizContainer = document.getElementById('matriz-loseta');
-                    const cellWidth = matrizContainer.offsetWidth / losetaSeleccionada.matriz[0].length;
-                    const cellHeight = matrizContainer.offsetHeight / losetaSeleccionada.matriz.length;
-                    
-                    enemigoElement.style.width = `${cellWidth * dimensiones.ancho - 10}px`;
-                    enemigoElement.style.height = `${cellHeight * dimensiones.alto - 10}px`;
-                    enemigoElement.style.left = `${columna * cellWidth + 5}px`;
-                    enemigoElement.style.top = `${fila * cellHeight + 5}px`;
-                    
-                    // Añadir nombre abreviado si es necesario
-                    let nombreMostrar = enemigo.nombre;
-                    if (nombreMostrar.length > 12) {
-                        nombreMostrar = nombreMostrar.substring(0, 10) + '...';
+                for (const casilla of casillasValidas) {
+                    if (!casilla.elemento.classList.contains('ocupada') && 
+                        areaDisponible(casilla.fila, casilla.columna, enemigo.tamano)) {
+                        
+                        // Colocar el enemigo
+                        colocarEnemigo(casilla.fila, casilla.columna, enemigo);
+                        marcarAreaOcupada(casilla.fila, casilla.columna, enemigo.tamano);
+                        colocado = true;
+                        break;
                     }
-                    enemigoElement.textContent = nombreMostrar;
-                    
-                    // Añadir a la matriz
-                    matrizContainer.appendChild(enemigoElement);
-                    
-                    // Guardar enemigo para la lista
-                    enemigosCargados.push({
-                        element: enemigoElement,
-                        nombre: enemigo.nombre,
-                        tamano: enemigo.tamano,
-                        nivel: enemigo.nivel,
-                        fila: fila,
-                        columna: columna
-                    });
-                    
-                    return true;
+                }
+                
+                if (!colocado) {
+                    enemigosNoColocados.push(enemigo);
                 }
             }
             
-            return false;
+            // Mostrar advertencia si no se pudieron colocar todos los enemigos
+            if (enemigosNoColocados.length > 0) {
+                console.warn('No se pudieron colocar todos los enemigos:', enemigosNoColocados);
+                
+                // Agrupar enemigos no colocados para el mensaje
+                const noColocadosAgrupados = {};
+                enemigosNoColocados.forEach(e => {
+                    noColocadosAgrupados[e.nombre] = (noColocadosAgrupados[e.nombre] || 0) + 1;
+                });
+                
+                const mensaje = Object.entries(noColocadosAgrupados)
+                    .map(([nombre, cantidad]) => `${cantidad}x ${nombre}`)
+                    .join(', ');
+                
+                alert(`No hay suficiente espacio para colocar: ${mensaje}`);
+            }
         }
 
-        // Mostrar lista de enemigos generados
-        function mostrarListaEnemigos() {
-            const lista = document.getElementById('enemigos-lista');
-            lista.innerHTML = '';
+        // Colocar un enemigo específico en la posición dada
+        function colocarEnemigo(fila, columna, enemigo) {
+            const matrizContainer = document.getElementById('matriz-loseta');
+            const dimensiones = obtenerDimensionesEnemigo(enemigo.tamano);
             
-            // Agrupar enemigos por nombre
-            const enemigosAgrupados = {};
-            enemigosCargados.forEach(enemigo => {
-                if (!enemigosAgrupados[enemigo.nombre]) {
-                    enemigosAgrupados[enemigo.nombre] = {
-                        count: 0,
-                        tamano: enemigo.tamano,
-                        nivel: enemigo.nivel
-                    };
-                }
-                enemigosAgrupados[enemigo.nombre].count++;
+            // Crear elemento enemigo
+            const enemigoElement = document.createElement('div');
+            enemigoElement.className = `enemigo ${enemigo.tamano.toLowerCase()}`;
+            
+            // Obtener la imagen del token
+            const imagenToken = obtenerImagenToken(enemigo.nombre);
+            
+            // Establecer estilos según el tamaño
+            enemigoElement.style.width = `calc(${dimensiones.ancho} * (100% / ${losetaSeleccionada.matriz[0].length}) - 4px)`;
+            enemigoElement.style.height = `calc(${dimensiones.alto} * (100% / ${losetaSeleccionada.matriz.length}) - 4px)`;
+            enemigoElement.style.left = `calc(${columna} * (100% / ${losetaSeleccionada.matriz[0].length}))`;
+            enemigoElement.style.top = `calc(${fila} * (100% / ${losetaSeleccionada.matriz.length}))`;
+            enemigoElement.style.position = 'absolute';
+            enemigoElement.style.backgroundImage = `url(${imagenToken})`;
+            enemigoElement.style.backgroundSize = 'cover';
+            enemigoElement.style.backgroundPosition = 'center';
+            enemigoElement.title = enemigo.nombre;
+            
+            // Añadir tooltip con información
+            enemigoElement.dataset.tooltip = `${enemigo.nombre} (${enemigo.tamano})`;
+            
+            // Añadir evento para mostrar información al pasar el mouse
+            enemigoElement.addEventListener('mouseenter', () => {
+                // Podrías añadir un tooltip o información adicional aquí
+                console.log(enemigoElement.dataset.tooltip);
             });
             
-            // Crear elementos para la lista
-            for (const nombre in enemigosAgrupados) {
-                const item = document.createElement('div');
-                item.className = 'enemigo-item';
-                
-                const info = enemigosAgrupados[nombre];
-                item.innerHTML = `
-                    <strong>${nombre}</strong>
-                    <div>Cantidad: ${info.count}</div>
-                    <div>Tamaño: ${info.tamano}</div>
-                    <div>Nivel: ${info.nivel}</div>
-                `;
-                
-                lista.appendChild(item);
-            }
+            matrizContainer.appendChild(enemigoElement);
         }
     </script>
 </body>
