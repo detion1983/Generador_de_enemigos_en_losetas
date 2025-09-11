@@ -488,16 +488,20 @@
                 monstruosImagenes = { mapeo_imagenes: {}, plurales: {} };
             }
         }
-
-        // Función para obtener la imagen de un token según el nombre del monstruo
+    
         function obtenerImagenToken(nombre) {
+            console.log("Buscando imagen para:", nombre);
+            
             if (!monstruosImagenes.mapeo_imagenes) {
-                return 'images/tokens/default.png'; // Imagen por defecto
+                console.warn("mapeo_imagenes no está definido");
+                return 'images/tokens/default.png';
             }
                 
             // Primero, convertir a minúsculas, limpiar el nombre y normalizar tildes
             let nombreLimpio = nombre.toLowerCase().trim()
                 .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Eliminar tildes
+                
+            console.log("Nombre limpio:", nombreLimpio);
                 
             // Si el nombre contiene un número al inicio, eliminarlo (ej: "2 lobos temibles" -> "lobos temibles")
             nombreLimpio = nombreLimpio.replace(/^\d+\s+/, '');
@@ -508,6 +512,7 @@
                     const pluralLimpio = plural.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                     if (nombreLimpio === pluralLimpio) {
                         nombreLimpio = singular.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        console.log("Convertido a singular:", nombreLimpio);
                         break;
                     }
                 }
@@ -516,12 +521,13 @@
             // Si no se encontró en el diccionario, aplicar reglas generales
             if (nombreLimpio.endsWith('es')) {
                 nombreLimpio = nombreLimpio.slice(0, -2);
+                console.log("Removido 'es':", nombreLimpio);
             } else if (nombreLimpio.endsWith('s')) {
                 nombreLimpio = nombreLimpio.slice(0, -1);
+                console.log("Removido 's':", nombreLimpio);
             }
                 
             // Obtener todas las claves y ordenarlas de más largas a más cortas
-            // Esto asegura que "goblin chamán" se busque antes que "goblin"
             const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
                 .sort((a, b) => b.length - a.length);
                 
@@ -529,11 +535,14 @@
             for (const clave of clavesOrdenadas) {
                 const claveLimpia = clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                 if (nombreLimpio.includes(claveLimpia)) {
-                    return `images/tokens/${monstruosImagenes.mapeo_imagenes[clave]}`;
+                    const imagenEncontrada = `images/tokens/${monstruosImagenes.mapeo_imagenes[clave]}`;
+                    console.log("Imagen encontrada:", imagenEncontrada);
+                    return imagenEncontrada;
                 }
             }
                 
             // Imagen por defecto si no se encuentra coincidencia
+            console.warn("No se encontró imagen para:", nombre);
             return 'images/tokens/default.png';
         }
 
@@ -878,6 +887,7 @@
         }
 
         
+        
         // Función mejorada para procesar descripción de encuentro
         function procesarDescripcionEncuentro(descripcion) {
             const enemigos = [];
@@ -887,7 +897,6 @@
             
             for (const partePrincipal of partesPrincipales) {
                 // Para cada parte principal, buscar expresiones de dados
-                // Modificado: capturar 2 caracteres más después de "Armadura"
                 const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s+y\s+|$))/g;
                 
                 let match;
@@ -897,6 +906,11 @@
                     
                     // Limpiar posibles conectores al final
                     nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|$)\s*$/, '');
+                    
+                    // Caso especial para "Hombres Bestia" - convertirlo a singular
+                    if (nombreEnemigo.includes("Hombres Bestia")) {
+                        nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+                    }
                     
                     // Capturar 2 caracteres más si termina con "Armadura"
                     if (nombreEnemigo.includes("Armadura") && !nombreEnemigo.match(/Armadura\s+\d+/)) {
@@ -931,6 +945,11 @@
                         let nombreEnemigo = matchNumeroSimple[2].trim();
                         const tamano = obtenerTamanoMonstruo(nombreEnemigo);
                         
+                        // Caso especial para "Hombres Bestia"
+                        if (nombreEnemigo.includes("Hombres Bestia")) {
+                            nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+                        }
+                        
                         // Capturar 2 caracteres más si termina con "Armadura"
                         if (nombreEnemigo.includes("Armadura") && !nombreEnemigo.match(/Armadura\s+\d+/)) {
                             const remainingText = partePrincipal.substr(matchNumeroSimple[0].length);
@@ -953,6 +972,11 @@
                         let nombreEnemigo = partePrincipal.trim();
                         const tamano = obtenerTamanoMonstruo(nombreEnemigo);
                         
+                        // Caso especial para "Hombres Bestia"
+                        if (nombreEnemigo.includes("Hombres Bestia")) {
+                            nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+                        }
+                        
                         enemigos.push({
                             nombre: nombreEnemigo,
                             descripcionCompleta: partePrincipal.trim(),
@@ -963,9 +987,9 @@
                 }
             }
             
-            return enemigos;
-        }        
-        
+            return enemigos;    
+        }
+
         // Función principal para generar enemigos
         function generarEnemigos() {
             // Validaciones
