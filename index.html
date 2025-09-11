@@ -877,6 +877,7 @@
             return cantidad;
         }
 
+        
         // Función mejorada para procesar descripción de encuentro
         function procesarDescripcionEncuentro(descripcion) {
             const enemigos = [];
@@ -886,7 +887,8 @@
             
             for (const partePrincipal of partesPrincipales) {
                 // Para cada parte principal, buscar expresiones de dados
-                const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s*y\s+|$))/g;
+                // Modificado: capturar 2 caracteres más después de "Armadura"
+                const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s+y\s+|$))/g;
                 
                 let match;
                 while ((match = patronDadosGlobal.exec(partePrincipal)) !== null) {
@@ -895,6 +897,14 @@
                     
                     // Limpiar posibles conectores al final
                     nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|$)\s*$/, '');
+                    
+                    // Capturar 2 caracteres más si termina con "Armadura"
+                    if (nombreEnemigo.includes("Armadura") && !nombreEnemigo.match(/Armadura\s+\d+/)) {
+                        const matchArmaduraExtra = partePrincipal.substr(match.index + match[0].length, 3);
+                        if (matchArmaduraExtra) {
+                            nombreEnemigo += matchArmaduraExtra;
+                        }
+                    }
                     
                     if (nombreEnemigo && nombreEnemigo.length > 1) {
                         const cantidad = procesarExpresionDados(expresion);
@@ -918,8 +928,17 @@
                     const matchNumeroSimple = partePrincipal.match(/^(\d+)\s+(.+)$/);
                     if (matchNumeroSimple) {
                         const cantidad = parseInt(matchNumeroSimple[1]);
-                        const nombreEnemigo = matchNumeroSimple[2].trim();
+                        let nombreEnemigo = matchNumeroSimple[2].trim();
                         const tamano = obtenerTamanoMonstruo(nombreEnemigo);
+                        
+                        // Capturar 2 caracteres más si termina con "Armadura"
+                        if (nombreEnemigo.includes("Armadura") && !nombreEnemigo.match(/Armadura\s+\d+/)) {
+                            const remainingText = partePrincipal.substr(matchNumeroSimple[0].length);
+                            const matchArmaduraExtra = remainingText.substr(0, 3);
+                            if (matchArmaduraExtra) {
+                                nombreEnemigo += matchArmaduraExtra;
+                            }
+                        }
                         
                         for (let i = 0; i < cantidad; i++) {
                             enemigos.push({
@@ -931,9 +950,11 @@
                         }
                     } else {
                         // Si no hay número, asumir 1 enemigo
-                        const tamano = obtenerTamanoMonstruo(partePrincipal.trim());
+                        let nombreEnemigo = partePrincipal.trim();
+                        const tamano = obtenerTamanoMonstruo(nombreEnemigo);
+                        
                         enemigos.push({
-                            nombre: partePrincipal.trim(),
+                            nombre: nombreEnemigo,
                             descripcionCompleta: partePrincipal.trim(),
                             nivel: nivelHeroes,
                             tamano: tamano
@@ -943,8 +964,8 @@
             }
             
             return enemigos;
-        }
-
+        }        
+        
         // Función principal para generar enemigos
         function generarEnemigos() {
             // Validaciones
@@ -1040,7 +1061,7 @@
                 lista.appendChild(item);
             }
         }
-
+        
         // Colocar enemigos en la loseta
         function colocarEnemigosEnLoseta(enemigos) {
             // Primero, ordenar enemigos por tamaño (más grandes primero)
