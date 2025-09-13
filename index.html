@@ -576,11 +576,10 @@
                 alert('Error al cargar los tamaños de monstruos.');
             }
         }
-
         function obtenerTamanoMonstruo(nombre) {
             let nombreNormalizado = nombre.trim();
             
-            // 1. PRIMERO buscar coincidencia EXACTA
+            // 1. PRIMERO buscar coincidencia EXACTA (case-sensitive)
             if (tamanosMonstruos[nombreNormalizado]) {
                 return tamanosMonstruos[nombreNormalizado];
             }
@@ -593,16 +592,29 @@
                 }
             }
             
-            // 3. FINALMENTE buscar coincidencias parciales
+            // 3. Buscar coincidencias PARCIALES pero con PRIORIDAD de coincidencia más larga
+            let mejorCoincidencia = null;
+            let longitudMejorCoincidencia = 0;
+            
             for (const key in tamanosMonstruos) {
-                if (nombre.includes(key) || key.includes(nombreNormalizado)) {
-                    return tamanosMonstruos[key];
+                // Buscar si el nombre contiene la clave completa (coincidencia parcial)
+                if (nombreNormalizado.includes(key)) {
+                    // Priorizar la coincidencia MÁS LARGA
+                    if (key.length > longitudMejorCoincidencia) {
+                        mejorCoincidencia = key;
+                        longitudMejorCoincidencia = key.length;
+                    }
                 }
             }
             
+            if (mejorCoincidencia) {
+                return tamanosMonstruos[mejorCoincidencia];
+            }
+            
+            // 4. Valor por defecto
             return "NORMAL";
         }
-
+        
 
         // Cargar tipos de enemigos disponibles
         async function cargarTiposEnemigos() {
