@@ -186,6 +186,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
         }
 
         .casilla:hover {
@@ -221,6 +222,8 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            object-fit: cover;
+            overflow-y: hidden;
         }
 
         .enemigo.normal {
@@ -502,8 +505,8 @@
         }
     
        
-
         function obtenerImagenToken(nombre) {
+            console.log("=== BÚSQUEDA DE IMAGEN PARA:", nombre, "===");
             console.log("=== INICIANDO BÚSQUEDA DE IMAGEN ===");
             console.log("Nombre original:", nombre);
             
@@ -512,9 +515,8 @@
                 return 'images/tokens/default.png';
             }
             
-            // Primero, convertir a minúsculas, limpiar el nombre y normalizar tildes
             let nombreLimpio = nombre.toLowerCase().trim()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Eliminar tildes
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
                 
             console.log("Nombre limpio inicial:", nombreLimpio);
             
@@ -557,9 +559,9 @@
             
             console.log("❌ No hay coincidencia exacta. Buscando parcial...");
             
-            // 2. Buscar coincidencia PARCIAL
+            // 2. Buscar coincidencia PARCIAL con PRIORIDAD de coincidencia más larga
             const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
-                .sort((a, b) => b.length - a.length);
+                .sort((a, b) => b.length - a.length); // Ordenar de más largo a más corto
             
             for (const clave of clavesOrdenadas) {
                 const claveLimpia = clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -574,7 +576,7 @@
             console.log("Claves disponibles:", Object.keys(monstruosImagenes.mapeo_imagenes));
             return 'images/tokens/default.png';
         }
-
+        
 
         // Cargar tamaños de monstruos
         async function cargarTamanosMonstruos() {
@@ -605,20 +607,14 @@
                 return tamanosMonstruos[nombreNormalizado];
             }
             
-            // 2. Buscar coincidencia exacta singularizada
-            if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
-                const singular = nombreNormalizado.slice(0, -1);
-                if (tamanosMonstruos[singular]) {
-                    console.log("Tamaño encontrado (singularizado):", tamanosMonstruos[singular]);
-                    return tamanosMonstruos[singular];
-                }
-            }
-            
-            // 3. Buscar coincidencias PARCIALES pero con PRIORIDAD de coincidencia más larga
+            // 2. Buscar coincidencias PARCIALES con PRIORIDAD de coincidencia más larga
             let mejorCoincidencia = null;
             let longitudMejorCoincidencia = 0;
             
-            for (const key in tamanosMonstruos) {
+            // Ordenar claves de más larga a más corta para priorizar coincidencias específicas
+            const clavesOrdenadas = Object.keys(tamanosMonstruos).sort((a, b) => b.length - a.length);
+            
+            for (const key of clavesOrdenadas) {
                 // Buscar si el nombre contiene la clave completa (coincidencia parcial)
                 if (nombreNormalizado.includes(key)) {
                     // Priorizar la coincidencia MÁS LARGA
@@ -634,11 +630,19 @@
                 return tamanosMonstruos[mejorCoincidencia];
             }
             
+            // 3. Buscar coincidencia exacta singularizada (solo si no hay coincidencia parcial)
+            if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
+                const singular = nombreNormalizado.slice(0, -1);
+                if (tamanosMonstruos[singular]) {
+                    console.log("Tamaño encontrado (singularizado):", tamanosMonstruos[singular]);
+                    return tamanosMonstruos[singular];
+                }
+            }
+            
             // 4. Valor por defecto
             console.log("Tamaño por defecto: NORMAL");
             return "NORMAL";
-        }
-        
+        }  
 
         // Cargar tipos de enemigos disponibles
         async function cargarTiposEnemigos() {
@@ -935,8 +939,6 @@
             return cantidad;
         }
 
-        
-        
         // Función mejorada para procesar descripción de encuentro
         function procesarDescripcionEncuentro(descripcion) {
             const enemigos = [];
@@ -949,9 +951,8 @@
             for (const partePrincipal of partesPrincipales) {
                 console.log("Procesando parte:", partePrincipal);
                 
-                // Para cada parte principal, buscar expresiones de dados
-                // MEJORADA: Ahora captura mejor los nombres con "Armadura"
-                const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^0-9()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s+y\s+|Armadura\s*\d*|$))/gi;
+                // MEJORADO: Patrón que captura mejor nombres complejos como "Goblins de las cuevas"
+                const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^0-9()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s+y\s+|Armadura\s*\d*|con\s+[^0-9]|$))/gi;
                 
                 let match;
                 while ((match = patronDadosGlobal.exec(partePrincipal)) !== null) {
@@ -960,8 +961,8 @@
                     
                     console.log("Expresión:", expresion, "Nombre:", nombreEnemigo);
                     
-                    // Limpiar posibles conectores al final
-                    nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|$)\s*$/i, '');
+                    // Limpiar posibles conectores al final (MEJORADO)
+                    nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|Armadura\s*\d*|$)\s*$/i, '');
                     
                     // Caso especial para "Hombres Bestia" - convertirlo a singular
                     if (nombreEnemigo.includes("Hombres Bestia")) {
@@ -988,8 +989,8 @@
                 
                 // Si no encontramos patrones de dados pero la parte es significativa
                 if (enemigos.length === 0 && partePrincipal.trim().length > 2) {
-                    // Buscar si hay un número simple al inicio
-                    const matchNumeroSimple = partePrincipal.match(/^(\d+)\s+([^0-9]+?)(?=\s*(?:Armadura\s*\d*|$))/i);
+                    // Buscar si hay un número simple al inicio (MEJORADO)
+                    const matchNumeroSimple = partePrincipal.match(/^(\d+)\s+([^0-9]+?)(?=\s*(?:Armadura\s*\d*|con\s+[^0-9]|$))/i);
                     if (matchNumeroSimple) {
                         const cantidad = parseInt(matchNumeroSimple[1]);
                         let nombreEnemigo = matchNumeroSimple[2].trim();
@@ -1002,8 +1003,8 @@
                             nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
                         }
                         
-                        // Limpiar conectores al final
-                        nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|$)\s*$/i, '');
+                        // Limpiar conectores al final (MEJORADO)
+                        nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|Armadura\s*\d*|$)\s*$/i, '');
                         
                         for (let i = 0; i < cantidad; i++) {
                             enemigos.push({
@@ -1023,8 +1024,8 @@
                             nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
                         }
                         
-                        // Limpiar "Armadura X" del final
-                        nombreEnemigo = nombreEnemigo.replace(/\s*Armadura\s*\d*\s*$/i, '');
+                        // Limpiar "Armadura X" y otros conectores del final (MEJORADO)
+                        nombreEnemigo = nombreEnemigo.replace(/\s*(?:Armadura\s*\d*|con\s+[^0-9]|,|;|y|$)\s*$/i, '');
                         
                         enemigos.push({
                             nombre: nombreEnemigo,
@@ -1038,15 +1039,7 @@
             
             console.log("Enemigos procesados:", enemigos);
             return enemigos;    
-        }    
-
-
-
-
-
-
-
-
+        }
 
         // Función principal para generar enemigos
         function generarEnemigos() {
@@ -1231,8 +1224,9 @@
             enemigoElement.style.top = `calc(${fila} * (100% / ${losetaSeleccionada.matriz.length}))`;
             enemigoElement.style.position = 'absolute';
             enemigoElement.style.backgroundImage = `url(${imagenToken})`;
-            enemigoElement.style.backgroundSize = 'cover';
+            enemigoElement.style.backgroundSize = 'contain';
             enemigoElement.style.backgroundPosition = 'center';
+            enemigoElement.style.backgroundRepeat = 'no-repeat';
             enemigoElement.title = enemigo.nombre;
             
             // Añadir tooltip con información
