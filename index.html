@@ -52,7 +52,7 @@
 
         .titulo-container {
             width: 90%;
-            max-width: 5000px;
+            max-width: 2000px;
             height: 500px;
             margin: 0 auto 1px;
             background: url('images/interface/titulo_losetas.png') no-repeat center center;
@@ -144,7 +144,10 @@
 
         .loseta-container {
             flex: 2;
-            min-width: 300px;
+            min-width: 100px;
+            max-width: 1200px;
+            min-height: 100px;
+            max-height: 1200px;
             background: rgba(60, 60, 60, 0.1);
             padding: 20px;
             border-radius: 10px;
@@ -167,7 +170,7 @@
             background: transparent;
             padding: 8px;
             border-radius: 8px;
-            min-height: 350px;
+            /*min-height: 10px;*/
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -187,6 +190,7 @@
             transition: transform 0.2s;
             border: 1px solid rgba(255, 255, 255, 0.1);
             overflow: hidden;
+            background-size: contain;
         }
 
         .casilla:hover {
@@ -597,6 +601,7 @@
             }
         }
         
+        
         function obtenerTamanoMonstruo(nombre) {
             let nombreNormalizado = nombre.trim();
             console.log("Obteniendo tamaño para:", nombreNormalizado);
@@ -607,7 +612,33 @@
                 return tamanosMonstruos[nombreNormalizado];
             }
             
-            // 2. Buscar coincidencias PARCIALES con PRIORIDAD de coincidencia más larga
+            // 2. Buscar coincidencia exacta sin sensibilidad a mayúsculas
+            const claves = Object.keys(tamanosMonstruos);
+            for (const clave of claves) {
+                if (clave.toLowerCase() === nombreNormalizado.toLowerCase()) {
+                    console.log("Tamaño encontrado (exacto case-insensitive):", tamanosMonstruos[clave]);
+                    return tamanosMonstruos[clave];
+                }
+            }
+            
+            // 3. Buscar coincidencia exacta singularizada
+            if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
+                const singular = nombreNormalizado.slice(0, -1);
+                if (tamanosMonstruos[singular]) {
+                    console.log("Tamaño encontrado (singularizado):", tamanosMonstruos[singular]);
+                    return tamanosMonstruos[singular];
+                }
+                
+                // También probar sin sensibilidad a mayúsculas
+                for (const clave of claves) {
+                    if (clave.toLowerCase() === singular.toLowerCase()) {
+                        console.log("Tamaño encontrado (singularizado case-insensitive):", tamanosMonstruos[clave]);
+                        return tamanosMonstruos[clave];
+                    }
+                }
+            }
+            
+            // 4. SOLO AHORA buscar coincidencias PARCIALES con PRIORIDAD de coincidencia más larga
             let mejorCoincidencia = null;
             let longitudMejorCoincidencia = 0;
             
@@ -616,7 +647,7 @@
             
             for (const key of clavesOrdenadas) {
                 // Buscar si el nombre contiene la clave completa (coincidencia parcial)
-                if (nombreNormalizado.includes(key)) {
+                if (nombreNormalizado.toLowerCase().includes(key.toLowerCase())) {
                     // Priorizar la coincidencia MÁS LARGA
                     if (key.length > longitudMejorCoincidencia) {
                         mejorCoincidencia = key;
@@ -630,19 +661,31 @@
                 return tamanosMonstruos[mejorCoincidencia];
             }
             
-            // 3. Buscar coincidencia exacta singularizada (solo si no hay coincidencia parcial)
-            if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
-                const singular = nombreNormalizado.slice(0, -1);
-                if (tamanosMonstruos[singular]) {
-                    console.log("Tamaño encontrado (singularizado):", tamanosMonstruos[singular]);
-                    return tamanosMonstruos[singular];
-                }
-            }
-            
-            // 4. Valor por defecto
+            // 5. Valor por defecto
             console.log("Tamaño por defecto: NORMAL");
             return "NORMAL";
-        }  
+        }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // Cargar tipos de enemigos disponibles
         async function cargarTiposEnemigos() {
