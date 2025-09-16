@@ -511,17 +511,17 @@
        
         function obtenerImagenToken(nombre) {
             console.log("=== BÚSQUEDA DE IMAGEN PARA:", nombre, "===");
-            console.log("=== INICIANDO BÚSQUEDA DE IMAGEN ===");
-            console.log("Nombre original:", nombre);
             
             if (!monstruosImagenes.mapeo_imagenes) {
                 console.warn("mapeo_imagenes no está definido");
                 return 'images/tokens/default.png';
             }
             
+            // Normalizar el nombre: minúsculas, sin acentos, sin caracteres especiales
             let nombreLimpio = nombre.toLowerCase().trim()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^\w\s]/gi, '');
+            
             console.log("Nombre limpio inicial:", nombreLimpio);
             
             // Eliminar expresiones de dados y multiplicadores
@@ -532,7 +532,19 @@
             
             console.log("Después de quitar dados/multiplicadores:", nombreLimpio);
             
-            // Buscar en plurales
+            // 1. PRIMERO: Buscar nombres compuestos (más específicos primero)
+            const nombresCompuestos = Object.keys(monstruosImagenes.mapeo_imagenes)
+                .filter(clave => clave.includes(' ') && nombreLimpio.includes(clave))
+                .sort((a, b) => b.length - a.length); // Los más largos primero
+            
+            if (nombresCompuestos.length > 0) {
+                console.log("Nombres compuestos encontrados:", nombresCompuestos);
+                const mejorCoincidencia = nombresCompuestos[0];
+                console.log("✅ Coincidencia COMPUESTA encontrada:", mejorCoincidencia);
+                return `images/tokens/${monstruosImagenes.mapeo_imagenes[mejorCoincidencia]}`;
+            }
+            
+            // 2. Buscar en plurales
             if (monstruosImagenes.plurales) {
                 for (const [plural, singular] of Object.entries(monstruosImagenes.plurales)) {
                     const pluralLimpio = plural.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -555,7 +567,7 @@
             
             console.log("Nombre final para búsqueda:", nombreLimpio);
             
-            // 1. Buscar coincidencia EXACTA
+            // 3. Buscar coincidencia EXACTA
             if (monstruosImagenes.mapeo_imagenes[nombreLimpio]) {
                 console.log("✅ Coincidencia EXACTA encontrada:", nombreLimpio);
                 return `images/tokens/${monstruosImagenes.mapeo_imagenes[nombreLimpio]}`;
@@ -563,7 +575,7 @@
             
             console.log("❌ No hay coincidencia exacta. Buscando parcial...");
             
-            // 2. Buscar coincidencia PARCIAL con PRIORIDAD de coincidencia más larga
+            // 4. Buscar coincidencia PARCIAL con PRIORIDAD de coincidencia más larga
             const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
                 .sort((a, b) => b.length - a.length); // Ordenar de más largo a más corto
             
@@ -575,7 +587,7 @@
                 }
             }
             
-            // 3. Imagen por defecto
+            // 5. Imagen por defecto
             console.warn("❌❌❌ NO se encontró imagen para:", nombre);
             console.log("Claves disponibles:", Object.keys(monstruosImagenes.mapeo_imagenes));
             return 'images/tokens/default.png';
@@ -602,6 +614,7 @@
         }
         
         
+           
         function obtenerTamanoMonstruo(nombre) {
             let nombreNormalizado = nombre.trim();
             console.log("Obteniendo tamaño para:", nombreNormalizado);
@@ -664,27 +677,7 @@
             // 5. Valor por defecto
             console.log("Tamaño por defecto: NORMAL");
             return "NORMAL";
-        }   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
 
         // Cargar tipos de enemigos disponibles
@@ -984,106 +977,272 @@
         }
 
         // Función mejorada para procesar descripción de encuentro
-        function procesarDescripcionEncuentro(descripcion) {
-            const enemigos = [];
-            
-            console.log("Procesando descripción:", descripcion);
-            
-            // Dividir la descripción en partes principales (usando "y" como separador principal)
-            const partesPrincipales = descripcion.split(/(?:\s+y\s+)/);
-            
-            for (const partePrincipal of partesPrincipales) {
-                console.log("Procesando parte:", partePrincipal);
+function procesarDescripcionEncuentro(descripcion) {
+    const enemigos = [];
+    
+    console.log("Procesando descripción:", descripcion);
+    
+    // Primero, buscar nombres compuestos conocidos (prioridad máxima)
+    const nombresCompuestos = Object.keys(tamanosMonstruos).filter(nombre => 
+        nombre.includes(" ") && descripcion.includes(nombre)
+    ).sort((a, b) => b.length - a.length); // Ordenar de más largo a más corto
+    
+    // Si encontramos nombres compuestos, procesarlos primero
+    if (nombresCompuestos.length > 0) {
+        console.log("Nombres compuestos encontrados:", nombresCompuestos);
+        
+        let descripcionRestante = descripcion;
+        for (const nombreCompuesto of nombresCompuestos) {
+            if (descripcionRestante.includes(nombreCompuesto)) {
+                // Crear patrón para buscar la cantidad antes del nombre
+                const patron = new RegExp(`(\\d+d\\d+\\+\\d+|\\d+d\\d+|\\d+)\\s*${nombreCompuesto.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, "i");
+                const match = descripcionRestante.match(patron);
                 
-                // MEJORADO: Patrón que captura mejor nombres complejos como "Goblins de las cuevas"
-                const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^0-9()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s+y\s+|Armadura\s*\d*|con\s+[^0-9]|$))/gi;
-                
-                let match;
-                while ((match = patronDadosGlobal.exec(partePrincipal)) !== null) {
+                if (match) {
                     const expresion = match[1];
-                    let nombreEnemigo = match[2].trim();
+                    const cantidad = procesarExpresionDados(expresion);
+                    const tamano = obtenerTamanoMonstruo(nombreCompuesto);
                     
-                    console.log("Expresión:", expresion, "Nombre:", nombreEnemigo);
+                    console.log("Nombre compuesto procesado:", nombreCompuesto, "Cantidad:", cantidad);
                     
-                    // Limpiar posibles conectores al final (MEJORADO)
-                    nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|Armadura\s*\d*|$)\s*$/i, '');
-                    
-                    // Caso especial para "Hombres Bestia" - convertirlo a singular
-                    if (nombreEnemigo.includes("Hombres Bestia")) {
-                        nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+                    // Extraer descripción con "con" si existe
+                    let descripcionCon = "";
+                    const indiceCon = descripcionRestante.indexOf(" con ");
+                    if (indiceCon > -1) {
+                        descripcionCon = descripcionRestante.substring(indiceCon + 5);
+                        // Limpiar descripción (quitar lo que viene después de "y" o "Armadura")
+                        descripcionCon = descripcionCon.split(/\s+y\s+|Armadura/)[0].trim();
+                        console.log("Descripción con 'con':", descripcionCon);
                     }
                     
-                    if (nombreEnemigo && nombreEnemigo.length > 1) {
-                        const cantidad = procesarExpresionDados(expresion);
-                        const tamano = obtenerTamanoMonstruo(nombreEnemigo);
-                        
-                        console.log("Cantidad:", cantidad, "Tamaño:", tamano, "Para:", nombreEnemigo);
-                        
-                        // Añadir cada enemigo individualmente con el tamaño correcto
-                        for (let i = 0; i < cantidad; i++) {
-                            enemigos.push({
-                                nombre: nombreEnemigo,
-                                descripcionCompleta: partePrincipal.trim(),
-                                nivel: nivelHeroes,
-                                tamano: tamano
-                            });
-                        }
-                    }
-                }
-                
-                // Si no encontramos patrones de dados pero la parte es significativa
-                if (enemigos.length === 0 && partePrincipal.trim().length > 2) {
-                    // Buscar si hay un número simple al inicio (MEJORADO)
-                    const matchNumeroSimple = partePrincipal.match(/^(\d+)\s+([^0-9]+?)(?=\s*(?:Armadura\s*\d*|con\s+[^0-9]|$))/i);
-                    if (matchNumeroSimple) {
-                        const cantidad = parseInt(matchNumeroSimple[1]);
-                        let nombreEnemigo = matchNumeroSimple[2].trim();
-                        const tamano = obtenerTamanoMonstruo(nombreEnemigo);
-                        
-                        console.log("Coincidencia simple - Cantidad:", cantidad, "Nombre:", nombreEnemigo);
-                        
-                        // Caso especial para "Hombres Bestia"
-                        if (nombreEnemigo.includes("Hombres Bestia")) {
-                            nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
-                        }
-                        
-                        // Limpiar conectores al final (MEJORADO)
-                        nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|Armadura\s*\d*|$)\s*$/i, '');
-                        
-                        for (let i = 0; i < cantidad; i++) {
-                            enemigos.push({
-                                nombre: nombreEnemigo,
-                                descripcionCompleta: partePrincipal.trim(),
-                                nivel: nivelHeroes,
-                                tamano: tamano
-                            });
-                        }
-                    } else {
-                        // Si no hay número, asumir 1 enemigo
-                        let nombreEnemigo = partePrincipal.trim();
-                        const tamano = obtenerTamanoMonstruo(nombreEnemigo);
-                        
-                        // Caso especial para "Hombres Bestia"
-                        if (nombreEnemigo.includes("Hombres Bestia")) {
-                            nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
-                        }
-                        
-                        // Limpiar "Armadura X" y otros conectores del final (MEJORADO)
-                        nombreEnemigo = nombreEnemigo.replace(/\s*(?:Armadura\s*\d*|con\s+[^0-9]|,|;|y|$)\s*$/i, '');
-                        
+                    for (let i = 0; i < cantidad; i++) {
                         enemigos.push({
-                            nombre: nombreEnemigo,
-                            descripcionCompleta: partePrincipal.trim(),
+                            nombre: nombreCompuesto,
+                            descripcionCompleta: descripcionRestante.trim(),
+                            descripcionCon: descripcionCon,
                             nivel: nivelHeroes,
                             tamano: tamano
                         });
                     }
+                    
+                    // Eliminar esta parte procesada de la descripción restante
+                    descripcionRestante = descripcionRestante.replace(match[0], "").trim();
                 }
             }
-            
-            console.log("Enemigos procesados:", enemigos);
-            return enemigos;    
         }
+        
+        // Si procesamos toda la descripción con nombres compuestos, retornar
+        if (descripcionRestante.replace(/[\s,;y]+/g, '').length === 0) {
+            console.log("Enemigos procesados (solo nombres compuestos):", enemigos);
+            return enemigos;
+        }
+        
+        // Continuar con el procesamiento normal para el resto
+        descripcion = descripcionRestante;
+    }
+    
+    // Dividir la descripción en partes usando "y" como separador principal
+    const partesPrincipales = descripcion.split(/(?:\s+y\s+)/i);
+    
+    for (const partePrincipal of partesPrincipales) {
+        if (!partePrincipal.trim()) continue;
+        
+        console.log("Procesando parte:", partePrincipal);
+        
+        // Extraer descripción con "con" si existe
+        let descripcionCon = "";
+        let parteSinCon = partePrincipal;
+        const indiceCon = partePrincipal.toLowerCase().indexOf(" con ");
+        if (indiceCon > -1) {
+            descripcionCon = partePrincipal.substring(indiceCon + 5);
+            // Limpiar descripción (quitar lo que viene después de "y" o "Armadura")
+            descripcionCon = descripcionCon.split(/\s+y\s+|Armadura/i)[0].trim();
+            parteSinCon = partePrincipal.substring(0, indiceCon);
+            console.log("Descripción con 'con':", descripcionCon);
+        }
+        
+        // MEJORADO: Patrón que captura mejor nombres complejos
+        // Ahora también excluye palabras de equipamiento comunes
+        const patronDadosGlobal = /(\d+d\d+\+\d+|\d+d\d+|\d+)\s*([^0-9()]+?)(?=\s*(?:\d+d\d+\+\d+|\d+d\d+|\d+|\s+y\s+|Armadura\s*\d*|con\s+[^0-9]|$))/gi;
+        
+        let match;
+        let encontrado = false;
+        
+        while ((match = patronDadosGlobal.exec(parteSinCon)) !== null) {
+            encontrado = true;
+            const expresion = match[1];
+            let nombreEnemigo = match[2].trim();
+            
+            console.log("Expresión:", expresion, "Nombre:", nombreEnemigo);
+            
+            // Limpiar posibles conectores al final
+            nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|Armadura\s*\d*|$)\s*$/i, '');
+            
+            // Caso especial para "Hombres Bestia" - convertirlo a singular
+            if (nombreEnemigo.includes("Hombres Bestia")) {
+                nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+            }
+            
+            // Verificar si el nombre contiene palabras de equipamiento comunes
+            const palabrasEquipamiento = ["espada", "hacha", "arco", "daga", "escudo", "lanza", "jabalina", "mayal", "bastón", "red", "ballesta", "alabarda", "maza", "martillo", "lucero"];
+            const tieneEquipamiento = palabrasEquipamiento.some(palabra => 
+                nombreEnemigo.toLowerCase().includes(palabra) && !tamanosMonstruos[nombreEnemigo]
+            );
+            
+            if (tieneEquipamiento) {
+                console.log("Posible equipamiento detectado, omitiendo:", nombreEnemigo);
+                continue;
+            }
+            
+            if (nombreEnemigo && nombreEnemigo.length > 1) {
+                const cantidad = procesarExpresionDados(expresion);
+                const tamano = obtenerTamanoMonstruo(nombreEnemigo);
+                
+                console.log("Cantidad:", cantidad, "Tamaño:", tamano, "Para:", nombreEnemigo);
+                
+                // Añadir cada enemigo individualmente con el tamaño correcto
+                for (let i = 0; i < cantidad; i++) {
+                    enemigos.push({
+                        nombre: nombreEnemigo,
+                        descripcionCompleta: partePrincipal.trim(),
+                        descripcionCon: descripcionCon,
+                        nivel: nivelHeroes,
+                        tamano: tamano
+                    });
+                }
+            }
+        }
+        
+        // Si no encontramos patrones de dados pero la parte es significativa
+        if (!encontrado && parteSinCon.trim().length > 2) {
+            // Buscar si hay un número simple al inicio
+            const matchNumeroSimple = parteSinCon.match(/^(\d+)\s+([^0-9]+?)(?=\s*(?:Armadura\s*\d*|con\s+[^0-9]|$))/i);
+            if (matchNumeroSimple) {
+                const cantidad = parseInt(matchNumeroSimple[1]);
+                let nombreEnemigo = matchNumeroSimple[2].trim();
+                const tamano = obtenerTamanoMonstruo(nombreEnemigo);
+                
+                console.log("Coincidencia simple - Cantidad:", cantidad, "Nombre:", nombreEnemigo);
+                
+                // Caso especial para "Hombres Bestia"
+                if (nombreEnemigo.includes("Hombres Bestia")) {
+                    nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+                }
+                
+                // Verificar si el nombre contiene palabras de equipamiento
+                const palabrasEquipamiento = ["espada", "hacha", "arco", "daga", "escudo", "lanza", "jabalina", "mayal", "bastón", "red", "ballesta", "alabarda", "maza", "martillo", "lucero"];
+                const tieneEquipamiento = palabrasEquipamiento.some(palabra => 
+                    nombreEnemigo.toLowerCase().includes(palabra) && !tamanosMonstruos[nombreEnemigo]
+                );
+                
+                if (tieneEquipamiento) {
+                    console.log("Posible equipamiento detectado, omitiendo:", nombreEnemigo);
+                    continue;
+                }
+                
+                // Limpiar conectores al final
+                nombreEnemigo = nombreEnemigo.replace(/\s*(?:,|;|y|con|Armadura\s*\d*|$)\s*$/i, '');
+                
+                for (let i = 0; i < cantidad; i++) {
+                    enemigos.push({
+                        nombre: nombreEnemigo,
+                        descripcionCompleta: partePrincipal.trim(),
+                        descripcionCon: descripcionCon,
+                        nivel: nivelHeroes,
+                        tamano: tamano
+                    });
+                }
+            } else {
+                // Si no hay número, asumir 1 enemigo
+                let nombreEnemigo = parteSinCon.trim();
+                const tamano = obtenerTamanoMonstruo(nombreEnemigo);
+                
+                // Caso especial para "Hombres Bestia"
+                if (nombreEnemigo.includes("Hombres Bestia")) {
+                    nombreEnemigo = nombreEnemigo.replace("Hombres Bestia", "Hombre Bestia");
+                }
+                
+                // Verificar si el nombre contiene palabras de equipamiento
+                const palabrasEquipamiento = [
+                    // Armas cuerpo a cuerpo
+                    "espada", "hacha", "daga", "lanza", "mayal", "maza", "martillo", "alabarda", 
+                    "bastón", "baculo", "báculo", "puñal", "cuchillo", "mandoble", "espadón", 
+                    "gladius", "sable", "estoque", "alfanje", "cimitarra", "montante", "brandistock",
+                    "hachuela", "hachón", "guja", "bisarma", "tridente", "lanceta", "pica", "chuzo",
+                    "azagaya", "venablo", "jabalina", "agarre", "garrote", "porra", "mangual", 
+                    "nunchaku", "tonfa", "macana", "clava", "morrión", "montante", "verduguillo",
+                    
+                    // Armas a distancia
+                    "arco", "ballesta", "honda", "cerbatana", "propulsor", "dardo", "flecha", 
+                    "virote", "saeta", "proyectil", "carcaj", "carcax", "tirachinas", "funda",
+                    
+                    // Escudos y protecciones
+                    "escudo", "rodela", "adarga", "broquel", "pavés", "tarja", "rondela", 
+                    "cetro", "tablachina", "defensa", "protección", "armadura", "yelmo", 
+                    "casco", "coraza", "peto", "greba", "brazal", "guardabrazo", "cubremuñeca",
+                    "hombrera", "muslera", "guardapiernas", "cotilla", "sobreveste", "cota",
+                    "malla", "loriga", "lorigón", "perneras", "guardarrenes", "escarcela",
+                    
+                    // Equipamiento diverso
+                    "red", "lazo", "bozal", "rienda", "freno", "estribo", "silla", "montura",
+                    "antorcha", "lámpara", "candil", "farol", "luminaria", "luz", "antorcha",
+                    "cuerda", "soga", "cadena", "grillete", "cepo", "trampa", "cebo", "señuelo",
+                    "gancho", "garfio", "arpón", "anzuelo", "cuchara", "tenaza", "alicate",
+                    
+                    // Objetos mágicos y especiales
+                    "varita", "varón", "orbe", "amuleto", "talismán", "medallón", "gema",
+                    "piedra", "cristal", "pergamino", "libro", "grimorio", "tomo", "códice",
+                    "poción", "elixir", "ungüento", "bálsamo", "brebaje", "infusión", "esencia",
+                    
+                    // Materiales y tipos
+                    "corto", "largo", "ancha", "ancho", "curvo", "recto", "pesado", "ligero",
+                    "grande", "pequeño", "afilado", "mocho", "roto", "nuevo", "viejo", "usado",
+                    "maldito", "bendito", "encantado", "mágico", "runico", "sagrado", "profano",
+                    "demoníaco", "angelical", "dracónico", "élfico", "enano", "orco", "goblin",
+                    
+                    // Términos específicos de D&D/RPG
+                    "lucero", "del", "alba", "macedonia", "estelar", "abyssalis", "caótico",
+                    "ordenado", "neutral", "siniestro", "luminoso", "sombrío", "oscuro", "umbrio",
+                    "solar", "lunar", "estelar", "cósmico", "terrenal", "celestial", "infernal",
+                    "abismal", "primordial", "arcano", "divino", "profético", "oracular",
+                    
+                    // Términos adicionales en español
+                    "corvo", "machete", "facón", "chafarote", "terciado", "jineta", "ropera",
+                    "florete", "sable", "alfanje", "cimitarra", "shamshir", "talwar", "scimitar",
+                    "falchion", "falcatra", "khopesh", "shotel", "kriss", "kukri", "katana",
+                    "wakizashi", "tachi", "nodachi", "naginata", "nagamaki", "nagamaki", "yari",
+                    "nagamaki", "nagamaki", "nagamaki", "nagamaki", "nagamaki", "nagamaki"
+                ];
+                const tieneEquipamiento = palabrasEquipamiento.some(palabra => 
+                    nombreEnemigo.toLowerCase().includes(palabra) && !tamanosMonstruos[nombreEnemigo]
+                );
+                
+                if (tieneEquipamiento) {
+                    console.log("Posible equipamiento detectado, omitiendo:", nombreEnemigo);
+                    continue;
+                }
+                
+                // Limpiar "Armadura X" y otros conectores del final
+                nombreEnemigo = nombreEnemigo.replace(/\s*(?:Armadura\s*\d*|con\s+[^0-9]|,|;|y|$)\s*$/i, '');
+                
+                enemigos.push({
+                    nombre: nombreEnemigo,
+                    descripcionCompleta: partePrincipal.trim(),
+                    descripcionCon: descripcionCon,
+                    nivel: nivelHeroes,
+                    tamano: tamano
+                });
+            }
+        }
+    }
+    
+    console.log("Enemigos procesados:", enemigos);
+    return enemigos;    
+}
+
+       
+
+
 
         // Función principal para generar enemigos
         function generarEnemigos() {
@@ -1147,6 +1306,8 @@
             enemigosCargados = [];
         }
 
+        
+
         // Mostrar enemigos en la lista
         function mostrarEnemigosLista(enemigos) {
             const lista = document.getElementById('enemigos-lista');
@@ -1156,31 +1317,37 @@
             const enemigosAgrupados = {};
             
             enemigos.forEach(enemigo => {
-                if (!enemigosAgrupados[enemigo.nombre]) {
-                    enemigosAgrupados[enemigo.nombre] = {
+                const clave = enemigo.nombre + (enemigo.descripcionCon ? "|" + enemigo.descripcionCon : "");
+                if (!enemigosAgrupados[clave]) {
+                    enemigosAgrupados[clave] = {
                         cantidad: 0,
                         tamano: enemigo.tamano,
-                        descripcion: enemigo.descripcionCompleta
+                        descripcion: enemigo.descripcionCompleta,
+                        descripcionCon: enemigo.descripcionCon
                     };
                 }
-                enemigosAgrupados[enemigo.nombre].cantidad++;
+                enemigosAgrupados[clave].cantidad++;
             });
             
             // Crear elementos para cada tipo de enemigo
-            for (const [nombre, info] of Object.entries(enemigosAgrupados)) {
+            for (const [clave, info] of Object.entries(enemigosAgrupados)) {
+                const [nombre, descripcionCon] = clave.split("|");
                 const item = document.createElement('div');
                 item.className = 'enemigo-item';
                 
-                item.innerHTML = `
-                    <strong>${info.cantidad}x ${nombre}</strong>
-                    <div>Tamaño: ${info.tamano}</div>
-                    <div>Nivel: ${nivelHeroes}</div>
-                `;
+                let contenido = `<strong>${info.cantidad}x ${nombre}</strong>
+                                <div>Tamaño: ${info.tamano}</div>
+                                <div>Nivel: ${nivelHeroes}</div>`;
                 
+                if (info.descripcionCon) {
+                    contenido += `<div>Equipamiento: ${info.descripcionCon}</div>`;
+                }
+                
+                item.innerHTML = contenido;
                 lista.appendChild(item);
             }
         }
-        
+
         // Colocar enemigos en la loseta
         function colocarEnemigosEnLoseta(enemigos) {
             // Primero, ordenar enemigos por tamaño (más grandes primero)
