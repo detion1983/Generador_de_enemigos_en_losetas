@@ -320,37 +320,6 @@
             color: #fff;
         }
 
-        /* ESTILOS PARA EL CONTADOR DE VISITAS */
-        .visitas-container {
-            display: flex;
-            justify-content: center;
-            background: rgba(52, 73, 94, 0.8);
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-            border: 1px solid #5D4037;
-        }
-
-        .visitas-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .visitas-value {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: block;
-            color: #d4af37;
-        }
-
-        .visitas-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
         /* NUEVOS ESTILOS PARA EL PANEL DE MONSTRUOS */
         .main-content2 {
             position: relative;
@@ -559,6 +528,7 @@
             display: flex;
             align-items: stretch;
             gap: 20px;
+            position: relative;
         }
 
         .monster-basic {
@@ -791,6 +761,37 @@
             color: gold;
         }
 
+        /* CONTADOR DE MONEDAS */
+        .monedas-container {
+            display: flex;
+            justify-content: center;
+            background: rgba(139, 69, 19, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            border: 1px solid #8B4513;
+        }
+
+        .monedas-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .monedas-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+            color: #ffd700;
+        }
+
+        .monedas-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
         @media (max-width: 992px) {
             .visualization {
                 flex-direction: column;
@@ -951,11 +952,11 @@
             </div>
         </div>
         
-        <!-- CONTADOR DE VISITAS -->
-        <div class="visitas-container">
-            <div class="visitas-item">
-                <span class="visitas-value" id="contador-visitas">0</span>
-                <span class="visitas-label">Visitas a esta página</span>
+        <!-- MONEDAS ACUMULADAS -->
+        <div class="monedas-container">
+            <div class="monedas-item">
+                <span class="monedas-value" id="monedas-acumuladas">0</span>
+                <span class="monedas-label">Monedas Acumuladas</span>
             </div>
         </div>
         
@@ -982,6 +983,7 @@
         let habilidadesDict = {};
         let saqueoData = {};
         let experienciaAcumulada = 0;
+        let monedasAcumuladas = 0; // NUEVA VARIABLE PARA MONEDAS
 
         const coloresId = [
             "white", "red", "lightblue", "green", "yellow", "orange", "black", "gray",
@@ -999,11 +1001,9 @@
             await cargarMonstruosStats();
             await cargarEquipo();
             
-            // Inicializar contador de visitas
-            actualizarContadorVisitas();
-            
             // Inicializar experiencia acumulada
             cargarExperienciaAcumulada();
+            cargarMonedasAcumuladas(); // NUEVO: Cargar monedas
             
             document.getElementById('nivel-heroes').addEventListener('change', (e) => {
                 nivelHeroes = parseInt(e.target.value) || 0;
@@ -1055,6 +1055,33 @@
         function reiniciarExperiencia() {
             experienciaAcumulada = 0;
             guardarExperienciaAcumulada();
+        }
+
+        // ========== FUNCIONES DE MONEDAS ==========
+
+        function cargarMonedasAcumuladas() {
+            const monedasGuardadas = localStorage.getItem('monedasAcumuladas');
+            monedasAcumuladas = monedasGuardadas ? parseInt(monedasGuardadas) : 0;
+            actualizarDisplayMonedas();
+        }
+
+        function guardarMonedasAcumuladas() {
+            localStorage.setItem('monedasAcumuladas', monedasAcumuladas.toString());
+            actualizarDisplayMonedas();
+        }
+
+        function actualizarDisplayMonedas() {
+            document.getElementById('monedas-acumuladas').textContent = monedasAcumuladas;
+        }
+
+        function añadirMonedas(cantidad) {
+            monedasAcumuladas += cantidad;
+            guardarMonedasAcumuladas();
+        }
+
+        function reiniciarMonedas() {
+            monedasAcumuladas = 0;
+            guardarMonedasAcumuladas();
         }
 
         // ========== FUNCIONES DEL PANEL DE MONSTRUOS ==========
@@ -1223,14 +1250,103 @@
             barFill.style.setProperty("--vida-color", color);
         }
 
-        function renderizarCarta(monster, category, armas, armaduras, hechizos, color = "#fff", vidas = null, save = true) {
+        function obtenerImagenToken(encuentro) {
+            console.log("=== BÚSQUEDA SIMPLIFICADA DE IMAGEN ===");
+            
+            if (encuentro && encuentro.Imagen) {
+                console.log("✅ Imagen encontrada en JSON:", encuentro.Imagen);
+                return `images/tokens/${encuentro.Imagen}`;
+            }
+            
+            console.warn("❌ No se encontró imagen en JSON para el encuentro");
+            return 'images/tokens/default.png';
+        }
+
+        function obtenerImagenTokenPorNombre(nombre) {
+            // Función auxiliar para cuando se añaden monstruos manualmente desde el panel
+            console.log("Búsqueda por nombre para:", nombre);
+            
+            if (!monstruosImagenes.mapeo_imagenes) {
+                console.warn("mapeo_imagenes no está definido");
+                return 'images/tokens/default.png';
+            }
+            
+            let nombreLimpio = nombre.toLowerCase().trim()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^\w\s]/gi, '');
+            
+            console.log("Nombre limpio inicial:", nombreLimpio);
+            
+            nombreLimpio = nombreLimpio.replace(/^\d+d\d+\+\d+(\s+|$)/, '');
+            nombreLimpio = nombreLimpio.replace(/^\d+d\d+(\s+|$)/, '');
+            nombreLimpio = nombreLimpio.replace(/^\d+x(\s+|$)/, '');
+            nombreLimpio = nombreLimpio.replace(/^\d+(\s+|$)/, '');
+            
+            console.log("Después de quitar dados/multiplicadores:", nombreLimpio);
+            
+            const nombresCompuestos = Object.keys(monstruosImagenes.mapeo_imagenes)
+                .filter(clave => clave.includes(' ') && nombreLimpio.includes(clave))
+                .sort((a, b) => b.length - a.length);
+            
+            if (nombresCompuestos.length > 0) {
+                console.log("Nombres compuestos encontrados:", nombresCompuestos);
+                const mejorCoincidencia = nombresCompuestos[0];
+                console.log("✅ Coincidencia COMPUESTA encontrada:", mejorCoincidencia);
+                return `images/tokens/${monstruosImagenes.mapeo_imagenes[mejorCoincidencia]}`;
+            }
+            
+            if (monstruosImagenes.plurales) {
+                for (const [plural, singular] of Object.entries(monstruosImagenes.plurales)) {
+                    const pluralLimpio = plural.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                    if (nombreLimpio === pluralLimpio) {
+                        nombreLimpio = singular.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        console.log("Convertido a singular:", nombreLimpio);
+                        break;
+                    }
+                }
+            }
+            
+            if (nombreLimpio.endsWith('es')) {
+                nombreLimpio = nombreLimpio.slice(0, -2);
+                console.log("Removido 'es':", nombreLimpio);
+            } else if (nombreLimpio.endsWith('s')) {
+                nombreLimpio = nombreLimpio.slice(0, -1);
+                console.log("Removido 's':", nombreLimpio);
+            }
+            
+            console.log("Nombre final para búsqueda:", nombreLimpio);
+            
+            if (monstruosImagenes.mapeo_imagenes[nombreLimpio]) {
+                console.log("✅ Coincidencia EXACTA encontrada:", nombreLimpio);
+                return `images/tokens/${monstruosImagenes.mapeo_imagenes[nombreLimpio]}`;
+            }
+            
+            console.log("❌ No hay coincidencia exacta. Buscando parcial...");
+            
+            const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
+                .sort((a, b) => b.length - a.length);
+            
+            for (const clave of clavesOrdenadas) {
+                const claveLimpia = clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                if (nombreLimpio.includes(claveLimpia)) {
+                    console.log("✅ Coincidencia PARCIAL encontrada:", clave, "en", nombreLimpio);
+                    return `images/tokens/${monstruosImagenes.mapeo_imagenes[clave]}`;
+                }
+            }
+            
+            console.warn("❌❌❌ NO se encontró imagen para:", nombre);
+            console.log("Claves disponibles:", Object.keys(monstruosImagenes.mapeo_imagenes));
+            return 'images/tokens/default.png';
+        }
+
+        function renderizarCarta(monster, category, armas, armaduras, hechizos, color = "#fff", vidas = null, save = true, encuentro = null) {
             const wrapper = document.createElement("div");
             wrapper.classList.add("monster-card");
             wrapper.style.backgroundColor = color;
 
             const cantidad = vidas ? vidas.length : parseInt(document.getElementById("cantidadSelect").value || "1", 10);
             wrapper._vidas = vidas ? vidas.slice() : Array(cantidad).fill(monster.vida);
-            wrapper._experienciaAñadida = Array(cantidad).fill(false); // Para controlar EXP
+            wrapper._experienciaAñadida = Array(cantidad).fill(false);
 
             const barraBase = 100;
             const barraExtra = monster.vida * 2;
@@ -1311,12 +1427,16 @@
             });
             vidasGrid += "</div>";
 
+            // Usar el encuentro para obtener la imagen si está disponible, si no usar búsqueda por nombre
+            const imagenSrc = encuentro ? obtenerImagenToken(encuentro) : obtenerImagenTokenPorNombre(monster.nombre);
+
             // HTML principal
             wrapper.innerHTML = `
                 <button class="remove-btn">X</button>
+                
                 <div class="monster-header">
                     <div class="monster-left">
-                        <img src="${obtenerImagenToken(monster.nombre)}" 
+                        <img src="${imagenSrc}" 
                              alt="${monster.nombre}"
                              onerror="this.onerror=null; this.src='images/tokens/default.png';">
                         <div class="death-overlay"></div>
@@ -1433,11 +1553,22 @@
                         if (entrada) objetoGanado = entrada.Objeto;
                     }
 
+                    // NUEVO: Detectar y acumular monedas
+                    let monedasEncontradas = 0;
+                    if (objetoGanado.toLowerCase().includes("monedas") || objetoGanado.toLowerCase().includes("oro")) {
+                        const match = objetoGanado.match(/(\d+)\s*(monedas|oro)/i);
+                        if (match) {
+                            monedasEncontradas = parseInt(match[1]);
+                            añadirMonedas(monedasEncontradas);
+                        }
+                    }
+
                     Swal.fire({
                         title: `¡Saqueo de ${monster.nombre}!`,
                         html: `
                     <p>Has tirado un <strong>d10</strong> y salió: <strong>${tirada}</strong></p>
                     <p><strong>Has encontrado:</strong> ${objetoGanado}</p>
+                    ${monedasEncontradas > 0 ? `<p>💰 <strong>+${monedasEncontradas} monedas añadidas al total!</strong></p>` : ''}
                 `,
                         icon: 'success',
                         confirmButtonText: 'Aceptar'
@@ -1497,6 +1628,7 @@
                 const card = renderizarCarta(monster, data.category, armas, armaduras, hechizos, data.color || "#fff", data.vidas || null, false);
                 card.dataset.info = JSON.stringify(data);
                 card._experienciaAñadida = data.experienciaAñadida || Array(data.vidas.length).fill(false);
+                
                 container.appendChild(card);
 
                 // Restaurar saqueos si existen
@@ -1516,19 +1648,6 @@
         }
 
         // FUNCIONES ORIGINALES (mantenidas)
-
-        function actualizarContadorVisitas() {
-            let visitas = localStorage.getItem('visitasPagina');
-            
-            if (visitas) {
-                visitas = parseInt(visitas) + 1;
-            } else {
-                visitas = 1;
-            }
-            
-            localStorage.setItem('visitasPagina', visitas);
-            document.getElementById('contador-visitas').textContent = visitas;
-        }
 
         async function cargarTamanosMonstruos() {
             try {
@@ -1563,82 +1682,6 @@
                 console.error('Error cargando imágenes de monstruos:', error);
                 monstruosImagenes = { mapeo_imagenes: {}, plurales: {} };
             }
-        }
-
-        function obtenerImagenToken(nombre) {
-            console.log("=== BÚSQUEDA DE IMAGEN PARA:", nombre, "===");
-            
-            if (!monstruosImagenes.mapeo_imagenes) {
-                console.warn("mapeo_imagenes no está definido");
-                return 'images/tokens/default.png';
-            }
-            
-            let nombreLimpio = nombre.toLowerCase().trim()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                .replace(/[^\w\s]/gi, '');
-            
-            console.log("Nombre limpio inicial:", nombreLimpio);
-            
-            nombreLimpio = nombreLimpio.replace(/^\d+d\d+\+\d+(\s+|$)/, '');
-            nombreLimpio = nombreLimpio.replace(/^\d+d\d+(\s+|$)/, '');
-            nombreLimpio = nombreLimpio.replace(/^\d+x(\s+|$)/, '');
-            nombreLimpio = nombreLimpio.replace(/^\d+(\s+|$)/, '');
-            
-            console.log("Después de quitar dados/multiplicadores:", nombreLimpio);
-            
-            const nombresCompuestos = Object.keys(monstruosImagenes.mapeo_imagenes)
-                .filter(clave => clave.includes(' ') && nombreLimpio.includes(clave))
-                .sort((a, b) => b.length - a.length);
-            
-            if (nombresCompuestos.length > 0) {
-                console.log("Nombres compuestos encontrados:", nombresCompuestos);
-                const mejorCoincidencia = nombresCompuestos[0];
-                console.log("✅ Coincidencia COMPUESTA encontrada:", mejorCoincidencia);
-                return `images/tokens/${monstruosImagenes.mapeo_imagenes[mejorCoincidencia]}`;
-            }
-            
-            if (monstruosImagenes.plurales) {
-                for (const [plural, singular] of Object.entries(monstruosImagenes.plurales)) {
-                    const pluralLimpio = plural.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                    if (nombreLimpio === pluralLimpio) {
-                        nombreLimpio = singular.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                        console.log("Convertido a singular:", nombreLimpio);
-                        break;
-                    }
-                }
-            }
-            
-            if (nombreLimpio.endsWith('es')) {
-                nombreLimpio = nombreLimpio.slice(0, -2);
-                console.log("Removido 'es':", nombreLimpio);
-            } else if (nombreLimpio.endsWith('s')) {
-                nombreLimpio = nombreLimpio.slice(0, -1);
-                console.log("Removido 's':", nombreLimpio);
-            }
-            
-            console.log("Nombre final para búsqueda:", nombreLimpio);
-            
-            if (monstruosImagenes.mapeo_imagenes[nombreLimpio]) {
-                console.log("✅ Coincidencia EXACTA encontrada:", nombreLimpio);
-                return `images/tokens/${monstruosImagenes.mapeo_imagenes[nombreLimpio]}`;
-            }
-            
-            console.log("❌ No hay coincidencia exacta. Buscando parcial...");
-            
-            const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
-                .sort((a, b) => b.length - a.length);
-            
-            for (const clave of clavesOrdenadas) {
-                const claveLimpia = clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                if (nombreLimpio.includes(claveLimpia)) {
-                    console.log("✅ Coincidencia PARCIAL encontrada:", clave, "en", nombreLimpio);
-                    return `images/tokens/${monstruosImagenes.mapeo_imagenes[clave]}`;
-                }
-            }
-            
-            console.warn("❌❌❌ NO se encontró imagen para:", nombre);
-            console.log("Claves disponibles:", Object.keys(monstruosImagenes.mapeo_imagenes));
-            return 'images/tokens/default.png';
         }
 
         function obtenerTamanoMonstruo(nombre) {
@@ -2017,6 +2060,10 @@
         }
 
         function generarEnemigos() {
+            limpiarMonstruosAnteriores();
+            reiniciarExperiencia();
+            reiniciarMonedas(); // NUEVO: Reiniciar monedas también
+
             if (nivelHeroes < 1) {
                 alert('Por favor, selecciona un nivel de héroes.');
                 return;
@@ -2054,10 +2101,23 @@
             
             mostrarEnemigosLista(enemigosCargados);
             
-            colocarEnemigosEnLoseta(enemigosCargados);
+            colocarEnemigosEnLoseta(enemigosCargados, encuentro);
 
             // NUEVO: Generar tarjetas de monstruos
             generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo);
+        }
+
+
+        function limpiarMonstruosAnteriores() {
+            const container = document.getElementById("monsterContainer");
+            container.innerHTML = "";
+            guardarEnAlmacenamientoLocal(); // Para actualizar el localStorage
+        }
+
+
+        function reiniciarExperiencia() {
+            experienciaAcumulada = 0;
+            guardarExperienciaAcumulada();
         }
 
         function generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo) {
@@ -2181,8 +2241,8 @@
 
             const monsterCopia = { ...monster, nombre: nombreExtendido };
 
-            // Renderizar tarjeta
-            const card = renderizarCarta(monsterCopia, category, armas, armaduras, hechizos, "#2e1502a4", vidas);
+            // Renderizar tarjeta - pasar el encuentro como parámetro adicional
+            const card = renderizarCarta(monsterCopia, category, armas, armaduras, hechizos, "#2e1502a4", vidas, true, encuentro);
             const infoObj = {
                 monsterName: monster.nombre,
                 category,
@@ -2249,7 +2309,7 @@
             }
         }
 
-        function colocarEnemigosEnLoseta(enemigos) {
+        function colocarEnemigosEnLoseta(enemigos, encuentro) {
             enemigos.sort((a, b) => {
                 const tamanoA = obtenerDimensionesEnemigo(a.tamano).casillas;
                 const tamanoB = obtenerDimensionesEnemigo(b.tamano).casillas;
@@ -2281,7 +2341,8 @@
                     if (!casilla.elemento.classList.contains('ocupada') && 
                         areaDisponible(casilla.fila, casilla.columna, enemigo.tamano)) {
                         
-                        colocarEnemigo(casilla.fila, casilla.columna, enemigo);
+                        // CAMBIO: Pasar el encuentro como parámetro adicional
+                        colocarEnemigo(casilla.fila, casilla.columna, enemigo, encuentro);
                         marcarAreaOcupada(casilla.fila, casilla.columna, enemigo.tamano);
                         colocado = true;
                         break;
@@ -2309,14 +2370,15 @@
             }
         }
 
-        function colocarEnemigo(fila, columna, enemigo) {
+        function colocarEnemigo(fila, columna, enemigo, encuentro) {
             const matrizContainer = document.getElementById('matriz-loseta');
             const dimensiones = obtenerDimensionesEnemigo(enemigo.tamano);
             
             const enemigoElement = document.createElement('div');
             enemigoElement.className = `enemigo ${enemigo.tamano.toLowerCase()}`;
             
-            const imagenToken = obtenerImagenToken(enemigo.nombre);
+            // CAMBIO: Usar la nueva función simplificada que recibe el encuentro
+            const imagenToken = obtenerImagenToken(encuentro);
             
             enemigoElement.style.width = `calc(${dimensiones.ancho} * (100% / ${losetaSeleccionada.matriz[0].length}) - 4px)`;
             enemigoElement.style.height = `calc(${dimensiones.alto} * (100% / ${losetaSeleccionada.matriz.length}) - 4px)`;
