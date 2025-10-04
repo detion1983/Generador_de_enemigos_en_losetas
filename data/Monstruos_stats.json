@@ -810,7 +810,7 @@
     },
     {
       "nombre": "Ogro",
-      "tipo": "Humanoide/Ogre",
+      "tipo": "Humanoide/Ogro",
       "vida": 34,
       "exp": 400,
       "recompensa": "R2",
@@ -865,7 +865,7 @@
     },
     {
       "nombre": "Ogro Berserker",
-      "tipo": "Bestia/Ogre berserker",
+      "tipo": "Bestia/Ogro berserker",
       "vida": 34,
       "exp": 500,
       "recompensa": "R2",
@@ -903,7 +903,7 @@
     },
     {
       "nombre": "Ogro jefe",
-      "tipo": "Humanoide/Ogre chieftain",
+      "tipo": "Humanoide/Ogro chieftain",
       "vida": 42,
       "exp": 600,
       "recompensa": "R3",
@@ -1540,7 +1540,7 @@
     },
     {
       "nombre": "Ogro Zombi",
-      "tipo": "No muerto menor/Zombie ogre",
+      "tipo": "No muerto menor/Zombie Ogro",
       "vida": 40,
       "exp": 650,
       "recompensa": "R1",
@@ -2022,7 +2022,7 @@
     },
     {
       "nombre": "Rátido Ogro",
-      "tipo": "Bestia/Ratkin ogre",
+      "tipo": "Bestia/Ratkin Ogro",
       "vida": 40,
       "exp": 650,
       "recompensa": "R1",
@@ -2844,7 +2844,7 @@
     },
     {
       "nombre": "Klatche el Ogro",
-      "tipo": "Bestia/Klatche the ogre",
+      "tipo": "Bestia/Klatche the Ogro",
       "vida": 40,
       "exp": 650,
       "recompensa": "R2",
