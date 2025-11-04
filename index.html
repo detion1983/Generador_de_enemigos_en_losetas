@@ -1250,92 +1250,15 @@
             barFill.style.setProperty("--vida-color", color);
         }
 
+        // FUNCIÓN SIMPLIFICADA PARA OBTENER IMAGEN
         function obtenerImagenToken(encuentro) {
-            console.log("=== BÚSQUEDA SIMPLIFICADA DE IMAGEN ===");
-            
             if (encuentro && encuentro.Imagen) {
-                console.log("✅ Imagen encontrada en JSON:", encuentro.Imagen);
-                return `images/tokens/${encuentro.Imagen}`;
+                const rutaImagen = `images/tokens/${encuentro.Imagen}`;
+                console.log("✅ Imagen encontrada en JSON:", rutaImagen);
+                return rutaImagen;
             }
             
-            console.warn("❌ No se encontró imagen en JSON para el encuentro");
-            return 'images/tokens/default.png';
-        }
-
-        function obtenerImagenTokenPorNombre(nombre) {
-            // Función auxiliar para cuando se añaden monstruos manualmente desde el panel
-            console.log("Búsqueda por nombre para:", nombre);
-            
-            if (!monstruosImagenes.mapeo_imagenes) {
-                console.warn("mapeo_imagenes no está definido");
-                return 'images/tokens/default.png';
-            }
-            
-            let nombreLimpio = nombre.toLowerCase().trim()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                .replace(/[^\w\s]/gi, '');
-            
-            console.log("Nombre limpio inicial:", nombreLimpio);
-            
-            nombreLimpio = nombreLimpio.replace(/^\d+d\d+\+\d+(\s+|$)/, '');
-            nombreLimpio = nombreLimpio.replace(/^\d+d\d+(\s+|$)/, '');
-            nombreLimpio = nombreLimpio.replace(/^\d+x(\s+|$)/, '');
-            nombreLimpio = nombreLimpio.replace(/^\d+(\s+|$)/, '');
-            
-            console.log("Después de quitar dados/multiplicadores:", nombreLimpio);
-            
-            const nombresCompuestos = Object.keys(monstruosImagenes.mapeo_imagenes)
-                .filter(clave => clave.includes(' ') && nombreLimpio.includes(clave))
-                .sort((a, b) => b.length - a.length);
-            
-            if (nombresCompuestos.length > 0) {
-                console.log("Nombres compuestos encontrados:", nombresCompuestos);
-                const mejorCoincidencia = nombresCompuestos[0];
-                console.log("✅ Coincidencia COMPUESTA encontrada:", mejorCoincidencia);
-                return `images/tokens/${monstruosImagenes.mapeo_imagenes[mejorCoincidencia]}`;
-            }
-            
-            if (monstruosImagenes.plurales) {
-                for (const [plural, singular] of Object.entries(monstruosImagenes.plurales)) {
-                    const pluralLimpio = plural.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                    if (nombreLimpio === pluralLimpio) {
-                        nombreLimpio = singular.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                        console.log("Convertido a singular:", nombreLimpio);
-                        break;
-                    }
-                }
-            }
-            
-            if (nombreLimpio.endsWith('es')) {
-                nombreLimpio = nombreLimpio.slice(0, -2);
-                console.log("Removido 'es':", nombreLimpio);
-            } else if (nombreLimpio.endsWith('s')) {
-                nombreLimpio = nombreLimpio.slice(0, -1);
-                console.log("Removido 's':", nombreLimpio);
-            }
-            
-            console.log("Nombre final para búsqueda:", nombreLimpio);
-            
-            if (monstruosImagenes.mapeo_imagenes[nombreLimpio]) {
-                console.log("✅ Coincidencia EXACTA encontrada:", nombreLimpio);
-                return `images/tokens/${monstruosImagenes.mapeo_imagenes[nombreLimpio]}`;
-            }
-            
-            console.log("❌ No hay coincidencia exacta. Buscando parcial...");
-            
-            const clavesOrdenadas = Object.keys(monstruosImagenes.mapeo_imagenes)
-                .sort((a, b) => b.length - a.length);
-            
-            for (const clave of clavesOrdenadas) {
-                const claveLimpia = clave.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                if (nombreLimpio.includes(claveLimpia)) {
-                    console.log("✅ Coincidencia PARCIAL encontrada:", clave, "en", nombreLimpio);
-                    return `images/tokens/${monstruosImagenes.mapeo_imagenes[clave]}`;
-                }
-            }
-            
-            console.warn("❌❌❌ NO se encontró imagen para:", nombre);
-            console.log("Claves disponibles:", Object.keys(monstruosImagenes.mapeo_imagenes));
+            console.warn("❌ No se encontró imagen en JSON para el encuentro:", encuentro?.Encuentro);
             return 'images/tokens/default.png';
         }
 
@@ -1427,8 +1350,8 @@
             });
             vidasGrid += "</div>";
 
-            // Usar el encuentro para obtener la imagen si está disponible, si no usar búsqueda por nombre
-            const imagenSrc = encuentro ? obtenerImagenToken(encuentro) : obtenerImagenTokenPorNombre(monster.nombre);
+            // USAR LA FUNCIÓN SIMPLIFICADA - CAMBIO IMPORTANTE
+            const imagenSrc = obtenerImagenToken(encuentro || { Encuentro: monster.nombre });
 
             // HTML principal
             wrapper.innerHTML = `
@@ -2341,7 +2264,6 @@
                     if (!casilla.elemento.classList.contains('ocupada') && 
                         areaDisponible(casilla.fila, casilla.columna, enemigo.tamano)) {
                         
-                        // CAMBIO: Pasar el encuentro como parámetro adicional
                         colocarEnemigo(casilla.fila, casilla.columna, enemigo, encuentro);
                         marcarAreaOcupada(casilla.fila, casilla.columna, enemigo.tamano);
                         colocado = true;
@@ -2377,7 +2299,7 @@
             const enemigoElement = document.createElement('div');
             enemigoElement.className = `enemigo ${enemigo.tamano.toLowerCase()}`;
             
-            // CAMBIO: Usar la nueva función simplificada que recibe el encuentro
+            // USAR LA FUNCIÓN SIMPLIFICADA
             const imagenToken = obtenerImagenToken(encuentro);
             
             enemigoElement.style.width = `calc(${dimensiones.ancho} * (100% / ${losetaSeleccionada.matriz[0].length}) - 4px)`;
