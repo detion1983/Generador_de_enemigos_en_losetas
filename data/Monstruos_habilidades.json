@@ -17,6 +17,10 @@
             "Descripcion": "(Pasiva) Como será el tufo de esta criatura que cuesta concentrarse. Todos los ataques cuerpo a cuerpo a esta criatura sufren una penalización de -10 HC."
         },
         {
+            "Habilidad": "Piel venenosa",
+            "Descripcion":"Héroes y mercenarios pueden frotar sus armas sobre el lomo de un anuro (siempre que no estén en combate) y así emponzoñarlas. Sólo se puede envenenar un arma o hasta diez flechas por anuro. El veneno seguirá siendo eficaz hasta finalizar la siguiente batalla o hasta que se hayan utilizado todas las flechas."
+        },
+        {
             "Habilidad": "Arma maldita",
             "Descripcion": "(Pasiva) Las Armas Malditas están impregnadas de magia impía o han sido utilizadas como receptáculo del mal por su portador. El daño causado por estas armas quita 1 punto de Cordura del objetivo."
         },
@@ -217,7 +221,15 @@
             "Descripcion": "(Activa) Si no hay Héroes adyacentes a este enemigo, su ataque siempre será lanzar una roca a un miembro aleatorio del grupo en LDV. Esto prioriza su tabla de comportamiento y no tendrás que tirar dado para ver que hace. Este ataque consume 1PA, y usa HD para chequear el impacto. La roca hace 1d12 DAÑ más el BD propio de la criatura."
         },
         {
-            "Habilidad": "Latigazo [Fuego/Arena/Hielo]",
+            "Habilidad": "Latigazo de Fuego",
+            "Descripcion": "(Activa) Este es un ataque en el que la criatura usa su propio cuerpo para arremeter contra los héroes. Puede atacar a una distancia de 2 casillas (4 si es Enorme), incluso si hay una criatura amiga entre medias. Se requiere test de HC; Se aplica daño normal y elemental."
+        },
+        {
+            "Habilidad": "Latigazo de Arena",
+            "Descripcion": "(Activa) Este es un ataque en el que la criatura usa su propio cuerpo para arremeter contra los héroes. Puede atacar a una distancia de 2 casillas (4 si es Enorme), incluso si hay una criatura amiga entre medias. Se requiere test de HC; Se aplica daño normal y elemental."
+        },
+        {
+            "Habilidad": "Latigazo de Hielo",
             "Descripcion": "(Activa) Este es un ataque en el que la criatura usa su propio cuerpo para arremeter contra los héroes. Puede atacar a una distancia de 2 casillas (4 si es Enorme), incluso si hay una criatura amiga entre medias. Se requiere test de HC; Se aplica daño normal y elemental."
         },
         {
@@ -232,6 +244,7 @@
             "Habilidad": "Levitar",
             "Descripcion": "(Pasiva) Esta criatura se eleva sobre el suelo, por ello es capaz de evitar fosos y trampas. Nunca activarán trampas y pueden moverse por ellas con normalidad. Pueden terminar su movimiento sobre una trampa."
         },
+        {"Habilidad":"Elevar y Soltar","Descripcion":"Con un HD exitoso, la arpía agarra y levanta al héroe más cercano dentro de M casillas. Luego, el héroe cae en una casilla aleatoria de la misma loseta, a no mas de 4 casillas de su posición inicial. El héroe sufre 1d6 de daño sin modificador de armadura excepto AN. Si el héroe cae sobre otro héroe, ambos sufren 1d6 de daño. El héroe caído se coloca en la casilla desocupada más cercana. Cualquier héroe afectado por este ataque termina tumbado en el suelo."},
         {
             "Habilidad": "Maestro de los acertijos",
             "Descripcion": "(Pasiva) Cada vez que te enfrentes a una Esfinge (o varias) sin otros enemigos cerca, tienes la opción de responder un acertijo. Requiere una tirada de SAB para el héroe escogido. Una respuesta correcta quitará la Esfinge del tablero sin luchar y dará 150 puntos de EXP. Un fallo enfadará a la Esfinge y la conducirá a la batalla."
@@ -400,6 +413,10 @@
             "Habilidad": "Venganza",
             "Descripcion": "(Pasiva) La amargura fluye por la sangre de esta criatura. Si es golpeado con éxito con un ataque a melé o a distancia, la criatura gana +1 DAÑ permanente. Cuando esta criatura falle un ataque, pierde esos bonos. Esto no se acumula con Ataque Múltiple."
         },
+        {
+"Habilidad":"Hambre insaciable",
+"Descripcion":"Un necrófago que esté en una casilla con un monstruo muerto o en una casilla adyacente a un monstruo muerto debe pasar inmediatamente un test de DET o se tirará al suelo a devorarlo. Un necrófago que se pone a comer pierde el resto de su turno. Luego continuará realizando el test DET al inicio de su turno. Si tiene éxito, podrá actuar normalmente, pero aún tendrá que realizar el test el siguiente turno si todavía está cerca del monstruo muerto. Cada turno que come, recupera 2VIT, sin poder superar su máximo, y cuando está masticando se le considera como que está en el suelo caído."
+        },
          {
             "Habilidad": "Vientre débil",
             "Descripcion": "(Pasiva) Cuando un dragón hace un ataque poderoso, expone su vientre Su AN se reduce en -3 hasta su siguiente activación. Los ataques por la espalda que reciba, no se benefician de esta reducción de AN."
@@ -411,5 +428,23 @@
         {
             "Habilidad": "Volador",
             "Descripcion": "(Pasiva) Estos enemigos pueden volar y moverse a través de otras miniaturas mientras no terminen su movimiento en una casilla ocupada. Tampoco sufre penalizaciones por la ZDC del héroe. Es capaz de evitar fosos y trampas. Nunca activarán trampas y pueden moverse por ellas con normalidad. Pueden terminar su movimiento sobre una trampa. Todo movimiento es considerado como volar. Algunos voladores son tan grandes que sólo pueden volar en exteriores durante una escaramuza. Si se da el caso, la regla está escrita como Volador (E)."
-        }   ]
+        },
+        {
+            "Habilidad": "Mutación Troll",
+            "Descripcion":"<strong>Tira 1d20:</strong>             <br><strong style='color:orange;'>Con 1-9:</strong> No hay mutación.            <br><strong style='color:orange;'>Con 10:</strong> <strong style='color:#d4af37;'>Pierna débil:</strong> Sólo puede hacer un movimiento por turno. Tiene 2 PA, si el segundo PA no puede ser usado para otra acción, se perderá.            <br><strong style='color:orange;'>Con 11:</strong> <strong style='color:#d4af37;'>Frágil:</strong> -10 VIT.            <br><strong style='color:orange;'>Con 12:</strong> <strong style='color:#d4af37;'>Piel gruesa:</strong> +1 AN.            <br><strong style='color:orange;'>Con 13:</strong> <strong style='color:#d4af37;'>Brazo extra:</strong> Lo que le permite realizar 1 ataque normal adicional (1d8+1 DAÑ) cada turno.            <br><strong style='color:orange;'>Con 14:</strong> <strong style='color:#d4af37;'>Astado:</strong> (Pasiva) Esta criatura pone tanto énfasis cuando carga, que causa 1d4 DAÑ más durante ese ataque.            <br><strong style='color:orange;'>Con 15:</strong> <strong style='color:#d4af37;'>Fauces estomacales:</strong> Le otorga un ataque normal adicional cada turno contra el personaje en la casilla directamente frente a él. (1d8 DAÑ, PArm 2)            <br><strong style='color:orange;'>Con 16:</strong> <strong style='color:#d4af37;'>Garras:</strong> Posee unas garras antinaturalmente grandes, ganando PArm (2).            <br><strong style='color:orange;'>Con 17:</strong> <strong style='color:#d4af37;'>Inmune a Fuego</strong> Si posee la regla especial Pirofobia, esta queda anulada.            <br><strong style='color:orange;'>Con 18:</strong> <strong style='color:#d4af37;'>Extra duro:</strong> +10 VIT.            <br><strong style='color:orange;'>Con 19:</strong> <strong style='color:#d4af37;'>Uno con el Vacío:</strong> La criatura es completamente inmune a todo daño mágico y a cualquier efecto causado por la magia.            <br><strong style='color:orange;'>Con 20:</strong> Frio como el hielo: <strong style='color:#d4af37;'>Inmune a Frío</strong>. Además, cada uno de sus ataques inflige daño de frío y obtiene la regla especial <strong style='color:#d4af37;'>Aura Congelada</strong>Aura Congelada, (Pasiva) Cualquier jugador adyacente a esta criatura debe pasar test de CON al comienzo de su activación o quedará aturdido. Esta prueba debe repetirse cada turno."
+        }  ,
+        {
+              "Habilidad": "Mutación Demoníaca",
+            "Descripcion":"Tira 1d6:             <br><strong style='color:orange;'>Con 1-2:</strong> No tiene mutación.            <br><strong style='color:orange;'>Con 3:</strong>  <strong style='color:#d4af37;'>Enfermedad:</strong> Héroe herido, tira CON o enfermará.            <br><strong style='color:orange;'>Con 4:</strong>   <strong style='color:#d4af37;'>Cola:</strong> El demonio tiene una cola larga cubierta de púas afiladas. Cada turno, puede realizar un ataque gratuito (no se necesitan PA) contra cualquier héroe adyacente que no esté en las tres casillas delanteras. Inflige 1d10+2 (PArm2) de daño.            <br><strong style='color:orange;'>Con 5:</strong> <strong style='color:#d4af37;'>Aliento de Fuego:</strong> 1d10+5 DAÑ en casilla objetivo y 1d6+5 DAÑ en las 24 casillas adyacentes.            <br><strong style='color:orange;'>Con 6:</strong> <strong style='color:#d4af37;'>Seducción:</strong> Héroe DET o es seducido. Falla: Pierde los PA. DET al principio de su turno para perder este estado. Los Héroes seducidos no serán objetivo si hay Héroes no seducidos a la vista."
+        },
+    {
+        "Habilidad":"Comportamiento Espanto",
+        "Descripcion":"Tira 1d10:        <br><strong style='color:orange;'>Con 1-3:</strong>Mover. El Espanto se aleja lo más posible de los héroes mientras permanece en LDV. Esto sólo puede ocurrir una vez por turno.<br><strong style='color:orange;'>Con 4:</strong> Borroso. La imagen del Espanto parpadea. Hasta que se active nuevamente, gana -30 RG.<br><strong style='color:orange;'>Con 5-7:</strong>Ola de frío. Todos los héroes hasta 3 casillas del espanto reciben 1d8 DAÑ de frío. Ni la armadura ni la AN ayudan.<br><strong style='color:orange;'>Con 8:</strong>Chillido. Todos los héroes hasta 6 casillas del espanto pierden 1d4 VIT y 1d3 Cordura.<br><strong style='color:orange;'>Con 9:</strong>Levantar a los muertos. El fantasma lanza el hechizo Levantar a los muertos, usando su HD.<br><strong style='color:orange;'>Con 10:</strong>Portal al Vacío. El fantasma actúa como un portal al vacío y todos los Héroes que usen maná, pierden 2d10+5 Mana. Si esto le deja en negativo, el héroe pierde 1d3 de cordura."
+        },
+    {
+        "Habilidad":"Susto",
+        "Descripcion":"Tira 1d10:<br><strong style='color:orange;'>Con 1:</strong> <strong style='color:#d4af37;'>Tirar el arma:</strong> El fantasma señala a un héroe que debe pasar un test de DET o soltar su arma.<br><strong style='color:orange;'>Con 2:</strong> <strong style='color:#d4af37;'>Cordura:</strong> El fantasma señala a un héroe aleatorio en LDV que debe pasar un test de DET o perder -1 COR.<br><strong style='color:orange;'>Con 3:</strong> <strong style='color:#d4af37;'>Paralizar:</strong> El fantasma señala a un héroe aleatorio en LDV que debe pasar un test de DET o quedar paralizado 1 turno.<br><strong style='color:orange;'>Con 4-5:</strong> <strong style='color:#d4af37;'>Toque Fantasmal:</strong> Este ataque solo puede hacerse contra un Héroe adyacente y no puede ser bloqueado, pero sí esquivado. La armadura y AN no protegen contra este golpe, pero el objetivo puede evitar el daño pasando un test de DET. Si falla, pierde 1d8 VIT y 1 COR.<br><strong style='color:orange;'>Con 6:</strong> <strong style='color:#d4af37;'>DAÑ de frío:</strong> Todos los héroes hasta a cuatro casillas del fantasma, sin necesidad de línea de visión, deben pasar una prueba DET o sufrir 1d6 DAÑ de frío, sin armadura ni AN.<br><strong style='color:orange;'>Con 7:</strong> <strong style='color:#d4af37;'>Huida:</strong> El fantasma señala al héroe más cercano, quien debe pasar un test de DET o gastar sus siguientes 2PA alejándose lo más posible del fantasma. Si no puede moverse, el héroe perderá sus siguientes 2PA.<br><strong style='color:orange;'>Con 8:</strong> <strong style='color:#d4af37;'>Pasividad:</strong> El fantasma señala a un héroe aleatorio que debe pasar una prueba DET o desmayarse. El héroe queda aturdido durante los siguientes 2PA. Después, el héroe puede gastar 1PA para levantarse.<br><strong style='color:orange;'>Con 9:</strong> <strong style='color:#d4af37;'>Apagón:</strong> Todas las fuentes de luz se apagan. Todos los héroes en la misma loseta que el fantasma deben pasar un test de DET o ser colocados aleatoriamente en una nueva casilla en la misma loseta que el fantasma.<br><strong style='color:orange;'>Con 10:</strong> <strong style='color:#d4af37;'>Atravesar:</strong> El fantasma se lanza contra un Héroe aleatorio en LDV y vuelve a su casilla original. No hace falta tirar HC. El Héroe puede intentar esquivar este ataque. Si falla, el ataque causa aturdimiento y 1d8+2 DAÑ."
+    }
+    
+    ]
 }

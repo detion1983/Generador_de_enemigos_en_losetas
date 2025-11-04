@@ -298,7 +298,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "hombre_bestia.png"
+      "Imagen": "hombre_bestia_guardia.png"
     },
     {
       "ID": 20,
@@ -310,7 +310,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "hombre_bestia.png"
+      "Imagen": "hombre_bestia_guardia.png"
     },
     {
       "ID": 21,
@@ -742,7 +742,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_de_rio_martillo_de_guerra.png"
+      "Imagen": "troll_de_rio.png"
     },
     {
       "ID": 44,
@@ -754,7 +754,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_de_rio_martillo_de_guerra.png"
+      "Imagen": "troll_de_rio.png"
     },
     {
       "ID": 45,
@@ -862,7 +862,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_hacha_de_batalla.png"
+      "Imagen": "minotauro.png"
     },
     {
       "ID": 48,
@@ -874,7 +874,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_hacha_de_batalla.png"
+      "Imagen": "minotauro.png"
     },
     {
       "ID": 49,
@@ -886,7 +886,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ettin_martillo_de_guerra.png"
+      "Imagen": "ettin.png"
     },
     {
       "ID": 50,
@@ -898,7 +898,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ettin_martillo_de_guerra.png"
+      "Imagen": "ettin.png"
     },
     {
       "ID": 51,
@@ -934,7 +934,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_de_piedra_martillo_de_guerra.png"
+      "Imagen": "troll_de_piedra.png"
     },
     {
       "ID": 54,
@@ -946,7 +946,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_de_piedra_martillo_de_guerra.png"
+      "Imagen": "troll_de_piedra.png"
     },
     {
       "ID": 53,
@@ -1162,7 +1162,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 64,
@@ -1174,7 +1174,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 65,
@@ -1210,7 +1210,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 66,
@@ -1222,7 +1222,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 67,
@@ -1234,7 +1234,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ettin_martillo_de_guerra.png"
+      "Imagen": "ettin.png"
     },
     {
       "ID": 68,
@@ -1246,7 +1246,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ettin_martillo_de_guerra.png"
+      "Imagen": "ettin.png"
     },
     {
       "ID": 67,
@@ -1354,7 +1354,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_la_plaga_espada_larga_maldita.png"
+      "Imagen": "demonio_de_la_plaga.png"
     },
     {
       "ID": 74,
@@ -1366,7 +1366,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_la_plaga_espada_larga_maldita.png"
+      "Imagen": "demonio_de_la_plaga.png"
     },
     {
       "ID": 75,
@@ -1378,7 +1378,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 76,
@@ -1390,7 +1390,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 77,
@@ -1546,7 +1546,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 82,
@@ -1558,7 +1558,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 83,
@@ -1678,7 +1678,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 88,
@@ -1822,7 +1822,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 98,
@@ -1834,7 +1834,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 97,
@@ -1870,7 +1870,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gran_demonio_gran_hacha.png"
+      "Imagen": "gran_demonio.png"
     },
     {
       "ID": 100,
@@ -1882,7 +1882,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gran_demonio_gran_hacha.png"
+      "Imagen": "gran_demonio.png"
     },
     {
       "ID": 101,
@@ -1918,7 +1918,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gran_demonio_gran_hacha_maldita.png"
+      "Imagen": "gran_demonio.png"
     },
     {
       "ID": 104,
@@ -1930,7 +1930,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gran_demonio_gran_hacha_maldita.png"
+      "Imagen": "gran_demonio.png"
     },
     {
       "ID": 103,
@@ -2412,7 +2412,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 27,
@@ -2424,7 +2424,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 28,
@@ -2436,7 +2436,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 29,
@@ -2448,7 +2448,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_ancha_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 30,
@@ -2460,7 +2460,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_ancha_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 31,
@@ -2496,7 +2496,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 34,
@@ -2508,7 +2508,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 33,
@@ -2664,7 +2664,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 44,
@@ -2676,7 +2676,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 45,
@@ -2712,7 +2712,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 48,
@@ -2724,7 +2724,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 47,
@@ -2856,7 +2856,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_lucero_del_alba_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 56,
@@ -2868,7 +2868,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_lucero_del_alba_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 55,
@@ -2880,7 +2880,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 56,
@@ -2892,7 +2892,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 57,
@@ -2904,7 +2904,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 58,
@@ -2916,7 +2916,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 59,
@@ -2976,7 +2976,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_larga_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 64,
@@ -2988,7 +2988,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_larga_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 63,
@@ -3000,7 +3000,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 64,
@@ -3012,7 +3012,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 65,
@@ -3024,7 +3024,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_esqueleto_gran_hacha.png"
+      "Imagen": "minotauro_esqueleto.png"
     },
     {
       "ID": 66,
@@ -3036,7 +3036,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_esqueleto_gran_hacha.png"
+      "Imagen": "minotauro_esqueleto.png"
     },
     {
       "ID": 67,
@@ -3096,7 +3096,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 70,
@@ -3108,7 +3108,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 71,
@@ -3144,7 +3144,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 74,
@@ -3156,7 +3156,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 75,
@@ -3168,7 +3168,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_mayal.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 76,
@@ -3180,7 +3180,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_mayal.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 75,
@@ -3192,7 +3192,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 76,
@@ -3204,7 +3204,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 77,
@@ -3216,7 +3216,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_esqueleto_gran_hacha.png"
+      "Imagen": "minotauro_esqueleto.png"
     },
     {
       "ID": 78,
@@ -3228,7 +3228,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_esqueleto_gran_hacha.png"
+      "Imagen": "minotauro_esqueleto.png"
     },
     {
       "ID": 79,
@@ -3240,7 +3240,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_espada_larga.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 80,
@@ -3252,7 +3252,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_espada_larga.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 79,
@@ -3264,7 +3264,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_larga_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 80,
@@ -3276,7 +3276,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_larga_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 81,
@@ -3360,7 +3360,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_hacha_de_batalla.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 88,
@@ -3372,7 +3372,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_hacha_de_batalla.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 87,
@@ -3432,7 +3432,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 92,
@@ -3444,7 +3444,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 93,
@@ -3504,7 +3504,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_larga_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 96,
@@ -3516,7 +3516,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_espada_larga_escudo.png"
+      "Imagen": "zombi.png"
     },
     {
       "ID": 97,
@@ -3552,7 +3552,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 98,
@@ -3564,7 +3564,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 99,
@@ -3576,7 +3576,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_espada_larga_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 100,
@@ -3588,7 +3588,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_espada_larga_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 99,
@@ -3624,7 +3624,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 100,
@@ -3636,7 +3636,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 101,
@@ -3648,7 +3648,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_hacha_de_batalla.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 102,
@@ -3660,7 +3660,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_hacha_de_batalla.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 103,
@@ -3672,7 +3672,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 104,
@@ -3684,7 +3684,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 103,
@@ -3696,7 +3696,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "momia_sacerdote_baston.png"
+      "Imagen": "momia_sacerdote.png"
     },
     {
       "ID": 104,
@@ -3708,7 +3708,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "momia_sacerdote_baston.png"
+      "Imagen": "momia_sacerdote.png"
     },
     {
       "ID": 105,
@@ -3744,7 +3744,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 108,
@@ -3756,7 +3756,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 107,
@@ -3768,7 +3768,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 108,
@@ -3780,7 +3780,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 109,
@@ -3792,7 +3792,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 110,
@@ -3804,7 +3804,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     }
   ],
   "Bandidos y Bandoleros": [
@@ -4106,7 +4106,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_gran_hacha.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 20,
@@ -4118,7 +4118,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_gran_hacha.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 21,
@@ -4298,7 +4298,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espada_larga.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 30,
@@ -4310,7 +4310,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espada_larga.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 31,
@@ -4346,7 +4346,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "brujo_baston.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 32,
@@ -4358,7 +4358,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "brujo_baston.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 33,
@@ -4418,7 +4418,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_espada_ancha_escudo.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 36,
@@ -4430,7 +4430,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_espada_ancha_escudo.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 35,
@@ -4466,7 +4466,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_mayal.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 38,
@@ -4478,7 +4478,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_mayal.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 37,
@@ -4490,7 +4490,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 38,
@@ -4502,7 +4502,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 37,
@@ -4514,7 +4514,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_hacha_de_batalla_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 38,
@@ -4526,7 +4526,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_hacha_de_batalla_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 39,
@@ -4538,7 +4538,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espadon.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 40,
@@ -4550,7 +4550,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espadon.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 41,
@@ -4562,7 +4562,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_espadon.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 42,
@@ -4574,7 +4574,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_espadon.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 41,
@@ -4586,7 +4586,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_ballesta_daga.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 42,
@@ -4598,7 +4598,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_ballesta_daga.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 43,
@@ -4706,7 +4706,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "brujo_espada_corta.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 46,
@@ -4718,7 +4718,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "brujo_espada_corta.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 47,
@@ -4730,7 +4730,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_mayal.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 48,
@@ -4742,7 +4742,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_mayal.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 49,
@@ -4778,7 +4778,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 52,
@@ -4790,7 +4790,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 53,
@@ -4802,7 +4802,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_hacha_de_batalla.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 54,
@@ -4814,7 +4814,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_hacha_de_batalla.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 55,
@@ -4826,7 +4826,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_espada_larga.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 56,
@@ -4838,7 +4838,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_espada_larga.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 55,
@@ -4850,7 +4850,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "brujo_espada_ancha.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 56,
@@ -4862,7 +4862,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "brujo_espada_ancha.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 57,
@@ -4946,7 +4946,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_alabarda.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 60,
@@ -4958,7 +4958,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_alabarda.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 61,
@@ -5018,7 +5018,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_ballesta_daga.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 64,
@@ -5030,7 +5030,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_ballesta_daga.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 65,
@@ -5042,7 +5042,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_hacha_de_batalla.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 66,
@@ -5054,7 +5054,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "berserker_hacha_de_batalla.png"
+      "Imagen": "berserker.png"
     },
     {
       "ID": 65,
@@ -5090,7 +5090,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_espadon.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 68,
@@ -5102,7 +5102,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_espadon.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 69,
@@ -5138,7 +5138,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_maldita_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 72,
@@ -5150,7 +5150,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_maldita_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 71,
@@ -5162,7 +5162,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "brujo_daga.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 72,
@@ -5174,7 +5174,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "brujo_daga.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 73,
@@ -5186,7 +5186,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 74,
@@ -5198,7 +5198,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 73,
@@ -5234,7 +5234,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espada_larga_escudo.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 76,
@@ -5246,7 +5246,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espada_larga_escudo.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 77,
@@ -5258,7 +5258,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "brujo_baston.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 78,
@@ -5270,7 +5270,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "brujo_baston.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 77,
@@ -5330,7 +5330,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_ballesta_daga.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 80,
@@ -5342,7 +5342,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "bandido_ballesta_daga.png"
+      "Imagen": "bandido.png"
     },
     {
       "ID": 81,
@@ -5354,7 +5354,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_espadon.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 82,
@@ -5366,7 +5366,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_espadon.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 83,
@@ -5378,7 +5378,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "centauro_jabalina_escudo.png"
+      "Imagen": "centauro.png"
     },
     {
       "ID": 84,
@@ -5390,7 +5390,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "centauro_jabalina_escudo.png"
+      "Imagen": "centauro.png"
     },
     {
       "ID": 85,
@@ -5402,7 +5402,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 86,
@@ -5414,7 +5414,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 85,
@@ -5426,7 +5426,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "brujo_baston.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 86,
@@ -5438,7 +5438,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "brujo_baston.png"
+      "Imagen": "brujo.png"
     },
     {
       "ID": 87,
@@ -5474,7 +5474,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_espadon.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 90,
@@ -5486,7 +5486,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_espadon.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 91,
@@ -5498,7 +5498,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "centauro_arco_largo_espada_corta.png"
+      "Imagen": "centauro_arco_largo.png"
     },
     {
       "ID": 92,
@@ -5510,7 +5510,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "centauro_arco_largo_espada_corta.png"
+      "Imagen": "centauro_arco_largo.png"
     },
     {
       "ID": 91,
@@ -5522,7 +5522,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espada_larga_escudo.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 92,
@@ -5534,7 +5534,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_espada_larga_escudo.png"
+      "Imagen": "Ogro.png"
     },
     {
       "ID": 93,
@@ -5546,7 +5546,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_gran_hacha.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 94,
@@ -5558,7 +5558,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "Ogro_berserker_gran_hacha.png"
+      "Imagen": "Ogro_berserker.png"
     },
     {
       "ID": 95,
@@ -5570,7 +5570,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_maldita_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 96,
@@ -5582,7 +5582,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_maldita_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 95,
@@ -5714,7 +5714,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gigante_martillo_de_guerra.png"
+      "Imagen": "gigante.png"
     },
     {
       "ID": 104,
@@ -5726,7 +5726,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gigante_martillo_de_guerra.png"
+      "Imagen": "gigante.png"
     },
     {
       "ID": 103,
@@ -5738,7 +5738,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_maldita_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 104,
@@ -5750,7 +5750,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "caballero_caido_espada_larga_maldita_escudo.png"
+      "Imagen": "caballero_caido.png"
     },
     {
       "ID": 105,
@@ -5834,7 +5834,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gigante_martillo_de_guerra.png"
+      "Imagen": "gigante.png"
     },
     {
       "ID": 110,
@@ -5846,7 +5846,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gigante_martillo_de_guerra.png"
+      "Imagen": "gigante.png"
     }
   ],
   "Orcos y Goblins": [
@@ -6004,7 +6004,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_espada_larga_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 14,
@@ -6016,7 +6016,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_espada_larga_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 15,
@@ -6124,7 +6124,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_jefe_hacha_de_batalla_escudo.png"
+      "Imagen": "orco_jefe.png"
     },
     {
       "ID": 24,
@@ -6136,7 +6136,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_jefe_hacha_de_batalla_escudo.png"
+      "Imagen": "orco_jefe.png"
     },
     {
       "ID": 25,
@@ -6148,7 +6148,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_espada_larga_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 26,
@@ -6160,7 +6160,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_espada_larga_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 27,
@@ -6172,7 +6172,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "goblin_jabalina_escudo.png"
+      "Imagen": "goblin.png"
     },
     {
       "ID": 28,
@@ -6184,7 +6184,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "goblin_jabalina_escudo.png"
+      "Imagen": "goblin.png"
     },
     {
       "ID": 29,
@@ -6196,7 +6196,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_espada_larga_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 30,
@@ -6208,7 +6208,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_espada_larga_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 31,
@@ -6220,7 +6220,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "goblin_chaman_espada_corta.png"
+      "Imagen": "goblin_chaman.png"
     },
     {
       "ID": 32,
@@ -6232,7 +6232,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "goblin_chaman_espada_corta.png"
+      "Imagen": "goblin_chaman.png"
     },
     {
       "ID": 33,
@@ -6316,7 +6316,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 40,
@@ -6328,7 +6328,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 41,
@@ -6340,7 +6340,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_bruto_hacha_de_batalla_escudo.png"
+      "Imagen": "orco_bruto.png"
     },
     {
       "ID": 42,
@@ -6352,7 +6352,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_bruto_hacha_de_batalla_escudo.png"
+      "Imagen": "orco_bruto.png"
     },
     {
       "ID": 43,
@@ -6364,7 +6364,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 44,
@@ -6376,7 +6376,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 45,
@@ -6412,7 +6412,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_jefe_lucero_del_alba_escudo.png"
+      "Imagen": "orco_jefe.png"
     },
     {
       "ID": 48,
@@ -6424,7 +6424,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_jefe_lucero_del_alba_escudo.png"
+      "Imagen": "orco_jefe.png"
     },
     {
       "ID": 49,
@@ -6436,7 +6436,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 50,
@@ -6448,7 +6448,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 51,
@@ -6484,7 +6484,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 54,
@@ -6496,7 +6496,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 55,
@@ -6532,7 +6532,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 58,
@@ -6544,7 +6544,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 59,
@@ -6580,7 +6580,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 62,
@@ -6592,7 +6592,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 63,
@@ -6628,7 +6628,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 66,
@@ -6640,7 +6640,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 67,
@@ -6676,7 +6676,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 70,
@@ -6688,7 +6688,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 71,
@@ -6724,7 +6724,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 74,
@@ -6736,7 +6736,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 75,
@@ -6772,7 +6772,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 78,
@@ -6784,7 +6784,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 79,
@@ -6820,7 +6820,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 82,
@@ -6832,7 +6832,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 83,
@@ -6868,7 +6868,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 86,
@@ -6880,7 +6880,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 87,
@@ -6916,7 +6916,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 90,
@@ -6928,7 +6928,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 91,
@@ -6964,7 +6964,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 94,
@@ -6976,7 +6976,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 95,
@@ -7012,7 +7012,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 98,
@@ -7024,7 +7024,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 99,
@@ -7060,7 +7060,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 102,
@@ -7072,7 +7072,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "orco_chaman_baston.png"
+      "Imagen": "orco_chaman.png"
     },
     {
       "ID": 103,
@@ -7108,7 +7108,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 106,
@@ -7120,7 +7120,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "ogro_espada_larga_escudo.png"
+      "Imagen": "ogro.png"
     },
     {
       "ID": 107,
@@ -7156,7 +7156,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     },
     {
       "ID": 110,
@@ -7168,7 +7168,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "orco_hacha_de_batalla_escudo.png"
+      "Imagen": "orco.png"
     }
 
   ],
@@ -7303,7 +7303,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 12,
@@ -7315,7 +7315,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 13,
@@ -7327,7 +7327,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 14,
@@ -7339,7 +7339,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 13,
@@ -7351,7 +7351,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_espada_corta_escudo.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 14,
@@ -7363,7 +7363,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_espada_corta_escudo.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 15,
@@ -7375,7 +7375,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 16,
@@ -7387,7 +7387,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 15,
@@ -7399,7 +7399,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_espada_corta_escudo.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 16,
@@ -7411,7 +7411,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_espada_corta_escudo.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 17,
@@ -7423,7 +7423,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 18,
@@ -7435,7 +7435,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 19,
@@ -7447,7 +7447,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_lucero_del_alba_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 20,
@@ -7459,7 +7459,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_lucero_del_alba_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 19,
@@ -7471,7 +7471,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 20,
@@ -7483,7 +7483,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 21,
@@ -7495,7 +7495,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_jabalina_escudo.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 22,
@@ -7507,7 +7507,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_jabalina_escudo.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 21,
@@ -7519,7 +7519,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_espada_larga_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 22,
@@ -7531,7 +7531,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_espada_larga_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 23,
@@ -7543,7 +7543,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_hacha_de_batalla_escudo.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 24,
@@ -7555,7 +7555,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_hacha_de_batalla_escudo.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 23,
@@ -7567,7 +7567,7 @@
       "Hechizos_Melé": "1",
       "Hechizos_Distancia": "1",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 24,
@@ -7579,7 +7579,7 @@
       "Hechizos_Melé": "1",
       "Hechizos_Distancia": "1",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 25,
@@ -7615,7 +7615,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_jabalina_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 26,
@@ -7627,7 +7627,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_jabalina_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 27,
@@ -7687,7 +7687,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 32,
@@ -7699,7 +7699,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 33,
@@ -7711,7 +7711,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_martillo_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 34,
@@ -7723,7 +7723,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_martillo_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 33,
@@ -7735,7 +7735,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_red_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 34,
@@ -7747,7 +7747,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_red_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 33,
@@ -7759,7 +7759,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 34,
@@ -7771,7 +7771,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 35,
@@ -7783,7 +7783,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 36,
@@ -7795,7 +7795,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 35,
@@ -7879,7 +7879,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 42,
@@ -7891,7 +7891,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 43,
@@ -7903,7 +7903,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 44,
@@ -7915,7 +7915,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 43,
@@ -7951,7 +7951,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_martillo_de_batalla_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 46,
@@ -7963,7 +7963,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_martillo_de_batalla_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 45,
@@ -7999,7 +7999,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_larga.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 48,
@@ -8011,7 +8011,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_larga.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 49,
@@ -8023,7 +8023,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_mayal.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 50,
@@ -8035,7 +8035,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_mayal.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 49,
@@ -8047,7 +8047,7 @@
       "Hechizos_Melé": "1",
       "Hechizos_Distancia": "1",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 50,
@@ -8059,7 +8059,7 @@
       "Hechizos_Melé": "1",
       "Hechizos_Distancia": "1",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 51,
@@ -8071,7 +8071,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 52,
@@ -8083,7 +8083,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_hacha_de_batalla_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 51,
@@ -8119,7 +8119,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 54,
@@ -8131,7 +8131,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 53,
@@ -8167,7 +8167,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_red_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 56,
@@ -8179,7 +8179,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_red_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 55,
@@ -8191,7 +8191,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 56,
@@ -8203,7 +8203,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 57,
@@ -8215,7 +8215,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_espada_larga.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 57,
@@ -8227,7 +8227,7 @@
       "Hechizos_Melé": "2",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 58,
@@ -8239,7 +8239,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_espada_larga.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 58,
@@ -8251,7 +8251,7 @@
       "Hechizos_Melé": "2",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 59,
@@ -8263,7 +8263,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_red_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 60,
@@ -8275,7 +8275,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_red_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 59,
@@ -8311,7 +8311,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_martillo_de_batalla.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 60,
@@ -8323,7 +8323,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_martillo_de_batalla.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 61,
@@ -8359,7 +8359,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_espada_larga_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 64,
@@ -8371,7 +8371,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_espada_larga_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 65,
@@ -8383,7 +8383,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_lucero_del_alba_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 66,
@@ -8395,7 +8395,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_lucero_del_alba_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 65,
@@ -8407,7 +8407,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_arco_corto_daga.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 66,
@@ -8419,7 +8419,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_arco_corto_daga.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 67,
@@ -8431,7 +8431,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_martillo_de_batalla.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 68,
@@ -8443,7 +8443,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_martillo_de_batalla.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 67,
@@ -8455,7 +8455,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 68,
@@ -8467,7 +8467,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 67,
@@ -8479,7 +8479,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_red_espada_corta.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 68,
@@ -8491,7 +8491,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_red_espada_corta.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 69,
@@ -8575,7 +8575,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_espada_larga_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 74,
@@ -8587,7 +8587,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_espada_larga_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 73,
@@ -8599,7 +8599,7 @@
       "Hechizos_Melé": "3",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 74,
@@ -8611,7 +8611,7 @@
       "Hechizos_Melé": "3",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 73,
@@ -8695,7 +8695,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 78,
@@ -8707,7 +8707,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_corta.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 79,
@@ -8719,7 +8719,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_espada_larga_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 80,
@@ -8731,7 +8731,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_espada_larga_escudo.png"
+      "Imagen": "saurio.png"
     },
     {
       "ID": 79,
@@ -8743,7 +8743,7 @@
       "Hechizos_Melé": "3",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "2",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 80,
@@ -8755,7 +8755,7 @@
       "Hechizos_Melé": "3",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "2",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 81,
@@ -8767,7 +8767,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_jefe_de_guerra_lucero_del_alba_escudo.png"
+      "Imagen": "saurio_jefe_de_guerra.png"
     },
     {
       "ID": 82,
@@ -8779,7 +8779,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_jefe_de_guerra_lucero_del_alba_escudo.png"
+      "Imagen": "saurio_jefe_de_guerra.png"
     },
     {
       "ID": 81,
@@ -8863,7 +8863,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_daga.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 88,
@@ -8875,7 +8875,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_daga.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 87,
@@ -8887,7 +8887,7 @@
       "Hechizos_Melé": "4",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "2",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 88,
@@ -8899,7 +8899,7 @@
       "Hechizos_Melé": "4",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "2",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 87,
@@ -8911,7 +8911,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 88,
@@ -8923,7 +8923,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_asesino_arco_corto_daga.png"
+      "Imagen": "lagarto_asesino.png"
     },
     {
       "ID": 89,
@@ -8935,7 +8935,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_jefe_de_guerra_espada_larga_escudo.png"
+      "Imagen": "saurio_jefe_de_guerra.png"
     },
     {
       "ID": 90,
@@ -8947,7 +8947,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_jefe_de_guerra_espada_larga_escudo.png"
+      "Imagen": "saurio_jefe_de_guerra.png"
     },
     {
       "ID": 89,
@@ -8983,7 +8983,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_ancha.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 92,
@@ -8995,7 +8995,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_ancha.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 91,
@@ -9055,7 +9055,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_larga.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 94,
@@ -9067,7 +9067,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "naga_espada_larga.png"
+      "Imagen": "naga.png"
     },
     {
       "ID": 93,
@@ -9103,7 +9103,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_alabarda_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 94,
@@ -9115,7 +9115,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_alabarda_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 95,
@@ -9151,7 +9151,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_espada_larga_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 98,
@@ -9163,7 +9163,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "saurio_de_elite_espada_larga_escudo.png"
+      "Imagen": "saurio_de_elite.png"
     },
     {
       "ID": 97,
@@ -9175,7 +9175,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_arco_corto_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 98,
@@ -9187,7 +9187,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "lagarto_arco_corto_espada_corta.png"
+      "Imagen": "lagarto.png"
     },
     {
       "ID": 97,
@@ -9199,7 +9199,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_red_espada_corta.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 98,
@@ -9211,7 +9211,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "renacuajo_red_espada_corta.png"
+      "Imagen": "renacuajo.png"
     },
     {
       "ID": 99,
@@ -9271,7 +9271,7 @@
       "Hechizos_Melé": "3",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 104,
@@ -9283,7 +9283,7 @@
       "Hechizos_Melé": "3",
       "Hechizos_Distancia": "2",
       "Hechizos_Apoyo": "1",
-      "Imagen": "saurio_sacerdote_baston.png"
+      "Imagen": "saurio_sacerdote.png"
     },
     {
       "ID": 103,
@@ -9295,7 +9295,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "troll_de_piedra_martillo_de_guerra.png"
+      "Imagen": "troll_de_piedra.png"
     },
     {
       "ID": 104,
@@ -9307,7 +9307,7 @@
       "Hechizos_Melé": "0",
       "Hechizos_Distancia": "0",
       "Hechizos_Apoyo": "0",
-      "Imagen": "troll_de_piedra_martillo_de_guerra.png"
+      "Imagen": "troll_de_piedra.png"
     },
     {
       "ID": 105,
@@ -9513,7 +9513,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_corta.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 10,
@@ -9525,7 +9525,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_corta.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 11,
@@ -9561,7 +9561,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_corta.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 14,
@@ -9573,7 +9573,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_corta.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 13,
@@ -9585,7 +9585,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_arco_corto_daga.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 14,
@@ -9597,7 +9597,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_arco_corto_daga.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 15,
@@ -9609,7 +9609,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_larga.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 16,
@@ -9621,7 +9621,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_larga.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 15,
@@ -9632,7 +9632,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_espada_corta_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 16,
@@ -9643,7 +9643,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_espada_corta_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 17,
@@ -9655,7 +9655,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 18,
@@ -9667,7 +9667,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 17,
@@ -9703,7 +9703,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_gran_hacha.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 20,
@@ -9715,7 +9715,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_gran_hacha.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 19,
@@ -9751,7 +9751,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_lucero_del_alba.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 22,
@@ -9763,7 +9763,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_lucero_del_alba.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 21,
@@ -9775,7 +9775,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_tirador_arco_largo_daga.png"
+      "Imagen": "elfo_oscuro_tirador.png"
     },
     {
       "ID": 22,
@@ -9787,7 +9787,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_tirador_arco_largo_daga.png"
+      "Imagen": "elfo_oscuro_tirador.png"
     },
     {
       "ID": 23,
@@ -9919,7 +9919,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espada_larga.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 30,
@@ -9931,7 +9931,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espada_larga.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 31,
@@ -9943,7 +9943,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 32,
@@ -9955,7 +9955,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 31,
@@ -9967,7 +9967,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_brujo_baston.png"
+      "Imagen": "elfo_oscuro_brujo.png"
     },
     {
       "ID": 32,
@@ -9979,7 +9979,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_brujo_baston.png"
+      "Imagen": "elfo_oscuro_brujo.png"
     },
     {
       "ID": 33,
@@ -9991,7 +9991,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 34,
@@ -10003,7 +10003,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 33,
@@ -10015,7 +10015,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_tirador_arco_largo_daga.png"
+      "Imagen": "elfo_oscuro_tirador.png"
     },
     {
       "ID": 34,
@@ -10027,7 +10027,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_tirador_arco_largo_daga.png"
+      "Imagen": "elfo_oscuro_tirador.png"
     },
     {
       "ID": 35,
@@ -10039,7 +10039,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_ancha_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 36,
@@ -10051,7 +10051,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_ancha_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 35,
@@ -10063,7 +10063,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 36,
@@ -10075,7 +10075,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 37,
@@ -10087,7 +10087,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_mayal.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 38,
@@ -10099,7 +10099,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_mayal.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 37,
@@ -10159,7 +10159,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espadon.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 40,
@@ -10171,7 +10171,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espadon.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 41,
@@ -10183,7 +10183,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espadon.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 42,
@@ -10195,7 +10195,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espadon.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 41,
@@ -10206,7 +10206,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_ballesta_daga_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 42,
@@ -10217,7 +10217,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_ballesta_daga_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 43,
@@ -10253,7 +10253,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_larga_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 44,
@@ -10265,7 +10265,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_larga_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 43,
@@ -10301,7 +10301,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 46,
@@ -10313,7 +10313,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 45,
@@ -10325,7 +10325,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "elfo_oscuro_brujo_espada_corta.png"
+      "Imagen": "elfo_oscuro_brujo.png"
     },
     {
       "ID": 46,
@@ -10337,7 +10337,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "elfo_oscuro_brujo_espada_corta.png"
+      "Imagen": "elfo_oscuro_brujo.png"
     },
     {
       "ID": 47,
@@ -10445,7 +10445,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_la_plaga_espada_larga.png"
+      "Imagen": "demonio_de_la_plaga.png"
     },
     {
       "ID": 56,
@@ -10457,7 +10457,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_la_plaga_espada_larga.png"
+      "Imagen": "demonio_de_la_plaga.png"
     },
     {
       "ID": 55,
@@ -10469,7 +10469,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "psiquico_espada_ancha.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 56,
@@ -10481,7 +10481,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 1,
-      "Imagen": "psiquico_espada_ancha.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 57,
@@ -10493,7 +10493,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espada_larga_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 58,
@@ -10505,7 +10505,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espada_larga_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 57,
@@ -10516,7 +10516,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_daga_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 58,
@@ -10527,7 +10527,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_daga_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 57,
@@ -10563,7 +10563,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_alabarda.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 60,
@@ -10575,7 +10575,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_alabarda.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 61,
@@ -10659,7 +10659,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_arco_corto_daga.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 64,
@@ -10671,7 +10671,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_arco_corto_daga.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 65,
@@ -10683,7 +10683,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 66,
@@ -10695,7 +10695,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_hacha_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 67,
@@ -10707,7 +10707,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espadon.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 68,
@@ -10719,7 +10719,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espadon.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 69,
@@ -10755,7 +10755,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita_escudo.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 72,
@@ -10767,7 +10767,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita_escudo.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 71,
@@ -10803,7 +10803,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_larga_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 74,
@@ -10815,7 +10815,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_espada_larga_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 73,
@@ -10851,7 +10851,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espada_larga_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 76,
@@ -10863,7 +10863,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espada_larga_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 77,
@@ -10899,7 +10899,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "psiquico_baston.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 78,
@@ -10911,7 +10911,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "psiquico_baston.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 79,
@@ -10923,7 +10923,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_espada_larga_escudo.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 80,
@@ -10935,7 +10935,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_capitan_espada_larga_escudo.png"
+      "Imagen": "elfo_oscuro_capitan.png"
     },
     {
       "ID": 79,
@@ -10947,7 +10947,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_tirador_ballesta_daga.png"
+      "Imagen": "elfo_oscuro_tirador.png"
     },
     {
       "ID": 80,
@@ -10959,7 +10959,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_tirador_ballesta_daga.png"
+      "Imagen": "elfo_oscuro_tirador.png"
     },
     {
       "ID": 81,
@@ -10971,7 +10971,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espadon.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 82,
@@ -10983,7 +10983,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_espadon.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 83,
@@ -10995,7 +10995,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "medusa_espada_ancha_escudo.png"
+      "Imagen": "medusa.png"
     },
     {
       "ID": 84,
@@ -11007,7 +11007,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "medusa_espada_ancha_escudo.png"
+      "Imagen": "medusa.png"
     },
     {
       "ID": 85,
@@ -11019,7 +11019,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 86,
@@ -11031,7 +11031,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 85,
@@ -11043,7 +11043,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "psiquico_baston.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 86,
@@ -11055,7 +11055,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "psiquico_baston.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 87,
@@ -11091,7 +11091,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 90,
@@ -11103,7 +11103,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_comun_martillo_de_guerra.png"
+      "Imagen": "troll_comun.png"
     },
     {
       "ID": 89,
@@ -11115,7 +11115,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_martillo_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 90,
@@ -11127,7 +11127,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_martillo_de_batalla_escudo.png"
+      "Imagen": "elfo_oscuro.png"
     },
     {
       "ID": 91,
@@ -11139,7 +11139,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "medusa_espada_larga_escudo.png"
+      "Imagen": "medusa.png"
     },
     {
       "ID": 92,
@@ -11151,7 +11151,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "medusa_espada_larga_escudo.png"
+      "Imagen": "medusa.png"
     },
     {
       "ID": 93,
@@ -11163,7 +11163,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_gran_hacha.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 94,
@@ -11175,7 +11175,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_gran_hacha.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 95,
@@ -11187,7 +11187,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita_escudo.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 96,
@@ -11199,7 +11199,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "demonio_de_sangre_espada_larga_maldita_escudo.png"
+      "Imagen": "demonio_de_sangre.png"
     },
     {
       "ID": 95,
@@ -11211,7 +11211,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_espada_corta_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 96,
@@ -11223,7 +11223,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "elfo_oscuro_asesino_espada_corta_envenenada.png"
+      "Imagen": "elfo_oscuro_asesino.png"
     },
     {
       "ID": 97,
@@ -11235,7 +11235,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_hacha_de_batalla_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 98,
@@ -11247,7 +11247,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_hacha_de_batalla_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 97,
@@ -11331,7 +11331,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "elfo_oscuro_brujo_baston.png"
+      "Imagen": "elfo_oscuro_brujo.png"
     },
     {
       "ID": 104,
@@ -11343,7 +11343,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "elfo_oscuro_brujo_baston.png"
+      "Imagen": "elfo_oscuro_brujo.png"
     },
     {
       "ID": 103,
@@ -11355,7 +11355,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gran_demonio_espada_larga_maldita_escudo.png"
+      "Imagen": "gran_demonio.png"
     },
     {
       "ID": 104,
@@ -11367,7 +11367,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "gran_demonio_espada_larga_maldita_escudo.png"
+      "Imagen": "gran_demonio.png"
     },
     {
       "ID": 105,
@@ -11379,7 +11379,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_hacha_de_batalla_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 106,
@@ -11391,7 +11391,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "dryder_hacha_de_batalla_escudo.png"
+      "Imagen": "dryder.png"
     },
     {
       "ID": 107,
@@ -11403,7 +11403,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "psiquico_baston.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 108,
@@ -11415,7 +11415,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "psiquico_baston.png"
+      "Imagen": "psiquico.png"
     },
     {
       "ID": 107,
@@ -11573,7 +11573,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_hacha_de_batalla_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 10,
@@ -11585,7 +11585,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_hacha_de_batalla_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 11,
@@ -11645,7 +11645,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 16,
@@ -11657,7 +11657,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 15,
@@ -11669,7 +11669,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_alabarda.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 16,
@@ -11681,7 +11681,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_alabarda.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 17,
@@ -11693,7 +11693,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 18,
@@ -11705,7 +11705,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 17,
@@ -11717,7 +11717,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_gran_hacha.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 18,
@@ -11729,7 +11729,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_gran_hacha.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 19,
@@ -11765,7 +11765,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_ancha.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 22,
@@ -11777,7 +11777,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_ancha.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 23,
@@ -11861,7 +11861,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_espada_larga_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 28,
@@ -11873,7 +11873,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_espada_larga_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 27,
@@ -11884,7 +11884,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 28,
@@ -11895,7 +11895,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 29,
@@ -11907,7 +11907,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_gran_hacha.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 30,
@@ -11919,7 +11919,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_gran_hacha.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 31,
@@ -11955,7 +11955,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 34,
@@ -11967,7 +11967,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_larga_escudo.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 33,
@@ -12051,7 +12051,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 40,
@@ -12063,7 +12063,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 41,
@@ -12147,7 +12147,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 44,
@@ -12159,7 +12159,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_arco_largo_daga.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 45,
@@ -12195,7 +12195,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 48,
@@ -12207,7 +12207,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 47,
@@ -12218,7 +12218,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 48,
@@ -12229,7 +12229,7 @@
       "Hechizos_Melé": 2,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 0,
-      "Imagen": "nigromante_baston.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 49,
@@ -12241,7 +12241,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_zombi_martillo_de_guerra.png"
+      "Imagen": "troll_zombi.png"
     },
     {
       "ID": 50,
@@ -12253,7 +12253,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_zombi_martillo_de_guerra.png"
+      "Imagen": "troll_zombi.png"
     },
     {
       "ID": 51,
@@ -12265,7 +12265,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_martillo_de_guerra.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 52,
@@ -12277,7 +12277,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_martillo_de_guerra.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 51,
@@ -12313,7 +12313,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_alabarda.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 54,
@@ -12325,7 +12325,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_alabarda.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 53,
@@ -12337,7 +12337,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_hacha_de_batalla_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 54,
@@ -12349,7 +12349,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_hacha_de_batalla_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 55,
@@ -12457,7 +12457,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_zombi_martillo_de_guerra.png"
+      "Imagen": "troll_zombi.png"
     },
     {
       "ID": 62,
@@ -12469,7 +12469,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "troll_zombi_martillo_de_guerra.png"
+      "Imagen": "troll_zombi.png"
     },
     {
       "ID": 63,
@@ -12481,7 +12481,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 64,
@@ -12493,7 +12493,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 63,
@@ -12504,7 +12504,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "momia_sacerdote_baston.png"
+      "Imagen": "momia_sacerdote.png"
     },
     {
       "ID": 64,
@@ -12515,7 +12515,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "momia_sacerdote_baston.png"
+      "Imagen": "momia_sacerdote.png"
     },
     {
       "ID": 65,
@@ -12527,7 +12527,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 66,
@@ -12539,7 +12539,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 65,
@@ -12599,7 +12599,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_martillo_de_guerra.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 70,
@@ -12611,7 +12611,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_martillo_de_guerra.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 69,
@@ -12647,7 +12647,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_martillo_de_guerra.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 72,
@@ -12659,7 +12659,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_martillo_de_guerra.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 73,
@@ -12671,7 +12671,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 74,
@@ -12683,7 +12683,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 75,
@@ -12695,7 +12695,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_hacha_de_batalla_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 76,
@@ -12707,7 +12707,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_hacha_de_batalla_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 75,
@@ -12719,7 +12719,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espadon.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 76,
@@ -12731,7 +12731,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espadon.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 77,
@@ -12768,7 +12768,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 80,
@@ -12779,7 +12779,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 79,
@@ -12791,7 +12791,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 80,
@@ -12803,7 +12803,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "momia_espada_larga_escudo.png"
+      "Imagen": "momia.png"
     },
     {
       "ID": 81,
@@ -12863,7 +12863,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_gran_hacha.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 86,
@@ -12875,7 +12875,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_gran_hacha.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 87,
@@ -12886,7 +12886,7 @@
       "Hechizos_Melé": 5,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 88,
@@ -12897,7 +12897,7 @@
       "Hechizos_Melé": 5,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 87,
@@ -12909,7 +12909,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_alabarda.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 88,
@@ -12921,7 +12921,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_alabarda.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 89,
@@ -12957,7 +12957,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 92,
@@ -12969,7 +12969,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_alabarda_maldita.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 93,
@@ -13101,7 +13101,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_espada_larga_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 100,
@@ -13113,7 +13113,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_espada_larga_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 99,
@@ -13148,7 +13148,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 3,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 100,
@@ -13159,7 +13159,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 3,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 101,
@@ -13171,7 +13171,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_espada_larga.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 102,
@@ -13183,7 +13183,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_vastago_espada_larga.png"
+      "Imagen": "vampiro_vastago.png"
     },
     {
       "ID": 103,
@@ -13194,7 +13194,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "momia_sacerdote_baston.png"
+      "Imagen": "momia_sacerdote.png"
     },
     {
       "ID": 104,
@@ -13205,7 +13205,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 2,
       "Hechizos_Apoyo": 1,
-      "Imagen": "momia_sacerdote_baston.png"
+      "Imagen": "momia_sacerdote.png"
     },
     {
       "ID": 103,
@@ -13217,7 +13217,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_esqueleto_gran_hacha_escudo.png"
+      "Imagen": "minotauro_esqueleto.png"
     },
     {
       "ID": 104,
@@ -13229,7 +13229,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "minotauro_esqueleto_gran_hacha_escudo.png"
+      "Imagen": "minotauro_esqueleto.png"
     },
     {
       "ID": 105,
@@ -13264,7 +13264,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 3,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 108,
@@ -13275,7 +13275,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 3,
       "Hechizos_Apoyo": 2,
-      "Imagen": "momia_reina_espada_larga.png"
+      "Imagen": "momia_reina.png"
     },
     {
       "ID": 107,
@@ -13287,7 +13287,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_alabarda.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 108,
@@ -13299,7 +13299,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guardian_de_la_tumba_alabarda.png"
+      "Imagen": "guardian_de_la_tumba.png"
     },
     {
       "ID": 109,
@@ -13311,7 +13311,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 110,
@@ -13323,7 +13323,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "vampiro_espada_larga.png"
+      "Imagen": "vampiro.png"
     },
     {
       "ID": 109,
@@ -13335,7 +13335,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 3,
       "Hechizos_Apoyo": 2,
-      "Imagen": "nigromante_daga.png"
+      "Imagen": "nigromante.png"
     },
     {
       "ID": 110,
@@ -13347,7 +13347,7 @@
       "Hechizos_Melé": 3,
       "Hechizos_Distancia": 3,
       "Hechizos_Apoyo": 2,
-      "Imagen": "nigromante_daga.png"
+      "Imagen": "nigromante.png"
     }
   ],
    "Fúngidos": [
@@ -13457,7 +13457,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "esqueleto_espada_ancha.png"
+      "Imagen": "esqueleto.png"
     },
     {
       "ID": 10,
@@ -13469,7 +13469,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "saprolin_baston.png"
+      "Imagen": "saprolin.png"
     },
     {
       "ID": 10,
@@ -13481,7 +13481,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 11,
@@ -13493,7 +13493,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 12,
@@ -13505,7 +13505,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 13,
@@ -13517,7 +13517,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 14,
@@ -13529,7 +13529,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "saprolin_baston.png"
+      "Imagen": "saprolin.png"
     },
     {
       "ID": 14,
@@ -13541,7 +13541,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 15,
@@ -13553,7 +13553,7 @@
       "Hechizos_Melé": 1,
       "Hechizos_Distancia": 1,
       "Hechizos_Apoyo": 0,
-      "Imagen": "saprolin_baston.png"
+      "Imagen": "saprolin.png"
     },
     {
       "ID": 15,
@@ -13565,7 +13565,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 16,
@@ -13577,7 +13577,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "tumulario_hacha_de_batalla_escudo.png"
+      "Imagen": "tumulario.png"
     },
     {
       "ID": 17,
@@ -13589,7 +13589,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_hacha_de_batalla.png"
+      "Imagen": "guerrero_fungido.png"
     },
     {
       "ID": 17,
@@ -13601,7 +13601,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "explorador_fungido_daga_bomba_de_esporas.png"
+      "Imagen": "explorador_fungido.png"
     },
     {
       "ID": 18,
@@ -13625,7 +13625,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "hongo_titan_martillo_de_batalla.png"
+      "Imagen": "hongo_titan.png"
     },
     {
       "ID": 20,
@@ -13649,7 +13649,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "guerrero_fungido_espada_ancha.png"
+      "Imagen": "guerrero_fungido.png"
     }
   ],
   "Rátidos": [
@@ -13759,7 +13759,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 10,
@@ -13771,7 +13771,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 11,
@@ -13807,7 +13807,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 14,
@@ -13819,7 +13819,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 15,
@@ -13831,7 +13831,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 16,
@@ -13843,7 +13843,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 15,
@@ -13855,7 +13855,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_arco_corto_daga.png"
+    "Imagen": "ratido_tirador.png"
   },
   {
     "ID": 16,
@@ -13867,7 +13867,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_arco_corto_daga.png"
+    "Imagen": "ratido_tirador.png"
   },
   {
     "ID": 17,
@@ -13879,7 +13879,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 18,
@@ -13891,7 +13891,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 17,
@@ -13927,7 +13927,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_arco_corto_escudo.png"
+    "Imagen": "ratido_tirador_arco_corto.png"
   },
   {
     "ID": 20,
@@ -13939,7 +13939,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_arco_corto_escudo.png"
+    "Imagen": "ratido_tirador_arco_corto.png"
   },
   {
     "ID": 19,
@@ -13951,7 +13951,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 20,
@@ -13963,7 +13963,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 21,
@@ -13987,7 +13987,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 22,
@@ -13999,7 +13999,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_jabalina_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 22,
@@ -14011,7 +14011,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_jabalina_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 23,
@@ -14023,7 +14023,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_ancha_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 24,
@@ -14035,7 +14035,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_ancha_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 23,
@@ -14047,7 +14047,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 24,
@@ -14059,7 +14059,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 25,
@@ -14095,7 +14095,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_corta.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 26,
@@ -14107,7 +14107,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_corta.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 27,
@@ -14143,7 +14143,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 30,
@@ -14155,7 +14155,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_corta_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 29,
@@ -14167,7 +14167,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_jabalina_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 30,
@@ -14179,7 +14179,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_jabalina_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 29,
@@ -14191,7 +14191,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 30,
@@ -14203,7 +14203,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 31,
@@ -14239,7 +14239,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_honda_daga.png"
+    "Imagen": "ratido_tirador_honda.png"
   },
   {
     "ID": 32,
@@ -14251,7 +14251,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_honda_daga.png"
+    "Imagen": "ratido_tirador_honda.png"
   },
   {
     "ID": 31,
@@ -14263,7 +14263,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_jabalina_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 32,
@@ -14275,7 +14275,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_jabalina_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 31,
@@ -14287,7 +14287,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 32,
@@ -14299,7 +14299,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 33,
@@ -14311,7 +14311,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 34,
@@ -14323,7 +14323,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 33,
@@ -14359,7 +14359,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_martillo_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 36,
@@ -14371,7 +14371,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_martillo_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 35,
@@ -14383,7 +14383,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 36,
@@ -14395,7 +14395,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 37,
@@ -14455,7 +14455,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabiosos_espada_corta.png"
+    "Imagen": "ratido_rabiosos.png"
   },
   {
     "ID": 42,
@@ -14467,7 +14467,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabiosos_espada_corta.png"
+    "Imagen": "ratido_rabiosos.png"
   },
   {
     "ID": 43,
@@ -14527,7 +14527,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 46,
@@ -14539,7 +14539,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 45,
@@ -14551,7 +14551,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_mayal.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 46,
@@ -14563,7 +14563,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_mayal.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 45,
@@ -14575,7 +14575,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 46,
@@ -14587,7 +14587,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 47,
@@ -14647,7 +14647,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 48,
@@ -14659,7 +14659,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 49,
@@ -14743,7 +14743,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 54,
@@ -14755,7 +14755,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 55,
@@ -14767,7 +14767,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_ancha_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 56,
@@ -14779,7 +14779,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_ancha_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 55,
@@ -14791,7 +14791,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 56,
@@ -14803,7 +14803,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 57,
@@ -14815,7 +14815,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_martillo_de_batalla_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 57,
@@ -14827,7 +14827,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 58,
@@ -14839,7 +14839,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_ancha.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 59,
@@ -14851,7 +14851,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 60,
@@ -14863,7 +14863,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_jabalina_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 59,
@@ -14875,7 +14875,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_ancha.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 60,
@@ -14887,7 +14887,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_ancha.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 59,
@@ -14899,7 +14899,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 60,
@@ -14911,7 +14911,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 61,
@@ -14923,7 +14923,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 62,
@@ -14935,7 +14935,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 61,
@@ -14971,7 +14971,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_ancha.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 64,
@@ -14983,7 +14983,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_ancha.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 63,
@@ -15019,7 +15019,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_lucero_del_alba_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 66,
@@ -15031,7 +15031,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_lucero_del_alba_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 65,
@@ -15067,7 +15067,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_larga_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 68,
@@ -15079,7 +15079,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_larga_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 67,
@@ -15091,7 +15091,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_larga_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 68,
@@ -15103,7 +15103,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_larga_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 69,
@@ -15139,7 +15139,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 70,
@@ -15151,7 +15151,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 71,
@@ -15187,7 +15187,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_mayal.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 72,
@@ -15199,7 +15199,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_mayal.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 73,
@@ -15211,7 +15211,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_ancha.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 74,
@@ -15223,7 +15223,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_ancha.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 75,
@@ -15283,7 +15283,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_arco_corto_daga.png"
+    "Imagen": "ratido_tirador.png"
   },
   {
     "ID": 78,
@@ -15295,7 +15295,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_tirador_arco_corto_daga.png"
+    "Imagen": "ratido_tirador.png"
   },
   {
     "ID": 77,
@@ -15307,7 +15307,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 78,
@@ -15319,7 +15319,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 77,
@@ -15331,7 +15331,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_alabarda.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 78,
@@ -15343,7 +15343,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_alabarda.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 77,
@@ -15355,7 +15355,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_daga.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 78,
@@ -15367,7 +15367,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_daga.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 79,
@@ -15379,7 +15379,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 80,
@@ -15391,7 +15391,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_hacha_de_batalla_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 79,
@@ -15403,7 +15403,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_corta.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 80,
@@ -15415,7 +15415,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_corta.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 79,
@@ -15427,7 +15427,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_larga_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 80,
@@ -15439,7 +15439,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_larga_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 81,
@@ -15451,7 +15451,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_corta.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 82,
@@ -15463,7 +15463,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_rabioso_espada_corta.png"
+    "Imagen": "ratido_rabioso.png"
   },
   {
     "ID": 83,
@@ -15499,7 +15499,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_ancha_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 84,
@@ -15511,7 +15511,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_ancha_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 83,
@@ -15523,7 +15523,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 84,
@@ -15535,7 +15535,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_espada_ancha_escudo.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 85,
@@ -15547,7 +15547,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_ancha_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 86,
@@ -15559,7 +15559,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_soldado_espada_ancha_escudo.png"
+    "Imagen": "ratido_soldado.png"
   },
   {
     "ID": 85,
@@ -15631,7 +15631,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_ancha_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 90,
@@ -15643,7 +15643,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_espada_ancha_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 89,
@@ -15655,7 +15655,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 90,
@@ -15667,7 +15667,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 89,
@@ -15679,7 +15679,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_gran_hacha.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 90,
@@ -15691,7 +15691,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_lider_gran_hacha.png"
+    "Imagen": "ratido_lider.png"
   },
   {
     "ID": 91,
@@ -15727,7 +15727,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 93,
@@ -15739,7 +15739,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 93,
@@ -15751,7 +15751,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_espada_corta.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 94,
@@ -15763,7 +15763,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 94,
@@ -15775,7 +15775,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 94,
@@ -15787,7 +15787,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_espada_corta.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 95,
@@ -15847,7 +15847,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 98,
@@ -15883,7 +15883,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_invocador_espada_corta.png"
+    "Imagen": "ratido_invocador.png"
   },
   {
     "ID": 99,
@@ -15919,7 +15919,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 101,
@@ -15943,7 +15943,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 102,
@@ -15967,7 +15967,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_de_elite_alabarda_escudo.png"
+    "Imagen": "ratido_de_elite.png"
   },
   {
     "ID": 103,
@@ -15991,7 +15991,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 104,
@@ -16003,7 +16003,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 104,
@@ -16027,7 +16027,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 105,
@@ -16039,7 +16039,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 105,
@@ -16063,7 +16063,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 106,
@@ -16075,7 +16075,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 106,
@@ -16099,7 +16099,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 107,
@@ -16111,7 +16111,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 107,
@@ -16135,7 +16135,7 @@
     "Hechizos_Melé": 0,
     "Hechizos_Distancia": 0,
     "Hechizos_Apoyo": 0,
-    "Imagen": "ratido_asesino_espada_larga_escudo.png"
+    "Imagen": "ratido_asesino.png"
   },
   {
     "ID": 108,
@@ -16147,7 +16147,7 @@
     "Hechizos_Melé": 1,
     "Hechizos_Distancia": 1,
     "Hechizos_Apoyo": 1,
-    "Imagen": "ratido_brujo_baston.png"
+    "Imagen": "ratido_brujo.png"
   },
   {
     "ID": 108,
