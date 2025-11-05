@@ -983,7 +983,7 @@
         let habilidadesDict = {};
         let saqueoData = {};
         let experienciaAcumulada = 0;
-        let monedasAcumuladas = 0; // NUEVA VARIABLE PARA MONEDAS
+        let monedasAcumuladas = 0;
 
         const coloresId = [
             "white", "red", "lightblue", "green", "yellow", "orange", "black", "gray",
@@ -1003,7 +1003,7 @@
             
             // Inicializar experiencia acumulada
             cargarExperienciaAcumulada();
-            cargarMonedasAcumuladas(); // NUEVO: Cargar monedas
+            cargarMonedasAcumuladas();
             
             document.getElementById('nivel-heroes').addEventListener('change', (e) => {
                 nivelHeroes = parseInt(e.target.value) || 0;
@@ -1029,6 +1029,41 @@
             poblarSelectsEquipo();
             cargarDesdeAlmacenamientoLocal();
         });
+
+        // ========== FUNCIONES DE LIMPIEZA ==========
+
+        function limpiarTodo() {
+            // 1. Limpiar enemigos de la loseta
+            document.querySelectorAll('.enemigo').forEach(el => el.remove());
+            
+            // 2. Limpiar casillas ocupadas
+            document.querySelectorAll('.casilla.ocupada').forEach(el => {
+                el.classList.remove('ocupada');
+            });
+            
+            // 3. Limpiar lista de enemigos
+            document.getElementById('enemigos-lista').innerHTML = '';
+            
+            // 4. Limpiar tarjetas de monstruos
+            const container = document.getElementById("monsterContainer");
+            container.innerHTML = "";
+            
+            // 5. Limpiar variables
+            enemigosCargados = [];
+            
+            // 6. Actualizar almacenamiento
+            guardarEnAlmacenamientoLocal();
+            
+            console.log("✅ Todo limpiado correctamente");
+        }
+
+        function reiniciarCompletamente() {
+            limpiarTodo();
+            reiniciarExperiencia();
+            reiniciarMonedas();
+            document.getElementById('tirada-info').style.display = 'none';
+            console.log("✅ Reinicio completo realizado");
+        }
 
         // ========== FUNCIONES DE EXPERIENCIA ==========
 
@@ -1476,7 +1511,7 @@
                         if (entrada) objetoGanado = entrada.Objeto;
                     }
 
-                    // NUEVO: Detectar y acumular monedas
+                    // Detectar y acumular monedas
                     let monedasEncontradas = 0;
                     if (objetoGanado.toLowerCase().includes("monedas") || objetoGanado.toLowerCase().includes("oro")) {
                         const match = objetoGanado.match(/(\d+)\s*(monedas|oro)/i);
@@ -1832,12 +1867,15 @@
         function encontrarEncuentroPorTirada(tirada, tipoEnemigo) {
             if (!encuentrosData[tipoEnemigo]) return null;
             
-            const encuentro = encuentrosData[tipoEnemigo].find(e => e.ID === tirada);
+            // Buscar TODOS los encuentros con este ID (no solo el primero)
+            const encuentros = encuentrosData[tipoEnemigo].filter(e => e.ID === tirada);
             
-            if (encuentro) {
-                return encuentro;
+            if (encuentros.length > 0) {
+                console.log(`🎯 Encontrados ${encuentros.length} encuentros para ID ${tirada}:`, encuentros);
+                return encuentros; // Devolver array con todos los encuentros
             }
             
+            // Si no hay encuentros exactos, buscar el mejor encuentro disponible
             let mejorEncuentro = null;
             for (const e of encuentrosData[tipoEnemigo]) {
                 if (e.ID <= tirada && (!mejorEncuentro || e.ID > mejorEncuentro.ID)) {
@@ -1845,7 +1883,7 @@
                 }
             }
             
-            return mejorEncuentro || encuentrosData[tipoEnemigo][0];
+            return mejorEncuentro ? [mejorEncuentro] : [encuentrosData[tipoEnemigo][0]];
         }
 
         function obtenerDimensionesEnemigo(tamano) {
@@ -1921,6 +1959,7 @@
                 const match = expresion.match(patron);
                 if (match) {
                     if (match[3]) {
+                        // Formato: XdY+Z
                         const numDados = parseInt(match[1]);
                         const carasDado = parseInt(match[2]);
                         const bonus = parseInt(match[3]);
@@ -1930,6 +1969,7 @@
                         }
                         cantidad += bonus;
                     } else if (match[2]) {
+                        // Formato: XdY
                         const numDados = parseInt(match[1]);
                         const carasDado = parseInt(match[2]);
                         
@@ -1937,55 +1977,22 @@
                             cantidad += Math.floor(Math.random() * carasDado) + 1;
                         }
                     } else {
+                        // Formato: número fijo
                         cantidad = parseInt(match[1]);
                     }
                     break;
                 }
             }
             
-            return cantidad;
+            // CORRECCIÓN CRÍTICA: Asegurar que siempre haya al menos 1
+            console.log(`🎲 Tirada: "${expresion}" = ${cantidad}`);
+            return Math.max(1, cantidad);
         }
 
-        function procesarDescripcionEncuentro(encuentro, tipoEnemigo) {
-            const enemigos = [];
-            
-            console.log("Procesando encuentro:", encuentro);
-            
-            if (!encuentro) {
-                return enemigos;
-            }
-            
-            const nombreEnemigo = encuentro.Encuentro;
-            const expresionCantidad = encuentro.Cantidad;
-            const armas = encuentro.Armas || "";
-            const armadura = encuentro.Armadura || 0;
-            
-            const tamano = obtenerTamanoMonstruo(nombreEnemigo);
-            
-            const cantidad = procesarExpresionDados(expresionCantidad);
-            
-            console.log(`Generando ${cantidad} ${nombreEnemigo} (${tamano})`);
-            
-            for (let i = 0; i < cantidad; i++) {
-                enemigos.push({
-                    nombre: nombreEnemigo,
-                    descripcionCompleta: `${cantidad}x ${nombreEnemigo}`,
-                    descripcionCon: armas ? `Armas: ${armas}` : "",
-                    nivel: nivelHeroes,
-                    tamano: tamano,
-                    armadura: armadura,
-                    armas: armas
-                });
-            }
-            
-            console.log("Enemigos procesados:", enemigos);
-            return enemigos;
-        }
-
+        // FUNCIÓN GENERAR ENEMIGOS - CORREGIDA
         function generarEnemigos() {
-            limpiarMonstruosAnteriores();
-            reiniciarExperiencia();
-            reiniciarMonedas(); // NUEVO: Reiniciar monedas también
+            // LIMPIAR TODO completamente antes de generar nuevo encuentro
+            reiniciarCompletamente();
 
             if (nivelHeroes < 1) {
                 alert('Por favor, selecciona un nivel de héroes.');
@@ -2005,13 +2012,11 @@
                 return;
             }
             
-            limpiarEnemigosAnteriores();
-            
             const tirada = calcularTirada();
             
-            const encuentro = encontrarEncuentroPorTirada(tirada.total, tipoEnemigo);
+            const encuentros = encontrarEncuentroPorTirada(tirada.total, tipoEnemigo);
             
-            if (!encuentro) {
+            if (!encuentros || encuentros.length === 0) {
                 alert('No se encontró un encuentro para la tirada ' + tirada.total);
                 return;
             }
@@ -2020,30 +2025,55 @@
             document.getElementById('tirada-detalle').textContent = 
                 `Dado: ${tirada.dado} + Modificador (Nivel ${nivelHeroes}): ${tirada.modificador} = Total: ${tirada.total}`;
             
-            enemigosCargados = procesarDescripcionEncuentro(encuentro, tipoEnemigo);
+            console.log("🎯 Encuentros encontrados:", encuentros);
+            
+            // PROCESAR TODOS LOS ENCUENTROS DE UNA SOLA VEZ
+            enemigosCargados = [];
+            const cantidadesPorEncuentro = {};
+            
+            encuentros.forEach(encuentro => {
+                if (!encuentro) return;
+                
+                const nombreEnemigo = encuentro.Encuentro;
+                const expresionCantidad = encuentro.Cantidad;
+                
+                // CALCULAR CANTIDAD UNA SOLA VEZ
+                const cantidad = procesarExpresionDados(expresionCantidad);
+                cantidadesPorEncuentro[nombreEnemigo] = cantidad;
+                
+                console.log(`🎲 ${nombreEnemigo}: ${expresionCantidad} = ${cantidad}`);
+                
+                // Crear array de enemigos individuales
+                for (let i = 0; i < cantidad; i++) {
+                    enemigosCargados.push({
+                        nombre: nombreEnemigo,
+                        descripcionCompleta: `${cantidad}x ${nombreEnemigo}`,
+                        descripcionCon: encuentro.Armas ? `Armas: ${encuentro.Armas}` : "",
+                        nivel: nivelHeroes,
+                        tamano: obtenerTamanoMonstruo(nombreEnemigo),
+                        armadura: encuentro.Armadura || 0,
+                        armas: encuentro.Armas || "",
+                        encuentroOriginal: encuentro,
+                        cantidadCalculada: cantidad
+                    });
+                }
+            });
+            
+            console.log("📋 Enemigos cargados:", enemigosCargados);
             
             mostrarEnemigosLista(enemigosCargados);
-            
-            colocarEnemigosEnLoseta(enemigosCargados, encuentro);
+            colocarEnemigosEnLoseta(enemigosCargados);
 
-            // NUEVO: Generar tarjetas de monstruos
-            generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo);
+            // GENERAR TARJETAS usando las cantidades ya calculadas
+            encuentros.forEach(encuentro => {
+                const cantidad = cantidadesPorEncuentro[encuentro.Encuentro] || 0;
+                if (cantidad > 0) {
+                    generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo, cantidad);
+                }
+            });
         }
 
-
-        function limpiarMonstruosAnteriores() {
-            const container = document.getElementById("monsterContainer");
-            container.innerHTML = "";
-            guardarEnAlmacenamientoLocal(); // Para actualizar el localStorage
-        }
-
-
-        function reiniciarExperiencia() {
-            experienciaAcumulada = 0;
-            guardarExperienciaAcumulada();
-        }
-
-        function generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo) {
+        function generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo, cantidadEnemigos) {
             const container = document.getElementById("monsterContainer");
             
             // Buscar monstruo por nombre
@@ -2063,9 +2093,11 @@
                 return;
             }
 
-            // Procesar cantidad
-            const cantidad = procesarExpresionDados(encuentro.Cantidad);
+            // USAR LA CANTIDAD YA CALCULADA - NO VOLVER A TIRAR DADOS
+            const cantidad = cantidadEnemigos;
             const vidas = Array(cantidad).fill(monster.vida);
+
+            console.log(`🔄 Generando ${cantidad} ${monster.nombre} (usando cantidad ya calculada: ${cantidadEnemigos})`);
 
             // Procesar armas
             let armas = [];
@@ -2181,17 +2213,6 @@
             guardarEnAlmacenamientoLocal();
         }
 
-        function limpiarEnemigosAnteriores() {
-            document.querySelectorAll('.enemigo').forEach(el => el.remove());
-            
-            document.querySelectorAll('.casilla.ocupada').forEach(el => {
-                el.classList.remove('ocupada');
-            });
-            
-            document.getElementById('enemigos-lista').innerHTML = '';
-            enemigosCargados = [];
-        }
-
         function mostrarEnemigosLista(enemigos) {
             const lista = document.getElementById('enemigos-lista');
             lista.innerHTML = '';
@@ -2232,13 +2253,18 @@
             }
         }
 
-        function colocarEnemigosEnLoseta(enemigos, encuentro) {
+        // FUNCIÓN MEJORADA PARA COLOCAR ENEMIGOS
+        function colocarEnemigosEnLoseta(enemigos) {
+            console.log("📍 Colocando enemigos en loseta:", enemigos);
+            
+            // Ordenar por tamaño (más grandes primero)
             enemigos.sort((a, b) => {
                 const tamanoA = obtenerDimensionesEnemigo(a.tamano).casillas;
                 const tamanoB = obtenerDimensionesEnemigo(b.tamano).casillas;
                 return tamanoB - tamanoA;
             });
             
+            // Obtener todas las casillas válidas
             const casillasValidas = [];
             const casillas = document.querySelectorAll('.casilla:not(.invalida):not(.ocupada)');
             
@@ -2250,35 +2276,44 @@
                 });
             });
             
+            // Mezclar casillas aleatoriamente
             for (let i = casillasValidas.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [casillasValidas[i], casillasValidas[j]] = [casillasValidas[j], casillasValidas[i]];
             }
             
             const enemigosNoColocados = [];
+            let enemigosColocados = 0;
+            
+            console.log(`📍 Intentando colocar ${enemigos.length} enemigos`);
             
             for (const enemigo of enemigos) {
                 let colocado = false;
+                const dimensiones = obtenerDimensionesEnemigo(enemigo.tamano);
                 
+                // Intentar colocar en cada casilla válida
                 for (const casilla of casillasValidas) {
                     if (!casilla.elemento.classList.contains('ocupada') && 
                         areaDisponible(casilla.fila, casilla.columna, enemigo.tamano)) {
                         
-                        colocarEnemigo(casilla.fila, casilla.columna, enemigo, encuentro);
+                        colocarEnemigo(casilla.fila, casilla.columna, enemigo);
                         marcarAreaOcupada(casilla.fila, casilla.columna, enemigo.tamano);
                         colocado = true;
+                        enemigosColocados++;
+                        console.log(`✅ Colocado: ${enemigo.nombre} en (${casilla.fila}, ${casilla.columna})`);
                         break;
                     }
                 }
                 
                 if (!colocado) {
                     enemigosNoColocados.push(enemigo);
+                    console.log(`❌ No se pudo colocar: ${enemigo.nombre}`);
                 }
             }
             
+            console.log(`📊 Resumen: ${enemigosColocados} colocados, ${enemigosNoColocados.length} no colocados`);
+            
             if (enemigosNoColocados.length > 0) {
-                console.warn('No se pudieron colocar todos los enemigos:', enemigosNoColocados);
-                
                 const noColocadosAgrupados = {};
                 enemigosNoColocados.forEach(e => {
                     noColocadosAgrupados[e.nombre] = (noColocadosAgrupados[e.nombre] || 0) + 1;
@@ -2288,19 +2323,25 @@
                     .map(([nombre, cantidad]) => `${cantidad}x ${nombre}`)
                     .join(', ');
                 
-                alert(`No hay suficiente espacio para colocar: ${mensaje}`);
+                Swal.fire({
+                    title: 'Espacio Insuficiente',
+                    html: `No hay suficiente espacio para colocar: <strong>${mensaje}</strong><br><br>
+                          <em>Se colocaron ${enemigosColocados} de ${enemigos.length} enemigos</em>`,
+                    icon: 'warning',
+                    confirmButtonText: 'Entendido'
+                });
             }
         }
 
-        function colocarEnemigo(fila, columna, enemigo, encuentro) {
+        function colocarEnemigo(fila, columna, enemigo) {
             const matrizContainer = document.getElementById('matriz-loseta');
             const dimensiones = obtenerDimensionesEnemigo(enemigo.tamano);
             
             const enemigoElement = document.createElement('div');
             enemigoElement.className = `enemigo ${enemigo.tamano.toLowerCase()}`;
             
-            // USAR LA FUNCIÓN SIMPLIFICADA
-            const imagenToken = obtenerImagenToken(encuentro);
+            // USAR el encuentro original para obtener la imagen
+            const imagenToken = obtenerImagenToken(enemigo.encuentroOriginal);
             
             enemigoElement.style.width = `calc(${dimensiones.ancho} * (100% / ${losetaSeleccionada.matriz[0].length}) - 4px)`;
             enemigoElement.style.height = `calc(${dimensiones.alto} * (100% / ${losetaSeleccionada.matriz.length}) - 4px)`;
@@ -2315,11 +2356,9 @@
             
             enemigoElement.dataset.tooltip = `${enemigo.nombre} (${enemigo.tamano})`;
             
-            enemigoElement.addEventListener('mouseenter', () => {
-                console.log(enemigoElement.dataset.tooltip);
-            });
-            
             matrizContainer.appendChild(enemigoElement);
+            
+            console.log(`🖼️ Imagen usada para ${enemigo.nombre}: ${imagenToken}`);
         }
 
         // Event listener para selects múltiples
