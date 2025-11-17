@@ -1900,7 +1900,7 @@
     },
     {
       "ID": 40,
-      "Encuentro": "Dráugar",
+      "Encuentro": "Draugar",
       "Cantidad": "3",
       "Armas": "Alabardas",
       "Armadura": 1,
@@ -2056,7 +2056,7 @@
     },
     {
       "ID": 48,
-      "Encuentro": "Dráugar",
+      "Encuentro": "Draugar",
       "Cantidad": "3",
       "Armas": "Hacha batalla, Escudo",
       "Armadura": 0,
@@ -2068,7 +2068,7 @@
     },
     {
       "ID": 48,
-      "Encuentro": "Dráugar hechicero",
+      "Encuentro": "Draugar hechicero",
       "Cantidad": "1",
       "Armas": "Bastón",
       "Armadura": 0,
@@ -2080,7 +2080,7 @@
     },
     {
       "ID": 49,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 0,
@@ -2088,11 +2088,11 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 50,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 0,
@@ -2100,7 +2100,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 51,
@@ -2320,7 +2320,7 @@
     },
     {
       "ID": 61,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 1,
@@ -2328,11 +2328,11 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 62,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 1,
@@ -2340,7 +2340,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 63,
@@ -2464,7 +2464,7 @@
     },
     {
       "ID": 69,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 0,
@@ -2472,11 +2472,11 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 70,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 0,
@@ -2484,7 +2484,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 69,
@@ -2512,7 +2512,7 @@
     },
     {
       "ID": 71,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 1,
@@ -2520,11 +2520,11 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 72,
-      "Encuentro": "Zombi ogro",
+      "Encuentro": "Ogro Zombi",
       "Cantidad": "2",
       "Armas": "Martillo guerra",
       "Armadura": 1,
@@ -2532,7 +2532,7 @@
       "Hechizos_Melé": 0,
       "Hechizos_Distancia": 0,
       "Hechizos_Apoyo": 0,
-      "Imagen": "zombi_ogro.png"
+      "Imagen": "ogro_zombi.png"
     },
     {
       "ID": 73,
@@ -2548,7 +2548,7 @@
     },
     {
       "ID": 74,
-      "Encuentro": "Dráugar",
+      "Encuentro": "Draugar",
       "Cantidad": "1d3+2",
       "Armas": "Jabalina, Escudo",
       "Armadura": 1,
@@ -2560,7 +2560,7 @@
     },
     {
       "ID": 74,
-      "Encuentro": "Dráugar hechicero",
+      "Encuentro": "Draugar hechicero",
       "Cantidad": "1",
       "Armas": "Daga",
       "Armadura": 0,
@@ -2860,7 +2860,7 @@
     },
     {
       "ID": 90,
-      "Encuentro": "Dráugar",
+      "Encuentro": "Draugar",
       "Cantidad": "1d4",
       "Armas": "Martillo batalla, Escudo",
       "Armadura": 0,
