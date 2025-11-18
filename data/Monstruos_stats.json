@@ -2,6 +2,7 @@
   "Bestias": [
     {
       "nombre": "Rata Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant rat",
       "vida": 6,
       "exp": 40,
@@ -23,6 +24,7 @@
     },
     {
       "nombre": "Centauro",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Centaur",
       "vida": 20,
       "exp": 150,
@@ -43,6 +45,7 @@
     },
     {
       "nombre": "Mantis Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Mantis",
       "vida": 35,
       "exp": 400,
@@ -66,6 +69,7 @@
     },
     {
       "nombre": "Mantis Gigantesca",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Mantis",
       "vida": 45,
       "exp": 900,
@@ -89,6 +93,7 @@
     },
     {
       "nombre": "Enjambre de Murciélagos",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Bat swarm",
       "vida": 10,
       "exp": 10,
@@ -111,6 +116,7 @@
     },
     {
       "nombre": "Murciélago Funesto",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/...",
       "vida": 15,
       "exp": 100,
@@ -134,6 +140,7 @@
     },
     {
       "nombre": "Sanguijuela Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant leech",
       "vida": 12,
       "exp": 90,
@@ -155,6 +162,7 @@
     },
     {
       "nombre": "Sátiro",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Satyr",
       "vida": 10,
       "exp": 80,
@@ -173,6 +181,7 @@
     },
     {
       "nombre": "Grifo",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Griffon",
       "vida": 48,
       "exp": 1500,
@@ -195,6 +204,7 @@
     },
     {
       "nombre": "Enredador",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Shambler",
       "vida": 30,
       "exp": 450,
@@ -215,6 +225,7 @@
     },
     {
       "nombre": "Troll de Piedra",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Stone troll",
       "vida": 42,
       "exp": 550,
@@ -241,6 +252,7 @@
     },
     {
       "nombre": "Viscosidad",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Slime",
       "vida": 12,
       "exp": 120,
@@ -260,6 +272,7 @@
     },
     {
       "nombre": "Serpiente Gigantesca",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Gigantic snake",
       "vida": 50,
       "exp": 800,
@@ -282,6 +295,7 @@
     },
     {
       "nombre": "Araña Gigantesca",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Gigantic spider",
       "vida": 60,
       "exp": 900,
@@ -304,6 +318,7 @@
     },
     {
       "nombre": "Gnoll Chamán",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Gnoll shaman",
       "vida": 11,
       "exp": 150,
@@ -324,6 +339,7 @@
     },
     {
       "nombre": "Ciempiés Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant centipede",
       "vida": 22,
       "exp": 300,
@@ -343,6 +359,7 @@
     },
     {
       "nombre": "Ciempiés Gigantesco",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Centipede",
       "vida": 38,
       "exp": 450,
@@ -364,6 +381,7 @@
     },
     {
       "nombre": "Ettin",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ettin",
       "vida": 30,
       "exp": 550,
@@ -388,6 +406,7 @@
     },
     {
       "nombre": "Gnoll",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gnoll",
       "vida": 10,
       "exp": 80,
@@ -408,6 +427,7 @@
     },
     {
       "nombre": "Lobo Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant wolf",
       "vida": 12,
       "exp": 80,
@@ -429,6 +449,7 @@
     },
     {
       "nombre": "Lobo Gélido",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/wolf",
       "vida": 15,
       "exp": 130,
@@ -452,6 +473,7 @@
     },
     {
       "nombre": "Serpiente Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant snake",
       "vida": 15,
       "exp": 120,
@@ -472,6 +494,7 @@
     },
     {
       "nombre": "Gnoll Sargento",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gnoll sergeant",
       "vida": 13,
       "exp": 100,
@@ -492,6 +515,7 @@
     },
     {
       "nombre": "Escorpión Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant scorpion",
       "vida": 30,
       "exp": 220,
@@ -513,6 +537,7 @@
     },
     {
       "nombre": "Escorpión Gigantesco",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Giant scorpion",
       "vida": 45,
       "exp": 900,
@@ -535,6 +560,7 @@
     },
     {
       "nombre": "Hombre Bestia",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Beastman",
       "vida": 15,
       "exp": 100,
@@ -554,6 +580,7 @@
     },
     {
       "nombre": "Troll Común",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Common troll",
       "vida": 40,
       "exp": 500,
@@ -580,6 +607,7 @@
     },
     {
       "nombre": "Araña Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant spider",
       "vida": 25,
       "exp": 170,
@@ -603,6 +631,7 @@
     },
     {
       "nombre": "Oso de las Cavernas",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Cave bear",
       "vida": 20,
       "exp": 130,
@@ -623,6 +652,7 @@
     },
     {
       "nombre": "Oso Gélido",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Cave bear",
       "vida": 30,
       "exp": 170,
@@ -644,6 +674,7 @@
     },
     {
       "nombre": "Rata de la Peste Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant pox rat",
       "vida": 8,
       "exp": 50,
@@ -665,6 +696,7 @@
     },
     {
       "nombre": "Rata Demonio",
+      "tamaño": "ENORME",
       "tipo": "Bestia/GDemon Rat",
       "vida": 40,
       "exp": 650,
@@ -687,6 +719,7 @@
     },
     {
       "nombre": "Hombre Bestia jefe",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Beastman chieftain",
       "vida": 20,
       "exp": 150,
@@ -706,6 +739,7 @@
     },
     {
       "nombre": "Esfinge",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Sphinx",
       "vida": 38,
       "exp": 1000,
@@ -727,6 +761,7 @@
     },
     {
       "nombre": "Minotauro",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Minotaur",
       "vida": 36,
       "exp": 450,
@@ -749,6 +784,7 @@
     },
     {
       "nombre": "Dragón",
+      "tamaño": "EXTRAENORME",
       "tipo": "Bestia/Dragon",
       "vida": 200,
       "exp": 4500,
@@ -772,6 +808,7 @@
     },
     {
       "nombre": "Dragón Joven",
+      "tamaño": "EXTRAENORME",
       "tipo": "Bestia/Dragon",
       "vida": 200,
       "exp": 4500,
@@ -796,6 +833,7 @@
     },
     {
       "nombre": "Dragón Anciano",
+      "tamaño": "EXTRAENORME",
       "tipo": "Bestia/Dragon",
       "vida": 450,
       "exp": 10000,
@@ -820,6 +858,7 @@
     },
     {
       "nombre": "Hombre Bestia Guardia",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Beastman guard",
       "vida": 18,
       "exp": 110,
@@ -839,6 +878,7 @@
     },
     {
       "nombre": "Arpía",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Arpy",
       "vida": 12,
       "exp": 130,
@@ -860,6 +900,7 @@
     },
     {
       "nombre": "Troll de Río",
+      "tamaño": "ENORME",
       "tipo": "Bestia/River troll",
       "vida": 40,
       "exp": 550,
@@ -886,6 +927,7 @@
     },
     {
       "nombre": "Mímico",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Mimic",
       "vida": 10,
       "exp": 110,
@@ -905,6 +947,7 @@
     },
     {
       "nombre": "Cíclope",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Cyclops",
       "vida": 75,
       "exp": 1000,
@@ -929,6 +972,7 @@
     },
     {
       "nombre": "Viscosidad Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Giant slime",
       "vida": 25,
       "exp": 250,
@@ -951,6 +995,7 @@
     },
     {
       "nombre": "Hidra",
+      "tamaño": "EXTRAENORME",
       "tipo": "Bestia/Hydra",
       "vida": 100,
       "exp": 3000,
@@ -972,6 +1017,7 @@
     },
     {
       "nombre": "Araña de las cavernas",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Cave spider",
       "vida": 12,
       "exp": 150,
@@ -993,6 +1039,7 @@
     },
     {
       "nombre": "Araña Gigante Joven",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Joung spider",
       "vida": 8,
       "exp": 90,
@@ -1016,6 +1063,7 @@
     },
     {
       "nombre": "Wyvern",
+      "tamaño": "EXTRAENORME",
       "tipo": "Bestia/Wyvern",
       "vida": 75,
       "exp": 1800,
@@ -1036,6 +1084,7 @@
     },
     {
       "nombre": "Licántropo",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Werewolf",
       "vida": 25,
       "exp": 280,
@@ -1057,6 +1106,7 @@
     },
     {
       "nombre": "Hormiga Obrera",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/..",
       "vida": 7,
       "exp": 50,
@@ -1078,6 +1128,7 @@
     },
     {
       "nombre": "Hormiga Guerrera",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/..",
       "vida": 15,
       "exp": 100,
@@ -1099,6 +1150,7 @@
     },
     {
       "nombre": "Hormiga Ácida",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/..",
       "vida": 15,
       "exp": 100,
@@ -1121,6 +1173,7 @@
     },
     {
       "nombre": "Hormiga Reina",
+      "tamaño": "ENORME",
       "tipo": "Bestia/..",
       "vida": 30,
       "exp": 400,
@@ -1144,6 +1197,7 @@
     },
     {
       "nombre": "Escarabajo Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/..",
       "vida": 18,
       "exp": 120,
@@ -1165,6 +1219,7 @@
     },
     {
       "nombre": "Escarabajo de Fuego",
+      "tamaño": "ENORME",
       "tipo": "Bestia/..",
       "vida": 20,
       "exp": 250,
@@ -1186,6 +1241,7 @@
     },
     {
       "nombre": "Escarabajo de Trueno",
+      "tamaño": "ENORME",
       "tipo": "Bestia/..",
       "vida": 25,
       "exp": 400,
@@ -1210,6 +1266,7 @@
   "Bandidos y Bandoleros": [
     {
       "nombre": "Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Giant",
       "vida": 150,
       "exp": 900,
@@ -1232,6 +1289,7 @@
     },
     {
       "nombre": "Caballero Caído",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Fallen knight",
       "vida": 18,
       "exp": 240,
@@ -1251,6 +1309,7 @@
     },
     {
       "nombre": "Berserker",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Berserker",
       "vida": 14,
       "exp": 110,
@@ -1270,6 +1329,7 @@
     },
     {
       "nombre": "Ogro",
+      "tamaño": "ENORME",
       "tipo": "Humanoide/Ogre",
       "vida": 34,
       "exp": 400,
@@ -1290,6 +1350,7 @@
     },
     {
       "nombre": "Bandido Líder",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Bandit leader",
       "vida": 16,
       "exp": 130,
@@ -1309,6 +1370,7 @@
     },
     {
       "nombre": "Bandido",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Bandit",
       "vida": 12,
       "exp": 90,
@@ -1328,6 +1390,7 @@
     },
     {
       "nombre": "Ogro Berserker",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ogre berserker",
       "vida": 34,
       "exp": 500,
@@ -1349,6 +1412,7 @@
     },
     {
       "nombre": "Brujo",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Warlock",
       "vida": 12,
       "exp": 180,
@@ -1368,6 +1432,7 @@
     },
     {
       "nombre": "Ogro jefe",
+      "tamaño": "ENORME",
       "tipo": "Humanoide/Ogre chieftain",
       "vida": 42,
       "exp": 600,
@@ -1390,6 +1455,7 @@
   "Reptiles": [
     {
       "nombre": "Sapo Gigante",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Giant toad",
       "vida": 35,
       "exp": 400,
@@ -1411,6 +1477,7 @@
     },
     {
       "nombre": "Raptor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Raptor",
       "vida": 14,
       "exp": 130,
@@ -1432,6 +1499,7 @@
     },
     {
       "nombre": "Cocotauro",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Cocotauro",
       "vida": 38,
       "exp": 600,
@@ -1458,6 +1526,7 @@
     },
     {
       "nombre": "Draconiano",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Draconian",
       "vida": 16,
       "exp": 140,
@@ -1478,6 +1547,7 @@
     },
     {
       "nombre": "Draconiano Líder",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Líder Draconian",
       "vida": 20,
       "exp": 170,
@@ -1499,6 +1569,7 @@
     },
     {
       "nombre": "Draconiano Hechicero",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Mage Draconian",
       "vida": 16,
       "exp": 240,
@@ -1520,6 +1591,7 @@
     },
     {
       "nombre": "Anuro",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Anuro",
       "vida": 8,
       "exp": 90,
@@ -1541,6 +1613,7 @@
     },
     {
       "nombre": "Saurio",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Saurian",
       "vida": 15,
       "exp": 110,
@@ -1560,6 +1633,7 @@
     },
     {
       "nombre": "Lagarto",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gecko",
       "vida": 10,
       "exp": 95,
@@ -1579,6 +1653,7 @@
     },
     {
       "nombre": "Kobold",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gecko",
       "vida": 10,
       "exp": 95,
@@ -1600,6 +1675,7 @@
     },
     {
       "nombre": "Cocatriz",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Cockatrice",
       "vida": 35,
       "exp": 325,
@@ -1620,6 +1696,7 @@
     },
     {
       "nombre": "Quimera",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Chimera",
       "vida": 44,
       "exp": 875,
@@ -1643,6 +1720,7 @@
     },
     {
       "nombre": "Saurio Jefe de Guerra",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Saurian warchief",
       "vida": 20,
       "exp": 160,
@@ -1662,6 +1740,7 @@
     },
     {
       "nombre": "Saurio Sacerdote",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Saurian priest",
       "vida": 15,
       "exp": 200,
@@ -1681,6 +1760,7 @@
     },
     {
       "nombre": "Saurio de Élite",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Saurian elite",
       "vida": 18,
       "exp": 140,
@@ -1700,6 +1780,7 @@
     },
     {
       "nombre": "Salamandra",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Salamander",
       "vida": 30,
       "exp": 430,
@@ -1722,6 +1803,7 @@
     },
     {
       "nombre": "Naga",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Naga",
       "vida": 25,
       "exp": 650,
@@ -1741,6 +1823,7 @@
     },
     {
       "nombre": "Lagarto Asesino",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gecko assasin",
       "vida": 10,
       "exp": 110,
@@ -1761,6 +1844,7 @@
     },
     {
       "nombre": "Renacuajo",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Frogling",
       "vida": 8,
       "exp": 90,
@@ -1782,6 +1866,7 @@
   "Orcos y Goblins": [
     {
       "nombre": "Orco Bruto",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Orc brute",
       "vida": 16,
       "exp": 110,
@@ -1801,6 +1886,7 @@
     },
     {
       "nombre": "Goblin de las Cuevas",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Cave goblin",
       "vida": 10,
       "exp": 90,
@@ -1822,6 +1908,7 @@
     },
     {
       "nombre": "Orco Jefe",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Orc chieftain",
       "vida": 18,
       "exp": 130,
@@ -1841,6 +1928,7 @@
     },
     {
       "nombre": "Orco",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Orc",
       "vida": 12,
       "exp": 95,
@@ -1860,6 +1948,7 @@
     },
     {
       "nombre": "Orco de las Cuevas",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Orc",
       "vida": 16,
       "exp": 180,
@@ -1881,6 +1970,7 @@
     },
     {
       "nombre": "Orco Negro",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Dark Orc",
       "vida": 19,
       "exp": 180,
@@ -1901,6 +1991,7 @@
     },
     {
       "nombre": "Orco Chamán",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Orc shaman",
       "vida": 12,
       "exp": 180,
@@ -1920,6 +2011,7 @@
     },
     {
       "nombre": "Goblin",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Goblin",
       "vida": 8,
       "exp": 70,
@@ -1939,6 +2031,7 @@
     },
     {
       "nombre": "Goblin Negro",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Dark Goblin",
       "vida": 14,
       "exp": 115,
@@ -1960,6 +2053,7 @@
     },
     {
       "nombre": "Goblin Chamán",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Goblin shaman",
       "vida": 8,
       "exp": 130,
@@ -1981,6 +2075,7 @@
   "No Muertos": [
     {
       "nombre": "Lobo Aterrador",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Dire wolf",
       "vida": 18,
       "exp": 140,
@@ -2003,6 +2098,7 @@
     },
     {
       "nombre": "Lobo Temible",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Dire wolf",
       "vida": 12,
       "exp": 80,
@@ -2025,6 +2121,7 @@
     },
     {
       "nombre": "Draugar",
+      "tamaño": "NORMAL",
       "tipo": "No Muerto Mayor/Draugar",
       "vida": 16,
       "exp": 200,
@@ -2047,6 +2144,7 @@
     },
     {
       "nombre": "Draugar Hechicero",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Draugar",
       "vida": 14,
       "exp": 200,
@@ -2070,6 +2168,7 @@
     },
     {
       "nombre": "Tumulario",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Wight",
       "vida": 15,
       "exp": 180,
@@ -2093,6 +2192,7 @@
     },
     {
       "nombre": "Guardián de la Tumba",
+      "tamaño": "ENORME",
       "tipo": "No muerto mayor/Tomb guardian",
       "vida": 40,
       "exp": 550,
@@ -2115,6 +2215,7 @@
     },
     {
       "nombre": "Vampiro",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Vampire",
       "vida": 40,
       "exp": 2000,
@@ -2139,6 +2240,7 @@
     },
     {
       "nombre": "Necrófago Príncipe",
+      "tamaño": "NORMAL",
       "tipo": "No Muerto mayor/Ghoul Prince",
       "vida": 25,
       "exp": 300,
@@ -2162,6 +2264,7 @@
     },
     {
       "nombre": "Vampiro Vástago",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Vampire Fledgling",
       "vida": 30,
       "exp": 1500,
@@ -2186,6 +2289,7 @@
     },
     {
       "nombre": "Alma en Pena",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Banshee",
       "vida": 25,
       "exp": 650,
@@ -2208,6 +2312,7 @@
     },
     {
       "nombre": "Espanto",
+      "tamaño": "NORMAL",
       "tipo": "Especial_Espanto/Espanto",
       "vida": 25,
       "exp": 700,
@@ -2231,6 +2336,7 @@
     },
     {
       "nombre": "Grimm",
+      "tamaño": "NORMAL",
       "tipo": "Especial/Perro Negro",
       "vida": 0,
       "exp": 100,
@@ -2257,6 +2363,7 @@
     },
     {
       "nombre": "Momia Sacerdote",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Mummy priest",
       "vida": 30,
       "exp": 600,
@@ -2280,6 +2387,7 @@
     },
     {
       "nombre": "Caballero de la Muerte",
+      "tamaño": "NORMAL",
       "tipo": "No Muerto Mayor/Death knight",
       "vida": 25,
       "exp": 300,
@@ -2303,6 +2411,7 @@
     },
     {
       "nombre": "Espectro",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Wraiths",
       "vida": 20,
       "exp": 500,
@@ -2327,6 +2436,7 @@
     },
     {
       "nombre": "Nigromante",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Necromancer",
       "vida": 12,
       "exp": 180,
@@ -2346,6 +2456,7 @@
     },
     {
       "nombre": "Zombi",
+      "tamaño": "NORMAL",
       "tipo": "No muerto menor/Zombie",
       "vida": 10,
       "exp": 80,
@@ -2368,6 +2479,7 @@
     },
     {
       "nombre": "Calavera Llameante",
+      "tamaño": "NORMAL",
       "tipo": "Especial/Calavera Llameante",
       "vida": "-",
       "exp": 100,
@@ -2392,6 +2504,7 @@
     },
     {
       "nombre": "Momia Reina",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Mummy queen",
       "vida": 35,
       "exp": 800,
@@ -2415,6 +2528,7 @@
     },
     {
       "nombre": "Ogro Zombi",
+      "tamaño": "ENORME",
       "tipo": "No muerto menor/Zombie ogre",
       "vida": 40,
       "exp": 450,
@@ -2439,6 +2553,7 @@
     },
     {
       "nombre": "Momia",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Mummy",
       "vida": 25,
       "exp": 300,
@@ -2461,6 +2576,7 @@
     },
     {
       "nombre": "Esqueleto",
+      "tamaño": "NORMAL",
       "tipo": "No muerto menor/Skeleton",
       "vida": 10,
       "exp": 80,
@@ -2483,6 +2599,7 @@
     },
     {
       "nombre": "Lich",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Lich",
       "vida": 30,
       "exp": 700,
@@ -2507,6 +2624,7 @@
     },
     {
       "nombre": "Necrófago",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ghoul",
       "vida": 11,
       "exp": 90,
@@ -2530,6 +2648,7 @@
     },
     {
       "nombre": "Minotauro Esqueleto",
+      "tamaño": "ENORME",
       "tipo": "No muerto menor/Minotaur skeleton",
       "vida": 20,
       "exp": 350,
@@ -2553,6 +2672,7 @@
     },
     {
       "nombre": "Fantasma",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Ghost",
       "vida": 20,
       "exp": 650,
@@ -2576,6 +2696,7 @@
     },
     {
       "nombre": "Gólem de Carne",
+      "tamaño": "ENORME",
       "tipo": "No Muerto menor/Flesh Golem",
       "vida": 35,
       "exp": 550,
@@ -2600,6 +2721,7 @@
   "Mágicos": [
     {
       "nombre": "Elemental de Agua",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Water elemental",
       "vida": 15,
       "exp": 150,
@@ -2621,6 +2743,7 @@
     },
     {
       "nombre": "Elemental de Agua Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Water elemental",
       "vida": 9,
       "exp": 110,
@@ -2641,6 +2764,7 @@
     },
     {
       "nombre": "Elemental de Agua Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ice elemental giant",
       "vida": 28,
       "exp": 450,
@@ -2664,6 +2788,7 @@
     },
     {
       "nombre": "Demonio Hinchado",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Bloated demon",
       "vida": 32,
       "exp": 650,
@@ -2688,6 +2813,7 @@
     },
     {
       "nombre": "Demonio Sombrío",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Demon",
       "vida": 40,
       "exp": 750,
@@ -2714,6 +2840,7 @@
     },
     {
       "nombre": "Acechador",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Lurker",
       "vida": 30,
       "exp": 1200,
@@ -2735,6 +2862,7 @@
     },
     {
       "nombre": "Elemental de Viento",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Wind elemental",
       "vida": 12,
       "exp": 150,
@@ -2755,6 +2883,7 @@
     },
     {
       "nombre": "Elemental de Viento Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Fire elemental minor",
       "vida": 8,
       "exp": 90,
@@ -2775,6 +2904,7 @@
     },
     {
       "nombre": "Elemental de Viento Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Fire elemental giant",
       "vida": 22,
       "exp": 300,
@@ -2798,6 +2928,7 @@
     },
     {
       "nombre": "Demonio de Sangre",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Blood demon",
       "vida": 12,
       "exp": 200,
@@ -2818,6 +2949,7 @@
     },
     {
       "nombre": "Psíquico",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Psyker",
       "vida": 16,
       "exp": 250,
@@ -2838,6 +2970,7 @@
     },
     {
       "nombre": "Diablillo de la Plaga",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Lesser plague demon",
       "vida": 5,
       "exp": 50,
@@ -2859,6 +2992,7 @@
     },
     {
       "nombre": "Diablillo",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Lesser demon",
       "vida": 8,
       "exp": 120,
@@ -2882,6 +3016,7 @@
     },
     {
       "nombre": "Gran Demonio",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Greater demon",
       "vida": 70,
       "exp": 1200,
@@ -2904,6 +3039,7 @@
     },
     {
       "nombre": "Gólem de Hueso",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Bone golem",
       "vida": 25,
       "exp": 350,
@@ -2925,6 +3061,7 @@
     },
     {
       "nombre": "Gólem Helado",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Frost golem",
       "vida": 40,
       "exp": 550,
@@ -2948,6 +3085,7 @@
     },
     {
       "nombre": "Gólem de Hielo",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ice golem",
       "vida": 35,
       "exp": 550,
@@ -2970,6 +3108,7 @@
     },
     {
       "nombre": "Gólem de Piedra",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Stone golem",
       "vida": 30,
       "exp": 550,
@@ -2991,6 +3130,7 @@
     },
     {
       "nombre": "Demonio de la Plaga",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Plague demon",
       "vida": 12,
       "exp": 200,
@@ -3011,6 +3151,7 @@
     },
     {
       "nombre": "Naxor",
+      "tamaño": "NORMAL",
       "tipo": "Especial_Naxxor/Naxxor",
       "vida": 16,
       "exp": 450,
@@ -3034,6 +3175,7 @@
     },
     {
       "nombre": "Espíritu del Árbol",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Tree spirit",
       "vida": 36,
       "exp": 350,
@@ -3056,6 +3198,7 @@
     },
     {
       "nombre": "Espíritu del Árbol Anciano",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ancient Tree spirit",
       "vida": 75,
       "exp": 1550,
@@ -3079,6 +3222,7 @@
     },
     {
       "nombre": "Elemental de Fuego",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Fire elemental",
       "vida": 15,
       "exp": 250,
@@ -3100,6 +3244,7 @@
     },
     {
       "nombre": "Elemental de Fuego Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Fire elemental minor",
       "vida": 10,
       "exp": 100,
@@ -3121,6 +3266,7 @@
     },
     {
       "nombre": "Elemental de Fuego Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Fire elemental giant",
       "vida": 30,
       "exp": 500,
@@ -3146,6 +3292,7 @@
     },
     {
       "nombre": "Elemental de Hielo",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Ice elemental",
       "vida": 23,
       "exp": 275,
@@ -3169,6 +3316,7 @@
     },
     {
       "nombre": "Elemental de Hielo Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Ice elemental minor",
       "vida": 11,
       "exp": 155,
@@ -3192,6 +3340,7 @@
     },
     {
       "nombre": "Elemental de Hielo Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ice elemental giant",
       "vida": 30,
       "exp": 500,
@@ -3216,6 +3365,7 @@
     },
     {
       "nombre": "Elemental de Nieve",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Ice elemental",
       "vida": 19,
       "exp": 225,
@@ -3238,6 +3388,7 @@
     },
     {
       "nombre": "Elemental de Nieve Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Ice elemental minor",
       "vida": 9,
       "exp": 130,
@@ -3260,6 +3411,7 @@
     },
     {
       "nombre": "Elemental de Nieve Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ice elemental giant",
       "vida": 28,
       "exp": 425,
@@ -3285,6 +3437,7 @@
     },
     {
       "nombre": "Elemental de Lodo",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Elemental",
       "vida": 22,
       "exp": 250,
@@ -3307,6 +3460,7 @@
     },
     {
       "nombre": "Elemental de Lodo Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Elemental minor",
       "vida": 12,
       "exp": 150,
@@ -3328,6 +3482,7 @@
     },
     {
       "nombre": "Elemental de Lodo Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Elemental giant",
       "vida": 30,
       "exp": 500,
@@ -3351,6 +3506,7 @@
     },
     {
       "nombre": "Elemental de Roca",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Elemental",
       "vida": 20,
       "exp": 200,
@@ -3372,6 +3528,7 @@
     },
     {
       "nombre": "Elemental de Roca Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Elemental minor",
       "vida": 10,
       "exp": 150,
@@ -3393,6 +3550,7 @@
     },
     {
       "nombre": "Elemental de Roca Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Elemental giant",
       "vida": 30,
       "exp": 500,
@@ -3417,6 +3575,7 @@
     },
     {
       "nombre": "Elemental de Arena",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Elemental",
       "vida": 18,
       "exp": 220,
@@ -3439,6 +3598,7 @@
     },
     {
       "nombre": "Elemental de Arena Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Elemental minor",
       "vida": 10,
       "exp": 150,
@@ -3460,6 +3620,7 @@
     },
     {
       "nombre": "Elemental de Arena Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Elemental giant",
       "vida": 28,
       "exp": 500,
@@ -3484,6 +3645,7 @@
     },
     {
       "nombre": "Gárgola",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Gargoyle",
       "vida": 25,
       "exp": 400,
@@ -3503,6 +3665,7 @@
     },
     {
       "nombre": "Elemental de Tierra",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Earth elemental",
       "vida": 20,
       "exp": 200,
@@ -3522,6 +3685,7 @@
     },
     {
       "nombre": "Elemental de Tierra Menor",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Earth elemental minor",
       "vida": 16,
       "exp": 150,
@@ -3541,6 +3705,7 @@
     },
     {
       "nombre": "Elemental de Tierra Gigante",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Earth elemental giant",
       "vida": 29,
       "exp": 500,
@@ -3566,6 +3731,7 @@
   "Rátidos": [
     {
       "nombre": "Horda de Ratas",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Rat swarm",
       "vida": 10,
       "exp": 20,
@@ -3586,6 +3752,7 @@
     },
     {
       "nombre": "Rátido Soldado",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ratkin soldier",
       "vida": 9,
       "exp": 70,
@@ -3605,6 +3772,7 @@
     },
     {
       "nombre": "Rátido Ogro",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ratkin ogre",
       "vida": 40,
       "exp": 650,
@@ -3628,6 +3796,7 @@
     },
     {
       "nombre": "Rata Gigantesca",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Gigantic rat",
       "vida": 18,
       "exp": 140,
@@ -3649,6 +3818,7 @@
     },
     {
       "nombre": "Sátiro",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Sátiro",
       "vida": 10,
       "exp": 80,
@@ -3668,6 +3838,7 @@
     },
     {
       "nombre": "Rátido Asesino",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ratkin assassin",
       "vida": 11,
       "exp": 120,
@@ -3688,6 +3859,7 @@
     },
     {
       "nombre": "Rátido Tirador",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ratkin skirmisher",
       "vida": 9,
       "exp": 70,
@@ -3707,6 +3879,7 @@
     },
     {
       "nombre": "Rátido de Élite",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ratkin elite",
       "vida": 16,
       "exp": 120,
@@ -3726,6 +3899,7 @@
     },
     {
       "nombre": "Rátido Líder",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ratkin packleader",
       "vida": 18,
       "exp": 100,
@@ -3745,6 +3919,7 @@
     },
     {
       "nombre": "Rátido Rabioso",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Rabid ratkin",
       "vida": 14,
       "exp": 120,
@@ -3764,6 +3939,7 @@
     },
     {
       "nombre": "Rátido Invocador",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Ratkin summoner",
       "vida": 12,
       "exp": 120,
@@ -3777,13 +3953,14 @@
       "M": 6,
       "DES": 30,
       "habilidades": [
-        "<strong style='color:#d4af37;'>Invocador:</strong> Cada turno que el Invocador no esté adyacente a un héroe, intentará invocar mas ratas. Tira un 1d8. Con un resultado de 1-2, tira en la tabla de encuentros y coloca los rátidos en una habitación aleatoria adyacente. No puede usar magia.",
+        "<strong style='color:#d4af37;'>Invocador:</strong> Cada turno que el Invocador no esté adyacente a un héroe, intentará invocar mas ratas. Tira un 1d8. Con un resultado de 1-2, tira en la tabla de encuentros y coloca los rátidos en una habitación aleatoria adyacente. No puede usar maga.",
         "<strong style='color:#d4af37;'>Mago:</strong> Puede lanzar hechizos usando HD como habilidad.",
         "<strong style='color:#d4af37;'>Parte:</strong> Sangre del Cambiaformas (1)"
       ]
     },
     {
       "nombre": "Rátido Demonio",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Rat demon",
       "vida": 40,
       "exp": 650,
@@ -3806,6 +3983,7 @@
     },
     {
       "nombre": "Rátido Brujo",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Ratkin warlock",
       "vida": 14,
       "exp": 165,
@@ -3828,6 +4006,7 @@
   "Elfos Oscuros": [
     {
       "nombre": "Elfo Oscuro Asesino",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Dark elf assasin",
       "vida": 11,
       "exp": 135,
@@ -3847,6 +4026,7 @@
     },
     {
       "nombre": "Elfo Gélido",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Elf",
       "vida": 15,
       "exp": 150,
@@ -3868,6 +4048,7 @@
     },
     {
       "nombre": "Dryder",
+      "tamaño": "ENORME",
       "tipo": "Humanoide/Dryder",
       "vida": 28,
       "exp": 600,
@@ -3889,6 +4070,7 @@
     },
     {
       "nombre": "Dryder Brujo",
+      "tamaño": "ENORME",
       "tipo": "Mago/Witch Dryder",
       "vida": 25,
       "exp": 700,
@@ -3911,6 +4093,7 @@
     },
     {
       "nombre": "Elfo Oscuro Brujo",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Dark elf warlock",
       "vida": 11,
       "exp": 165,
@@ -3930,6 +4113,7 @@
     },
     {
       "nombre": "Elfo Oscuro Capitán",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Dark elf captain",
       "vida": 13,
       "exp": 150,
@@ -3949,6 +4133,7 @@
     },
     {
       "nombre": "Elfo Oscuro Tirador",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Dark elf sniper",
       "vida": 11,
       "exp": 135,
@@ -3968,6 +4153,7 @@
     },
     {
       "nombre": "Medusa",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Medusa",
       "vida": 20,
       "exp": 350,
@@ -3987,6 +4173,7 @@
     },
     {
       "nombre": "Kalydon",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Kalydon",
       "vida": 30,
       "exp": 750,
@@ -4011,6 +4198,7 @@
     },
     {
       "nombre": "Elfo Oscuro",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Dark elf",
       "vida": 11,
       "exp": 125,
@@ -4032,6 +4220,7 @@
   "Fúngidos": [
     {
       "nombre": "Saprolín",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Shroomling",
       "vida": 12,
       "exp": 130,
@@ -4052,6 +4241,7 @@
     },
     {
       "nombre": "Guerrero Fúngido",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Fungoid warrior",
       "vida": 18,
       "exp": 150,
@@ -4071,6 +4261,7 @@
     },
     {
       "nombre": "Reina Hongo",
+      "tamaño": "ENORME",
       "tipo": "Mago/Shroom queen",
       "vida": 38,
       "exp": 500,
@@ -4092,7 +4283,8 @@
       ]
     },
     {
-      "nombre": "Explorador Fúngido",
+      "nombre": "Explorador Fúngico",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Fungoid ranger",
       "vida": 15,
       "exp": 150,
@@ -4113,6 +4305,7 @@
     },
     {
       "nombre": "Hongo Titán",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Macrobyte titan",
       "vida": 50,
       "exp": 650,
@@ -4136,6 +4329,7 @@
   "Ejército Real": [
     {
       "nombre": "Guardia",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Guardsman",
       "vida": 12,
       "exp": 100,
@@ -4155,6 +4349,7 @@
     },
     {
       "nombre": "Mago de Batalla",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Battlemage",
       "vida": 14,
       "exp": 160,
@@ -4175,6 +4370,7 @@
     },
     {
       "nombre": "Capitán",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Captain",
       "vida": 16,
       "exp": 160,
@@ -4194,6 +4390,7 @@
     },
     {
       "nombre": "Sargento",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Sergeant",
       "vida": 13,
       "exp": 140,
@@ -4215,6 +4412,7 @@
   "De Misión": [
     {
       "nombre": "Ghammi la Bruja",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Ghammi the witch",
       "vida": 14,
       "exp": 200,
@@ -4235,6 +4433,7 @@
     },
     {
       "nombre": "La Bruja Anciana",
+      "tamaño": "NORMAL",
       "tipo": "Mago/The Elder witch",
       "vida": 20,
       "exp": 350,
@@ -4255,6 +4454,7 @@
     },
     {
       "nombre": "Gólem de piedra Antiguo",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ancient stone golem",
       "vida": 35,
       "exp": 500,
@@ -4275,6 +4475,7 @@
     },
     {
       "nombre": "Ribbit",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide (A distancia)/Ribbit",
       "vida": 25,
       "exp": 140,
@@ -4296,6 +4497,7 @@
     },
     {
       "nombre": "Gneeb el MataHombres",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gneeb the man slayer",
       "vida": 30,
       "exp": 600,
@@ -4316,6 +4518,7 @@
     },
     {
       "nombre": "Reina Escorpión",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Scorpion queen",
       "vida": 45,
       "exp": 750,
@@ -4336,6 +4539,7 @@
     },
     {
       "nombre": "Scordreka Cazador",
+      "tamaño": "ENORME",
       "tipo": "Humanoide/Scorpion",
       "vida": 35,
       "exp": 450,
@@ -4361,6 +4565,7 @@
     },
     {
       "nombre": "Scordreka Guerrero",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Scorpion",
       "vida": 35,
       "exp": 480,
@@ -4386,6 +4591,7 @@
     },
     {
       "nombre": "Scordreka Chamán",
+      "tamaño": "ENORME",
       "tipo": "Mago/Scorpion",
       "vida": 30,
       "exp": 350,
@@ -4410,6 +4616,7 @@
     },
     {
       "nombre": "Scordreka Reina",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Scorpion",
       "vida": 45,
       "exp": 750,
@@ -4433,6 +4640,7 @@
     },
     {
       "nombre": "El Alquimista Proscrito",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide (A distancia)/The alchemist outlaw",
       "vida": 25,
       "exp": 140,
@@ -4454,6 +4662,7 @@
     },
     {
       "nombre": "Goblin jefe",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Goblin chieftain",
       "vida": 15,
       "exp": 130,
@@ -4472,6 +4681,7 @@
     },
     {
       "nombre": "La Matriarca",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/The brood mother",
       "vida": 15,
       "exp": 115,
@@ -4491,6 +4701,7 @@
     },
     {
       "nombre": "Ada el Nigromante",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Ada the necromancer",
       "vida": 28,
       "exp": 1500,
@@ -4513,6 +4724,7 @@
     },
     {
       "nombre": "Adras la Bruja",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Adras the witch",
       "vida": 14,
       "exp": 260,
@@ -4533,6 +4745,7 @@
     },
     {
       "nombre": "El Escorpión Guardián",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/The guardian scorpion",
       "vida": 40,
       "exp": 250,
@@ -4553,6 +4766,7 @@
     },
     {
       "nombre": "Phylax la Bruja",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Phylax the witch",
       "vida": 14,
       "exp": 200,
@@ -4573,6 +4787,7 @@
     },
     {
       "nombre": "Chadepho",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Chadepho",
       "vida": 35,
       "exp": 650,
@@ -4594,6 +4809,7 @@
     },
     {
       "nombre": "Lord Brenann",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Lord brenann",
       "vida": 25,
       "exp": 250,
@@ -4615,6 +4831,7 @@
     },
     {
       "nombre": "Novelm Sombrapizarra",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Novelm slateshadow",
       "vida": 25,
       "exp": 280,
@@ -4636,6 +4853,7 @@
     },
     {
       "nombre": "Klatche el Ogro",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Klatche the ogre",
       "vida": 40,
       "exp": 650,
@@ -4656,6 +4874,7 @@
     },
     {
       "nombre": "Marla la Bruja",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Marla the witch",
       "vida": 18,
       "exp": 200,
@@ -4676,6 +4895,7 @@
     },
     {
       "nombre": "El Capitán",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/The captain",
       "vida": 14,
       "exp": 280,
@@ -4697,6 +4917,7 @@
     },
     {
       "nombre": "Reina Khezira",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Queen khezira",
       "vida": 45,
       "exp": 1000,
@@ -4717,6 +4938,7 @@
     },
     {
       "nombre": "El Apóstol",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/The apostle",
       "vida": 30,
       "exp": 1500,
@@ -4739,6 +4961,7 @@
     },
     {
       "nombre": "Ragnalf el Loco",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Ragnalf the mad",
       "vida": 16,
       "exp": 200,
@@ -4757,6 +4980,7 @@
     },
     {
       "nombre": "Easta Rubeet",
+      "tamaño": "NORMAL",
       "tipo": "Bestia/Easta rubeet",
       "vida": 25,
       "exp": 190,
@@ -4776,6 +5000,7 @@
     },
     {
       "nombre": "Dregrir el Mago",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Dregrir the wizard",
       "vida": 12,
       "exp": 150,
@@ -4796,6 +5021,7 @@
     },
     {
       "nombre": "Gaul el Magullador",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Gaul the mauler",
       "vida": 22,
       "exp": 150,
@@ -4817,6 +5043,7 @@
     },
     {
       "nombre": "El Maestro Cerrajero",
+      "tamaño": "NORMAL",
       "tipo": "Mago/The master locksmith",
       "vida": 30,
       "exp": 600,
@@ -4839,6 +5066,7 @@
     },
     {
       "nombre": "Turog",
+      "tamaño": "NORMAL",
       "tipo": "No muerto mayor/Turog",
       "vida": 20,
       "exp": 300,
@@ -4861,6 +5089,7 @@
     },
     {
       "nombre": "Bestia de Turog Hall",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Beast of turog hall",
       "vida": 40,
       "exp": 700,
@@ -4884,6 +5113,7 @@
     },
     {
       "nombre": "Wyvern No Muerta",
+      "tamaño": "EXTRAENORME",
       "tipo": "No muerto menor/Undead wyvern",
       "vida": 65,
       "exp": 1400,
@@ -4904,6 +5134,7 @@
     },
     {
       "nombre": "Gorm",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Gorm",
       "vida": 40,
       "exp": 500,
@@ -4925,6 +5156,7 @@
     },
     {
       "nombre": "Reina Khaba",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Queen khaba",
       "vida": 35,
       "exp": 800,
@@ -4946,6 +5178,7 @@
     },
     {
       "nombre": "Molgor, el Demonio de Summerhall",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Molgor fiend of summerhall",
       "vida": 45,
       "exp": 450,
@@ -4970,6 +5203,7 @@
     },
     {
       "nombre": "Goldfrid el Corto",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Goldfrid the short",
       "vida": 12,
       "exp": 120,
@@ -4991,6 +5225,7 @@
     },
     {
       "nombre": "El Cartógrafo",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/The mapmaker",
       "vida": 10,
       "exp": "-",
@@ -5009,6 +5244,7 @@
     },
     {
       "nombre": "Madame Isabelle",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Madame isabelle",
       "vida": 14,
       "exp": 140,
@@ -5029,6 +5265,7 @@
     },
     {
       "nombre": "Digg",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Digg",
       "vida": 16,
       "exp": 110,
@@ -5037,20 +5274,19 @@
       "HD": 35,
       "DAN": "+1",
       "DET": 40,
-      "RG": -5,
+      "RG": -10,
       "AN": 1,
       "M": 4,
       "DES": 25,
       "habilidades": [
         "Sin reglas especiales.",
-        "Hacha de Batalla",
-        "Escudo",
-        "Armadura 2"
+        "<strong style='color:#d4af37;'>Parte:</strong> Sangre humana (1)"
       ]
     },
     {
       "nombre": "El Maestro",
       "tipo": "Mago/The master",
+      "tamaño": "NORMAL",
       "vida": 18,
       "exp": 200,
       "recompensa": "R4",
@@ -5069,6 +5305,7 @@
     },
     {
       "nombre": "Belua",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Belua",
       "vida": 85,
       "exp": 1100,
@@ -5090,6 +5327,7 @@
     },
     {
       "nombre": "Ambur el Ettin",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Ambur the ettin",
       "vida": 40,
       "exp": 550,
@@ -5112,6 +5350,7 @@
     },
     {
       "nombre": "Trogskegg",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Trogskegg",
       "vida": 40,
       "exp": 650,
@@ -5134,6 +5373,7 @@
     },
     {
       "nombre": "Emil el Vigilante",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Emil the caretaker",
       "vida": 14,
       "exp": 110,
@@ -5153,6 +5393,7 @@
     },
     {
       "nombre": "Kraghul el Poderoso",
+      "tamaño": "ENORME",
       "tipo": "Bestia/Kraghul the mighty",
       "vida": 50,
       "exp": 450,
@@ -5176,6 +5417,7 @@
     },
     {
       "nombre": "Imgrahil el Aprendiz",
+      "tamaño": "NORMAL",
       "tipo": "Mago/Imgrahil the apprentice",
       "vida": 13,
       "exp": 200,
@@ -5196,6 +5438,7 @@
     },
     {
       "nombre": "Briggo",
+      "tamaño": "ENORME",
       "tipo": "Humanoide/Briggo",
       "vida": 40,
       "exp": 400,
@@ -5217,6 +5460,7 @@
     },
     {
       "nombre": "Ulfric",
+      "tamaño": "NORMAL",
       "tipo": "No muerto menor/Ulfric",
       "vida": 12,
       "exp": 140,
@@ -5237,6 +5481,7 @@
     },
     {
       "nombre": "Grop",
+      "tamaño": "NORMAL",
       "tipo": "Humanoide/Grop",
       "vida": 16,
       "exp": 110,
@@ -5258,3 +5503,11 @@
     }
   ]
 }
+
+
+
+
+
+
+
+  
