@@ -969,7 +969,6 @@
         // Variables globales
         let encuentrosData = {};
         let losetasData = {};
-        let tamanosMonstruos = {};
         let monstruosImagenes = {};
         let enemigosCargados = [];
         let losetaSeleccionada = null;
@@ -992,7 +991,7 @@
 
         // Cargar datos iniciales
         document.addEventListener('DOMContentLoaded', async () => {
-            await cargarTamanosMonstruos();
+            // ELIMINAR: await cargarTamanosMonstruos();
             await cargarMonstruosImagenes();
             await cargarTiposEnemigos();
             cargarLosetas();
@@ -1607,23 +1606,7 @@
 
         // FUNCIONES ORIGINALES (mantenidas)
 
-        async function cargarTamanosMonstruos() {
-            try {
-                const ruta = isGitHubPages ? 'data/tamanos_monstruos.json' : 'data\\tamanos_monstruos.json';
-                const response = await fetch(ruta);
-                
-                if (!response.ok) {
-                    throw new Error(`Error al cargar tamanos_monstruos.json: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                tamanosMonstruos = data.tamaños;
-                console.log('Tamanos de monstruos cargados:', tamanosMonstruos);
-            } catch (error) {
-                console.error('Error cargando tamanos de monstruos:', error);
-                alert('Error al cargar los tamanos de monstruos.');
-            }
-        }
+
 
         async function cargarMonstruosImagenes() {
             try {
@@ -1646,34 +1629,36 @@
             let nombreNormalizado = nombre.trim();
             console.log("Obteniendo tamaño para:", nombreNormalizado);
             
-            if (tamanosMonstruos[nombreNormalizado]) {
-                console.log("Tamaño encontrado (exacto):", tamanosMonstruos[nombreNormalizado]);
-                return tamanosMonstruos[nombreNormalizado];
-            }
-            
-            const claves = Object.keys(tamanosMonstruos);
-            for (const clave of claves) {
-                if (clave.toLowerCase() === nombreNormalizado.toLowerCase()) {
-                    console.log("Tamaño encontrado (exacto case-insensitive):", tamanosMonstruos[clave]);
-                    return tamanosMonstruos[clave];
+            // Buscar en todas las categorías de monstersByCategory
+            for (const categoria in monstersByCategory) {
+                const monstruos = monstersByCategory[categoria];
+                const monstruo = monstruos.find(m => 
+                    m.nombre.toLowerCase() === nombreNormalizado.toLowerCase()
+                );
+                
+                if (monstruo && monstruo.tamaño) {
+                    console.log("Tamaño encontrado en Monstruos_stats:", monstruo.tamaño);
+                    return monstruo.tamaño;
                 }
             }
             
+            // Si no se encuentra, intentar con singular si termina en 's'
             if (nombreNormalizado.endsWith('s') && nombreNormalizado.length > 5) {
                 const singular = nombreNormalizado.slice(0, -1);
-                if (tamanosMonstruos[singular]) {
-                    console.log("Tamaño encontrado (singularizado):", tamanosMonstruos[singular]);
-                    return tamanosMonstruos[singular];
-                }
-                
-                for (const clave of claves) {
-                    if (clave.toLowerCase() === singular.toLowerCase()) {
-                        console.log("Tamaño encontrado (singularizado case-insensitive):", tamanosMonstruos[clave]);
-                        return tamanosMonstruos[clave];
+                for (const categoria in monstersByCategory) {
+                    const monstruos = monstersByCategory[categoria];
+                    const monstruo = monstruos.find(m => 
+                        m.nombre.toLowerCase() === singular.toLowerCase()
+                    );
+                    
+                    if (monstruo && monstruo.tamaño) {
+                        console.log("Tamaño encontrado (singularizado):", monstruo.tamaño);
+                        return monstruo.tamaño;
                     }
                 }
             }
-           
+            
+            // Tamaño por defecto
             console.log("Tamaño por defecto: NORMAL");
             return "NORMAL";
         }
