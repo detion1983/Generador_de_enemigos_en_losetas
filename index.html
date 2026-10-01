@@ -1931,6 +1931,10 @@
             }
         }
 
+        function lanzarDado(caras) {
+            return Math.floor(Math.random() * caras) + 1;
+        }
+        
         function procesarExpresionDados(expresion) {
             let cantidad = 0;
             
@@ -1940,27 +1944,29 @@
                 /(\d+)/
             ];
             
+            // Función helper para lanzar varios dados
+            const lanzarVariosDado = (numDados, caras) => {
+                let total = 0;
+                for (let i = 0; i < numDados; i++) {
+                    total += lanzarDado(caras);
+                }
+                return total;
+            };
+            
             for (const patron of patrones) {
                 const match = expresion.match(patron);
                 if (match) {
                     if (match[3]) {
-                        // Formato: XdY+Z
+                        // Formato: XdY+Z - Lanzar varios dados + bonificación
                         const numDados = parseInt(match[1]);
                         const carasDado = parseInt(match[2]);
                         const bonus = parseInt(match[3]);
-                        
-                        for (let i = 0; i < numDados; i++) {
-                            cantidad += Math.floor(Math.random() * carasDado) + 1;
-                        }
-                        cantidad += bonus;
+                        cantidad = lanzarVariosDado(numDados, carasDado) + bonus;
                     } else if (match[2]) {
-                        // Formato: XdY
+                        // Formato: XdY - Lanzar varios dados
                         const numDados = parseInt(match[1]);
                         const carasDado = parseInt(match[2]);
-                        
-                        for (let i = 0; i < numDados; i++) {
-                            cantidad += Math.floor(Math.random() * carasDado) + 1;
-                        }
+                        cantidad = lanzarVariosDado(numDados, carasDado);
                     } else {
                         // Formato: número fijo
                         cantidad = parseInt(match[1]);
@@ -2061,17 +2067,14 @@
         function generarTarjetasDesdeEncuentro(encuentro, tipoEnemigo, cantidadEnemigos) {
             const container = document.getElementById("monsterContainer");
             
-            // Buscar monstruo por nombre
-            let monster, category;
-            for (const cat in monstersByCategory) {
-                monster = (monstersByCategory[cat] || []).find(m => 
-                    m.nombre.toLowerCase() === encuentro.Encuentro.toLowerCase()
-                );
-                if (monster) {
-                    category = cat;
-                    break;
-                }
-            }
+            // Buscar monstruo por nombre - Simplificado con Object.values y find
+            const allMonsters = Object.values(monstersByCategory).flat();
+            monster = allMonsters.find(m => 
+                m.nombre.toLowerCase() === encuentro.Encuentro.toLowerCase()
+            );
+            category = monster ? Object.keys(monstersByCategory).find(cat => 
+                (monstersByCategory[cat] || []).some(m => m === monster)
+            ) : null;
             
             if (!monster) {
                 console.warn("❌ No se encontró definición para:", encuentro.Encuentro);
@@ -2084,55 +2087,45 @@
 
             console.log(`🔄 Generando ${cantidad} ${monster.nombre} (usando cantidad ya calculada: ${cantidadEnemigos})`);
 
-            // Procesar armas
+            // Procesar armas - Simplificado con función helper
+            const buscarElemento = (arr, tipo) => arr.find(a => a.Tipo.toLowerCase() === tipo.toLowerCase());
+
             let armas = [];
             if (encuentro.Armas) {
                 const listaArmas = encuentro.Armas.split(",").map(a => a.trim());
                 listaArmas.forEach(nombreOriginal => {
                     let nombre = nombreOriginal;
-                    let esMaldita = false;
-                    let esEnvenenada = false;
-
-                    if (nombre.toLowerCase().includes("maldita")) esMaldita = true;
-                    if (nombre.toLowerCase().includes("envenenada")) esEnvenenada = true;
+                    const esMaldita = nombre.toLowerCase().includes("maldita");
+                    const esEnvenenada = nombre.toLowerCase().includes("envenenada");
 
                     nombre = nombre.replace(/maldita/i, "").replace(/envenenada/i, "").trim();
 
                     if (nombre.toLowerCase() === "escudo") {
-                        const escudoRG = equipo.Armaduras.find(a => a.Tipo.toLowerCase() === "escudo -5 rg");
-                        if (escudoRG) armas.push(escudoRG);
+                        const escudo = buscarElemento(equipo.Armaduras, "escudo -5 rg");
+                        if (escudo) armas.push(escudo);
                     } else if (nombre) {
-                        const armaObj = equipo.Armas.find(
-                            a => a.Tipo.toLowerCase() === nombre.toLowerCase()
-                        );
-                        if (armaObj) armas.push(armaObj);
+                        const arma = buscarElemento(equipo.Armas, nombre);
+                        if (arma) armas.push(arma);
                     }
 
                     if (esMaldita) {
-                        const malditaObj = equipo.Armas.find(a => a.Tipo.toLowerCase() === "arma maldita");
-                        if (malditaObj) armas.push(malditaObj);
+                        const maldita = buscarElemento(equipo.Armas, "arma maldita");
+                        if (maldita) armas.push(maldita);
                     }
                     if (esEnvenenada) {
-                        const envenenadaObj = equipo.Armas.find(a => a.Tipo.toLowerCase() === "arma envenenada");
-                        if (envenenadaObj) armas.push(envenenadaObj);
+                        const envenenada = buscarElemento(equipo.Armas, "arma envenenada");
+                        if (envenenada) armas.push(envenenada);
                     }
                 });
             }
 
-            // Procesar armaduras
+            // Procesar armaduras - Simplificado
             let armaduras = [];
             if (encuentro.Armadura) {
                 const valorEscudo = encuentro.Armadura.toString().trim();
-                if (valorEscudo === "-5") {
-                    const escudoRG = equipo.Armaduras.find(a => a.Tipo.toLowerCase() === "escudo -5 rg");
-                    if (escudoRG) armaduras.push(escudoRG);
-                } else {
-                    const escudoBuscado = `Escudo ${valorEscudo}`;
-                    const escudoObj = equipo.Armaduras.find(
-                        a => a.Tipo.toLowerCase() === escudoBuscado.toLowerCase()
-                    );
-                    if (escudoObj) armaduras.push(escudoObj);
-                }
+                const escudoBuscado = valorEscudo === "-5" ? "escudo -5 rg" : `Escudo ${valorEscudo}`;
+                const escudo = buscarElemento(equipo.Armaduras, escudoBuscado);
+                if (escudo) armaduras.push(escudo);
             }
 
             // Procesar hechizos
@@ -2202,37 +2195,24 @@
             const lista = document.getElementById('enemigos-lista');
             lista.innerHTML = '';
             
-            const enemigosAgrupados = {};
-            
-            enemigos.forEach(enemigo => {
-                const clave = enemigo.nombre;
-                if (!enemigosAgrupados[clave]) {
-                    enemigosAgrupados[clave] = {
-                        cantidad: 0,
-                        tamano: enemigo.tamano,
-                        armas: enemigo.armas,
-                        armadura: enemigo.armadura
-                    };
+            // Agrupar enemigos usando reduce - Simplificado
+            const enemigosAgrupados = enemigos.reduce((acc, enemigo) => {
+                if (!acc[enemigo.nombre]) {
+                    acc[enemigo.nombre] = { cantidad: 0, tamano: enemigo.tamano, armas: enemigo.armas, armadura: enemigo.armadura };
                 }
-                enemigosAgrupados[clave].cantidad++;
-            });
+                acc[enemigo.nombre].cantidad++;
+                return acc;
+            }, {});
             
+            // Renderizar lista
             for (const [nombre, info] of Object.entries(enemigosAgrupados)) {
                 const item = document.createElement('div');
                 item.className = 'enemigo-item';
-                
                 let contenido = `<strong>${info.cantidad}x ${nombre}</strong>
-                                <div>Tamaño: ${info.tamano}</div>
-                                <div>Nivel: ${nivelHeroes}</div>`;
-                
-                if (info.armadura > 0) {
-                    contenido += `<div>Armadura: ${info.armadura}</div>`;
-                }
-                
-                if (info.armas) {
-                    contenido += `<div>Armas: ${info.armas}</div>`;
-                }
-                
+                                 <div>Tamaño: ${info.tamano}</div>
+                                 <div>Nivel: ${nivelHeroes}</div>`;
+                if (info.armadura > 0) contenido += `<div>Armadura: ${info.armadura}</div>`;
+                if (info.armas) contenido += `<div>Armas: ${info.armas}</div>`;
                 item.innerHTML = contenido;
                 lista.appendChild(item);
             }
